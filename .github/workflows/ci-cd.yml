@@ -1,0 +1,41 @@
+name: CI/CD Pipeline
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Deploy Application
+        env:
+          SERVER_IP: ${{ secrets.SERVER_IP }}
+          DEPLOY_KEY: ${{ secrets.DEPLOY_KEY }}
+        run: |
+          echo "Deploying to ${SERVER_IP}"
+          echo "${DEPLOY_KEY}" > deploy_key.pem
+          chmod 600 deploy_key.pem
+
+          # Debug SSH connection
+          ssh -v -i deploy_key.pem -o StrictHostKeyChecking=no dmenache@${{ secrets.SERVER_IP }} <<EOF
+            echo "Connected to server"
+            whoami
+            pwd
+            ls -la /var/www/html
+            cd /var/www/html
+            git pull origin main
+            composer install --no-dev || echo "Composer install failed"
+          EOF
+
+          # Cleanup
+          rm -f deploy_key.pem
+
