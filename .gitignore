@@ -1,5 +1,10 @@
 /*                      # Ignore everything
 !readme.html            # Allow readme.html
+!david_menache.html            # Allow david_menache.html
+!larry_banchero.html            # Allow larry_banchero.html
+!jon_fleischer.html            # Allow jon_fleischer.html
+!brian_fleischer.html            # Allow brian_fleischer.html
 .github/*               # Ignore everything in .github
 !.github/workflows/     # Allow the workflows directory
+!public/*     # Allow the workflows directory
 !.github/workflows/ci-cd.yml # Specifically allow ci-cd.yml
