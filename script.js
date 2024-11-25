@@ -417,7 +417,7 @@ function showDavidSection() {
 // Function to display the correct section based on button click
 function showSection(section) {
     const contentContainer = document.getElementById('content');
-    contentContainer.innerHTML = contentData[section] || `<img src="/communication-vital-banner1.webp" alt="Banner" class="responsive-banner">
+    contentContainer.innerHTML = contentData[section] || `<img src="public/homepage_banner.webp" alt="Banner" class="responsive-banner">
 
 Antelope Valley Autism Center  
 Specialized care for neuro-diverse,  minimally verbal, young adults
