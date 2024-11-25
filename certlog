@@ -1,0 +1,80 @@
+{
+    "Certificate": {
+        "CertificateArn": "arn:aws:acm:us-east-1:560888333536:certificate/eb2ec7a1-007e-4589-8a74-ae80c349fb68",
+        "DomainName": "avautismcenter.com",
+        "SubjectAlternativeNames": [
+            "avautismcenter.com",
+            "www.avautismcenter.com",
+            "antelopevalleyautismcenter.com"
+        ],
+        "DomainValidationOptions": [
+            {
+                "DomainName": "avautismcenter.com",
+                "ValidationDomain": "avautismcenter.com",
+                "ValidationStatus": "SUCCESS",
+                "ResourceRecord": {
+                    "Name": "_b4c9bc429715da27254d5d6c9645a736.avautismcenter.com.",
+                    "Type": "CNAME",
+                    "Value": "_c111385e1a6783d4e05dbae44551e492.zfyfvmchrl.acm-validations.aws."
+                },
+                "ValidationMethod": "DNS"
+            },
+            {
+                "DomainName": "www.avautismcenter.com",
+                "ValidationDomain": "www.avautismcenter.com",
+                "ValidationStatus": "SUCCESS",
+                "ResourceRecord": {
+                    "Name": "_5dd7586c6103fb492f19cc41b9e02e6a.www.avautismcenter.com.",
+                    "Type": "CNAME",
+                    "Value": "_fa6c61991233a5af9c29d6cc6ba41765.zfyfvmchrl.acm-validations.aws."
+                },
+                "ValidationMethod": "DNS"
+            },
+            {
+                "DomainName": "antelopevalleyautismcenter.com",
+                "ValidationDomain": "antelopevalleyautismcenter.com",
+                "ValidationStatus": "SUCCESS",
+                "ResourceRecord": {
+                    "Name": "_e9efad27d932dbbd891631f7812214af.antelopevalleyautismcenter.com.",
+                    "Type": "CNAME",
+                    "Value": "_d901f16b613c76322d995845f03f2873.zfyfvmchrl.acm-validations.aws."
+                },
+                "ValidationMethod": "DNS"
+            }
+        ],
+        "Serial": "0b:cb:01:83:8a:e1:81:d5:81:f9:6c:ac:d0:ab:85:b5",
+        "Subject": "CN=avautismcenter.com",
+        "Issuer": "Amazon",
+        "CreatedAt": "2024-11-23T19:01:53.932000-06:00",
+        "IssuedAt": "2024-11-23T19:02:07.100000-06:00",
+        "Status": "ISSUED",
+        "NotBefore": "2024-11-23T18:00:00-06:00",
+        "NotAfter": "2025-12-24T17:59:59-06:00",
+        "KeyAlgorithm": "RSA-2048",
+        "SignatureAlgorithm": "SHA256WITHRSA",
+        "InUseBy": [],
+        "Type": "AMAZON_ISSUED",
+        "KeyUsages": [
+            {
+                "Name": "DIGITAL_SIGNATURE"
+            },
+            {
+                "Name": "KEY_ENCIPHERMENT"
+            }
+        ],
+        "ExtendedKeyUsages": [
+            {
+                "Name": "TLS_WEB_SERVER_AUTHENTICATION",
+                "OID": "1.3.6.1.5.5.7.3.1"
+            },
+            {
+                "Name": "TLS_WEB_CLIENT_AUTHENTICATION",
+                "OID": "1.3.6.1.5.5.7.3.2"
+            }
+        ],
+        "RenewalEligibility": "INELIGIBLE",
+        "Options": {
+            "CertificateTransparencyLoggingPreference": "ENABLED"
+        }
+    }
+}

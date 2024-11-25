@@ -1,0 +1,121 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Description: "Infrastructure for avautismcenter.com and antelopevalleyautismcenter.com"
+
+Parameters:
+  PrimaryDomain:
+    Type: String
+    Default: "avautismcenter.com"
+    Description: "Primary domain for the website"
+
+  RedirectDomain:
+    Type: String
+    Default: "antelopevalleyautismcenter.com"
+    Description: "Redirect domain to the primary domain"
+
+  BucketName:
+    Type: String
+    Default: "www.avautismcenter.com"
+    Description: "Bucket name for the primary website"
+
+Resources:
+  PrimaryBucket:
+    Type: "AWS::S3::Bucket"
+    Properties:
+      BucketName: !Ref BucketName
+      WebsiteConfiguration:
+        IndexDocument: "index.html"
+
+  RedirectBucket:
+    Type: "AWS::S3::Bucket"
+    Properties:
+      BucketName: !Ref RedirectDomain
+      WebsiteConfiguration:
+        RedirectAllRequestsTo:
+          HostName: !Ref PrimaryDomain
+          Protocol: "https"
+
+  PrimaryBucketPolicy:
+    Type: "AWS::S3::BucketPolicy"
+    Properties:
+      Bucket: !Ref PrimaryBucket
+      PolicyDocument:
+        Statement:
+          - Effect: "Allow"
+            Principal: "*"
+            Action: "s3:GetObject"
+            Resource: !Sub "arn:aws:s3:::${BucketName}/*"
+
+  ACMCertificate:
+    Type: "AWS::CertificateManager::Certificate"
+    Properties:
+      DomainName: !Ref PrimaryDomain
+      SubjectAlternativeNames:
+        - !Sub "www.${PrimaryDomain}"
+        - !Ref RedirectDomain
+      ValidationMethod: "DNS"
+
+  CloudFrontDistribution:
+    Type: "AWS::CloudFront::Distribution"
+    Properties:
+      DistributionConfig:
+        Enabled: true
+        Origins:
+          - Id: "S3Origin"
+            DomainName: !GetAtt PrimaryBucket.RegionalDomainName
+            S3OriginConfig: {}
+        DefaultCacheBehavior:
+          TargetOriginId: "S3Origin"
+          ViewerProtocolPolicy: "redirect-to-https"
+          AllowedMethods:
+            - "GET"
+            - "HEAD"
+          CachedMethods:
+            - "GET"
+            - "HEAD"
+          ForwardedValues:
+            QueryString: false
+            Cookies:
+              Forward: "none"
+        ViewerCertificate:
+          AcmCertificateArn: !Ref ACMCertificate
+          SslSupportMethod: "sni-only"
+        DefaultRootObject: "index.html"
+        Aliases:
+          - !Ref PrimaryDomain
+          - !Sub "www.${PrimaryDomain}"
+
+  Route53HostedZonePrimary:
+    Type: "AWS::Route53::HostedZone"
+    Properties:
+      Name: !Ref PrimaryDomain
+
+  Route53HostedZoneRedirect:
+    Type: "AWS::Route53::HostedZone"
+    Properties:
+      Name: !Ref RedirectDomain
+
+  Route53RecordSetPrimary:
+    Type: "AWS::Route53::RecordSet"
+    Properties:
+      HostedZoneId: !Ref Route53HostedZonePrimary
+      Name: !Sub "www.${PrimaryDomain}"
+      Type: "A"
+      AliasTarget:
+        HostedZoneId: "Z2FDTNDATAQYW2" # CloudFront Hosted Zone ID (Static Value)
+        DNSName: !GetAtt CloudFrontDistribution.DomainName
+
+  Route53RecordSetRedirect:
+    Type: "AWS::Route53::RecordSet"
+    Properties:
+      HostedZoneId: !Ref Route53HostedZoneRedirect
+      Name: !Ref RedirectDomain
+      Type: "A"
+      AliasTarget:
+        HostedZoneId: "Z2FDTNDATAQYW2" # CloudFront Hosted Zone ID (Static Value)
+        DNSName: !GetAtt CloudFrontDistribution.DomainName
+
+Outputs:
+  WebsiteURL:
+    Description: "URL of the primary website"
+    Value: !Sub "https://${BucketName}"
+

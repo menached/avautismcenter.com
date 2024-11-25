@@ -1,0 +1,31 @@
+Resources:
+  CloudFrontDistribution:
+    Type: "AWS::CloudFront::Distribution"
+    Properties:
+      DistributionConfig:
+        Enabled: true
+        Origins:
+          - Id: "S3Origin"
+            DomainName: !GetAtt PrimaryBucket.RegionalDomainName
+            S3OriginConfig: {}
+        DefaultCacheBehavior:
+          TargetOriginId: "S3Origin"
+          ViewerProtocolPolicy: "redirect-to-https"
+          AllowedMethods:
+            - "GET"
+            - "HEAD"
+          CachedMethods:
+            - "GET"
+            - "HEAD"
+          ForwardedValues:
+            QueryString: false
+            Cookies:
+              Forward: "none"
+        ViewerCertificate:
+          AcmCertificateArn: "arn:aws:acm:us-west-2:123456789012:certificate/abc12345-6789-0123-4567-89abcdef0123" # Replace with your certificate ARN
+          SslSupportMethod: "sni-only"
+        DefaultRootObject: "index.html"
+        Aliases:
+          - "avautismcenter.com"
+          - "www.avautismcenter.com"
+

@@ -1,0 +1,162 @@
+{
+    "StackEvents": [
+        {
+            "StackId": "arn:aws:cloudformation:us-west-2:560888333536:stack/avautismcenter-stack/5eefba00-a9f7-11ef-9483-027a4982941b",
+            "EventId": "ACMCertificate-2534414d-0e8f-4665-8d43-5faf63f47a8f",
+            "StackName": "avautismcenter-stack",
+            "LogicalResourceId": "ACMCertificate",
+            "PhysicalResourceId": "",
+            "ResourceType": "AWS::CertificateManager::Certificate",
+            "Timestamp": "2024-11-24T00:02:58.625000+00:00",
+            "ResourceStatus": "CREATE_IN_PROGRESS",
+            "ResourceStatusReason": "Content of DNS Record is: {Name: _b4c9bc429715da27254d5d6c9645a736.avautismcenter.com.,Type: CNAME,Value: _c111385e1a6783d4e05dbae44551e492.zfyfvmchrl.acm-validations.aws.}"
+        },
+        {
+            "StackId": "arn:aws:cloudformation:us-west-2:560888333536:stack/avautismcenter-stack/5eefba00-a9f7-11ef-9483-027a4982941b",
+            "EventId": "PrimaryBucketPolicy-CREATE_COMPLETE-2024-11-24T00:02:42.180Z",
+            "StackName": "avautismcenter-stack",
+            "LogicalResourceId": "PrimaryBucketPolicy",
+            "PhysicalResourceId": "www.avautismcenter.com",
+            "ResourceType": "AWS::S3::BucketPolicy",
+            "Timestamp": "2024-11-24T00:02:42.180000+00:00",
+            "ResourceStatus": "CREATE_COMPLETE",
+            "ResourceProperties": "{\"Bucket\":\"www.avautismcenter.com\",\"PolicyDocument\":{\"Statement\":[{\"Action\":\"s3:GetObject\",\"Resource\":\"arn:aws:s3:::www.avautismcenter.com/*\",\"Effect\":\"Allow\",\"Principal\":\"*\"}]}}"
+        },
+        {
+            "StackId": "arn:aws:cloudformation:us-west-2:560888333536:stack/avautismcenter-stack/5eefba00-a9f7-11ef-9483-027a4982941b",
+            "EventId": "PrimaryBucketPolicy-CREATE_IN_PROGRESS-2024-11-24T00:02:41.770Z",
+            "StackName": "avautismcenter-stack",
+            "LogicalResourceId": "PrimaryBucketPolicy",
+            "PhysicalResourceId": "www.avautismcenter.com",
+            "ResourceType": "AWS::S3::BucketPolicy",
+            "Timestamp": "2024-11-24T00:02:41.770000+00:00",
+            "ResourceStatus": "CREATE_IN_PROGRESS",
+            "ResourceStatusReason": "Resource creation Initiated",
+            "ResourceProperties": "{\"Bucket\":\"www.avautismcenter.com\",\"PolicyDocument\":{\"Statement\":[{\"Action\":\"s3:GetObject\",\"Resource\":\"arn:aws:s3:::www.avautismcenter.com/*\",\"Effect\":\"Allow\",\"Principal\":\"*\"}]}}"
+        },
+        {
+            "StackId": "arn:aws:cloudformation:us-west-2:560888333536:stack/avautismcenter-stack/5eefba00-a9f7-11ef-9483-027a4982941b",
+            "EventId": "RedirectBucket-CREATE_COMPLETE-2024-11-24T00:02:40.781Z",
+            "StackName": "avautismcenter-stack",
+            "LogicalResourceId": "RedirectBucket",
+            "PhysicalResourceId": "antelopevalleyautismcenter.com",
+            "ResourceType": "AWS::S3::Bucket",
+            "Timestamp": "2024-11-24T00:02:40.781000+00:00",
+            "ResourceStatus": "CREATE_COMPLETE",
+            "ResourceProperties": "{\"BucketName\":\"antelopevalleyautismcenter.com\",\"WebsiteConfiguration\":{\"RedirectAllRequestsTo\":{\"Protocol\":\"https\",\"HostName\":\"avautismcenter.com\"}}}"
+        },
+        {
+            "StackId": "arn:aws:cloudformation:us-west-2:560888333536:stack/avautismcenter-stack/5eefba00-a9f7-11ef-9483-027a4982941b",
+            "EventId": "PrimaryBucketPolicy-CREATE_IN_PROGRESS-2024-11-24T00:02:40.692Z",
+            "StackName": "avautismcenter-stack",
+            "LogicalResourceId": "PrimaryBucketPolicy",
+            "PhysicalResourceId": "",
+            "ResourceType": "AWS::S3::BucketPolicy",
+            "Timestamp": "2024-11-24T00:02:40.692000+00:00",
+            "ResourceStatus": "CREATE_IN_PROGRESS",
+            "ResourceProperties": "{\"Bucket\":\"www.avautismcenter.com\",\"PolicyDocument\":{\"Statement\":[{\"Action\":\"s3:GetObject\",\"Resource\":\"arn:aws:s3:::www.avautismcenter.com/*\",\"Effect\":\"Allow\",\"Principal\":\"*\"}]}}"
+        },
+        {
+            "StackId": "arn:aws:cloudformation:us-west-2:560888333536:stack/avautismcenter-stack/5eefba00-a9f7-11ef-9483-027a4982941b",
+            "EventId": "PrimaryBucket-CREATE_COMPLETE-2024-11-24T00:02:40.332Z",
+            "StackName": "avautismcenter-stack",
+            "LogicalResourceId": "PrimaryBucket",
+            "PhysicalResourceId": "www.avautismcenter.com",
+            "ResourceType": "AWS::S3::Bucket",
+            "Timestamp": "2024-11-24T00:02:40.332000+00:00",
+            "ResourceStatus": "CREATE_COMPLETE",
+            "ResourceProperties": "{\"PublicAccessBlockConfiguration\":{\"RestrictPublicBuckets\":\"false\",\"BlockPublicPolicy\":\"false\",\"BlockPublicAcls\":\"false\",\"IgnorePublicAcls\":\"false\"},\"BucketName\":\"www.avautismcenter.com\",\"WebsiteConfiguration\":{\"IndexDocument\":\"index.html\"}}"
+        },
+        {
+            "StackId": "arn:aws:cloudformation:us-west-2:560888333536:stack/avautismcenter-stack/5eefba00-a9f7-11ef-9483-027a4982941b",
+            "EventId": "RedirectBucket-CREATE_IN_PROGRESS-2024-11-24T00:02:28.230Z",
+            "StackName": "avautismcenter-stack",
+            "LogicalResourceId": "RedirectBucket",
+            "PhysicalResourceId": "antelopevalleyautismcenter.com",
+            "ResourceType": "AWS::S3::Bucket",
+            "Timestamp": "2024-11-24T00:02:28.230000+00:00",
+            "ResourceStatus": "CREATE_IN_PROGRESS",
+            "ResourceStatusReason": "Resource creation Initiated",
+            "ResourceProperties": "{\"BucketName\":\"antelopevalleyautismcenter.com\",\"WebsiteConfiguration\":{\"RedirectAllRequestsTo\":{\"Protocol\":\"https\",\"HostName\":\"avautismcenter.com\"}}}"
+        },
+        {
+            "StackId": "arn:aws:cloudformation:us-west-2:560888333536:stack/avautismcenter-stack/5eefba00-a9f7-11ef-9483-027a4982941b",
+            "EventId": "PrimaryBucket-CREATE_IN_PROGRESS-2024-11-24T00:02:27.719Z",
+            "StackName": "avautismcenter-stack",
+            "LogicalResourceId": "PrimaryBucket",
+            "PhysicalResourceId": "www.avautismcenter.com",
+            "ResourceType": "AWS::S3::Bucket",
+            "Timestamp": "2024-11-24T00:02:27.719000+00:00",
+            "ResourceStatus": "CREATE_IN_PROGRESS",
+            "ResourceStatusReason": "Resource creation Initiated",
+            "ResourceProperties": "{\"PublicAccessBlockConfiguration\":{\"RestrictPublicBuckets\":\"false\",\"BlockPublicPolicy\":\"false\",\"BlockPublicAcls\":\"false\",\"IgnorePublicAcls\":\"false\"},\"BucketName\":\"www.avautismcenter.com\",\"WebsiteConfiguration\":{\"IndexDocument\":\"index.html\"}}"
+        },
+        {
+            "StackId": "arn:aws:cloudformation:us-west-2:560888333536:stack/avautismcenter-stack/5eefba00-a9f7-11ef-9483-027a4982941b",
+            "EventId": "ACMCertificate-CREATE_IN_PROGRESS-2024-11-24T00:02:27.060Z",
+            "StackName": "avautismcenter-stack",
+            "LogicalResourceId": "ACMCertificate",
+            "PhysicalResourceId": "arn:aws:acm:us-west-2:560888333536:certificate/d131b9c5-e5c6-4ad6-8305-e54f79c2857c",
+            "ResourceType": "AWS::CertificateManager::Certificate",
+            "Timestamp": "2024-11-24T00:02:27.060000+00:00",
+            "ResourceStatus": "CREATE_IN_PROGRESS",
+            "ResourceStatusReason": "Resource creation Initiated",
+            "ResourceProperties": "{\"DomainName\":\"avautismcenter.com\",\"ValidationMethod\":\"DNS\",\"SubjectAlternativeNames\":[\"www.avautismcenter.com\",\"antelopevalleyautismcenter.com\"]}"
+        },
+        {
+            "StackId": "arn:aws:cloudformation:us-west-2:560888333536:stack/avautismcenter-stack/5eefba00-a9f7-11ef-9483-027a4982941b",
+            "EventId": "RedirectBucket-CREATE_IN_PROGRESS-2024-11-24T00:02:26.676Z",
+            "StackName": "avautismcenter-stack",
+            "LogicalResourceId": "RedirectBucket",
+            "PhysicalResourceId": "",
+            "ResourceType": "AWS::S3::Bucket",
+            "Timestamp": "2024-11-24T00:02:26.676000+00:00",
+            "ResourceStatus": "CREATE_IN_PROGRESS",
+            "ResourceProperties": "{\"BucketName\":\"antelopevalleyautismcenter.com\",\"WebsiteConfiguration\":{\"RedirectAllRequestsTo\":{\"Protocol\":\"https\",\"HostName\":\"avautismcenter.com\"}}}"
+        },
+        {
+            "StackId": "arn:aws:cloudformation:us-west-2:560888333536:stack/avautismcenter-stack/5eefba00-a9f7-11ef-9483-027a4982941b",
+            "EventId": "ACMCertificate-CREATE_IN_PROGRESS-2024-11-24T00:02:26.667Z",
+            "StackName": "avautismcenter-stack",
+            "LogicalResourceId": "ACMCertificate",
+            "PhysicalResourceId": "",
+            "ResourceType": "AWS::CertificateManager::Certificate",
+            "Timestamp": "2024-11-24T00:02:26.667000+00:00",
+            "ResourceStatus": "CREATE_IN_PROGRESS",
+            "ResourceProperties": "{\"DomainName\":\"avautismcenter.com\",\"ValidationMethod\":\"DNS\",\"SubjectAlternativeNames\":[\"www.avautismcenter.com\",\"antelopevalleyautismcenter.com\"]}"
+        },
+        {
+            "StackId": "arn:aws:cloudformation:us-west-2:560888333536:stack/avautismcenter-stack/5eefba00-a9f7-11ef-9483-027a4982941b",
+            "EventId": "PrimaryBucket-CREATE_IN_PROGRESS-2024-11-24T00:02:26.665Z",
+            "StackName": "avautismcenter-stack",
+            "LogicalResourceId": "PrimaryBucket",
+            "PhysicalResourceId": "",
+            "ResourceType": "AWS::S3::Bucket",
+            "Timestamp": "2024-11-24T00:02:26.665000+00:00",
+            "ResourceStatus": "CREATE_IN_PROGRESS",
+            "ResourceProperties": "{\"PublicAccessBlockConfiguration\":{\"RestrictPublicBuckets\":\"false\",\"BlockPublicPolicy\":\"false\",\"BlockPublicAcls\":\"false\",\"IgnorePublicAcls\":\"false\"},\"BucketName\":\"www.avautismcenter.com\",\"WebsiteConfiguration\":{\"IndexDocument\":\"index.html\"}}"
+        },
+        {
+            "StackId": "arn:aws:cloudformation:us-west-2:560888333536:stack/avautismcenter-stack/5eefba00-a9f7-11ef-9483-027a4982941b",
+            "EventId": "62875fb0-a9f7-11ef-ae04-027b51af15a5",
+            "StackName": "avautismcenter-stack",
+            "LogicalResourceId": "avautismcenter-stack",
+            "PhysicalResourceId": "arn:aws:cloudformation:us-west-2:560888333536:stack/avautismcenter-stack/5eefba00-a9f7-11ef-9483-027a4982941b",
+            "ResourceType": "AWS::CloudFormation::Stack",
+            "Timestamp": "2024-11-24T00:02:24.669000+00:00",
+            "ResourceStatus": "CREATE_IN_PROGRESS",
+            "ResourceStatusReason": "User Initiated"
+        },
+        {
+            "StackId": "arn:aws:cloudformation:us-west-2:560888333536:stack/avautismcenter-stack/5eefba00-a9f7-11ef-9483-027a4982941b",
+            "EventId": "5eef44d0-a9f7-11ef-9483-027a4982941b",
+            "StackName": "avautismcenter-stack",
+            "LogicalResourceId": "avautismcenter-stack",
+            "PhysicalResourceId": "arn:aws:cloudformation:us-west-2:560888333536:stack/avautismcenter-stack/5eefba00-a9f7-11ef-9483-027a4982941b",
+            "ResourceType": "AWS::CloudFormation::Stack",
+            "Timestamp": "2024-11-24T00:02:18.740000+00:00",
+            "ResourceStatus": "REVIEW_IN_PROGRESS",
+            "ResourceStatusReason": "User Initiated"
+        }
+    ]
+}

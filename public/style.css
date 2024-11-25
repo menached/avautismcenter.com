@@ -1,0 +1,199 @@
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background: #0044cc;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+#tabs {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#tabs button {
+    margin: 0 10px;
+    padding: 10px 20px;
+    background-color: #eee;
+    border: none;
+    cursor: pointer;
+}
+
+#content {
+    padding: 20px;
+    max-width: 800px; /* Same as the banner image's max-width */
+    margin: 0 auto;
+}
+
+/* Responsive adjustments for wider screens */
+@media (min-width: 801px) {
+    #content {
+        padding: 0 20px; /* Add horizontal padding for a bit of space */
+    }
+}
+
+
+
+.reveal {
+    opacity: 0;
+    transition: opacity 1s ease-in;
+}
+
+.reveal.visible {
+    opacity: 1;
+}
+
+.modal.hidden {
+    display: none;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    background: white;
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.close {
+    cursor: pointer;
+    float: right;
+    font-size: 1.5rem;
+}
+
+
+/* Footer Styles */
+footer {
+    background: #f4f4f4;
+    padding: 20px;
+    text-align: center;
+    border-top: 2px solid #ddd;
+}
+
+footer .footer-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 800px;
+    margin: 0 auto;
+    border-top: 1px solid #ddd;
+    padding-top: 10px;
+}
+
+footer .footer-item {
+    flex: 1 1 200px;
+    margin: 10px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+footer a {
+    color: #0044cc;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/*[> Responsive Adjustments <]*/
+/*@media (max-width: 600px) {*/
+    /*footer .footer-container {*/
+        /*flex-direction: column;*/
+    /*}*/
+    /*footer .footer-item {*/
+        /*margin: 10px auto;*/
+    /*}*/
+/*}*/
+
+
+
+/* Only apply styles for screens 600px or less in width and in portrait mode */
+@media (max-width: 600px) and (orientation: portrait) {
+    footer .footer-container {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    footer .footer-item {
+        width: auto;
+        margin: 0 10px 10px 10px; /* Consistent side margins for all items */
+    }
+}
+
+/* Styling for the banner image */
+.responsive-banner {
+    /*width: 100%;*/
+    /*height: auto;*/
+    /*display: block;*/
+    /*margin: 0 auto 20px;*/
+    /*max-width: 800px;*/
+    /*border-radius: 10px;*/
+    width: 100%;
+    max-width: 800px; /* Ensure image aligns with content width */
+    height: auto;
+    display: block;
+    margin: 0 auto 20px;
+    border-radius: 10px;
+}
+
+/* Meet Our Team Section */
+#team {
+    padding: 40px 20px;
+    margin: 20px auto;
+    max-width: 800px;
+    text-align: center;
+    border-top: 2px solid #ddd;
+}
+
+#team h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+#team div {
+    margin: 20px 0;
+}
+
+/* Subscribe Button as a Call to Action */
+.subscribe-button {
+    display: block;
+    width: 80%;
+    max-width: 300px;
+    margin: 40px auto;
+    padding: 15px 30px;
+    font-size: 1.5rem;
+    background-color: #ff6600;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.subscribe-button:hover {
+    background-color: #ff4500;
+}
+

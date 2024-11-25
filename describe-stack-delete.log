@@ -1,0 +1,38 @@
+{
+    "Stacks": [
+        {
+            "StackId": "arn:aws:cloudformation:us-west-2:560888333536:stack/avautismcenter-stack/5eefba00-a9f7-11ef-9483-027a4982941b",
+            "StackName": "avautismcenter-stack",
+            "Description": "Infrastructure for avautismcenter.com and antelopevalleyautismcenter.com",
+            "Parameters": [
+                {
+                    "ParameterKey": "RedirectDomain",
+                    "ParameterValue": "antelopevalleyautismcenter.com"
+                },
+                {
+                    "ParameterKey": "BucketName",
+                    "ParameterValue": "www.avautismcenter.com"
+                },
+                {
+                    "ParameterKey": "PrimaryDomain",
+                    "ParameterValue": "avautismcenter.com"
+                }
+            ],
+            "CreationTime": "2024-11-24T00:02:18.740000+00:00",
+            "DeletionTime": "2024-11-24T00:34:32.862000+00:00",
+            "LastUpdatedTime": "2024-11-24T00:02:24.669000+00:00",
+            "RollbackConfiguration": {},
+            "StackStatus": "DELETE_IN_PROGRESS",
+            "DisableRollback": false,
+            "NotificationARNs": [],
+            "Capabilities": [
+                "CAPABILITY_NAMED_IAM"
+            ],
+            "Tags": [],
+            "EnableTerminationProtection": false,
+            "DriftInformation": {
+                "StackDriftStatus": "NOT_CHECKED"
+            }
+        }
+    ]
+}

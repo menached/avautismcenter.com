@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Antelope Valley Autism Center: Discover our mission and commitment to supporting neuro-diverse individuals.">
+    <meta name="author" content="Antelope Valley Autism Center">
+    <link rel="icon" href="https://www.avautismcenter.com/favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Marvel:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://www.avautismcenter.com/style.css">
+    <title>Mission | Antelope Valley Autism Center</title>
+    <style>
+        /* Page-specific styling */
+        .mission-container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            font-family: 'Marvel', sans-serif;
+            color: #333;
+        }
+
+        .mission-container h1 {
+            text-align: center;
+            color: #007bff;
+            font-size: 2.5em;
+        }
+
+        .tab-container {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .tab-container button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin: 5px;
+            font-size: 1em;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .tab-container button:hover {
+            background-color: #0056b3;
+        }
+
+        .mission-details ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 20px 0;
+        }
+
+        .mission-details ul li {
+            margin-bottom: 1.5em;
+            display: flex;
+            align-items: center;
+        }
+
+        .mission-details ul li i {
+            margin-right: 10px;
+            font-size: 1.5em;
+        }
+
+        @media only screen and (max-width: 768px) {
+            .tab-container button {
+                font-size: 0.9em;
+                padding: 8px 15px;
+            }
+
+            .mission-container h1 {
+                font-size: 2em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header placeholder -->
+    <div id="header-placeholder"></div>
+
+    <!-- Tab Buttons -->
+        <div id="tabs" class="tab-container">
+            <button onclick="window.location.href='mission.html'">Mission</button>
+            <button onclick="window.location.href='about.html'">About Us</button>
+            <button onclick="window.location.href='contact.html'">Contact</button>
+        </div>
+
+<div id="content" class="content-container">
+    <section id="mission">
+    <div class="title-share">
+        <h2><i class="fas fa-rocket"></i> Our Mission</h2>
+        <div class="share-buttons">
+            <a href="#" onclick="shareOnFacebook()" class="share-button facebook">
+                <i class="fab fa-facebook-f"></i> Share on Facebook
+            </a>
+            <a href="#" onclick="shareOnTwitter()" class="share-button twitter">
+                <i class="fab fa-twitter"></i> Share on Twitter
+            </a>
+            <a href="#" onclick="shareOnLinkedIn()" class="share-button linkedin">
+                <i class="fab fa-linkedin-in"></i> Share on LinkedIn
+            </a>
+        </div>
+    </div>
+
+
+        <p>Our mission is to foster a supportive community for individuals with autistic language deficiencies and other communication challenges. We believe in the power of connection and inclusivity, providing a safe space where everyone can thrive.</p>
+        <h3>Core Principles</h3>
+            <ul class="fancy-icons-list">
+                <li><i class="fas fa-star" style="color: gold;"></i> All people deserve to be understood and supported</li>
+                <li><i class="fas fa-star" style="color: gold;"></i> Disability and challenges do not have to prevent a great life</li>
+                <li><i class="fas fa-star" style="color: gold;"></i> Everyone deserves a solid chance in life no matter what obstacles they face</li>
+                <li><i class="fas fa-star" style="color: gold;"></i> Safety is the first consideration, and all development follows from there</li>
+            </ul>
+        <h3><i class="fas fa-bullseye"></i> Our Aim</h3>
+        <figure class="our-aim-image">
+            <img src="https://www.avautismcenter.com/OurAim.png" alt="Our Aim Supportive Environment">
+        </figure>
+        <p>We aim to engage with, teach, and learn from a community of similarly language-challenged non-verbal adults and developmentally disabled individuals from all walks of life. Our strategy is to build a certified autism-friendly community where participants may live full time, part-time, or visit daily.</p>
+    <!-- Clear the floats after the images -->
+    <div style="clear: both;"></div>
+        <h3><i class="fas fa-mountain"></i> Our Challenge</h3>
+        <figure class="our-aim-image">
+            <img src="https://www.avautismcenter.com/frustrated-parent.png" alt="Our Aim Supportive Environment">
+        </figure>
+        <p>Many parents face the overwhelming prospect that there is no place for their aging family members to reside and thrive once they can no longer provide for them. This issue is growing rapidly and creates enormous emotional strain for parents.</p>
+    <!-- Clear the floats after the images -->
+    <div style="clear: both;"></div>
+        <h3><i class="fas fa-chart-line"></i> Statistics</h3>
+        <figure class="our-aim-image stats-image">
+            <a class="no-link-icon" href="pa.html">
+                <img id="hover-stats-image" src="https://www.avautismcenter.com/trending-up.png" alt="Stats" style="display: inline-block;">
+            </a>
+            <figcaption class="fig-caption">
+                <a class="statslink" href="pa.html">Stats</a>
+            </figcaption>
+        </figure>    
+
+    <!-- Tooltip container -->
+        <div id="tooltip-container" class="tooltip-hidden"></div>
+
+        <p>Autism is one of the fastest-growing disabilities. Non-verbal and minimally verbal individuals make up 25-30% of the autistic population.</p>
+        <!-- Clear the floats after the images -->
+        <div style="clear: both;"></div>
+        <h3><i class="fas fa-users"></i> Our Community</h3>
+        <p>The hub includes sensory centers, tiny home living spaces, a store, a restaurant, a farm, and medical and security facilities.</p>
+        <figure style="text-align: center;">
+            <img src="https://www.avautismcenter.com/tiny_homes.jpg" alt="Picnic Outing" style="width: 80%; max-width: 500px; border-radius: 10px;">
+        </figure>
+
+        <h3><i class="fas fa-chalkboard-teacher"></i><a href="#" onclick="showSection('whatWeTeach')"> What We Teach</a></h3> <!-- Clickable link for What we teach -->
+        <p>We offer life skills training, from basic personal hygiene to advanced community participation. We emphasize mentorship through our “<a href="high-anxiety.html#legup">leg up</a>” program, pairing advanced participants with beginners.</p>
+        </section>
+    </div>
+
+    <!-- Footer placeholder -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Dynamic Header and Footer Script -->
+    <script>
+        // Load the header
+        fetch('header.html')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`Failed to load header: ${response.statusText}`);
+                }
+                return response.text();
+            })
+            .then(data => {
+                document.getElementById('header-placeholder').innerHTML = data;
+            })
+            .catch(error => {
+                console.error('Error loading header:', error);
+            });
+
+        // Load the footer
+        fetch('footer.html')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`Failed to load footer: ${response.statusText}`);
+                }
+                return response.text();
+            })
+            .then(data => {
+                document.getElementById('footer-placeholder').innerHTML = data;
+            })
+            .catch(error => {
+                console.error('Error loading footer:', error);
+            });
+    </script>
+</body>
+</html>
+

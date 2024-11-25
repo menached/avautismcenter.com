@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-JZXF57K15R"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-JZXF57K15R');
+    </script>
+    <!-- Basic Meta Tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Battling Anxiety">
+    <meta name="author" content="Verbal Pathways">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Battling Anxiety - Verbal Pathways">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.avautismcenter.com/cac.html">
+    <meta property="og:image" content="https://www.avautismcenter.com/a-new-category-for-profound-autism-graph.png">
+    <meta property="og:description" content="These organizations and individual providers are committed to ongoing training and education to remain experts in the field.">
+    <meta property="og:site_name" content="Verbal Pathways">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Battling Anxiety - Verbal Pathways">
+    <meta name="twitter:description" content="These organizations and individual providers are committed to ongoing training and education to remain experts in the field.">
+    <meta name="twitter:image" content="https://www.avautismcenter.com/a-new-category-for-profound-autism-graph.png">
+    <meta name="twitter:site" content="@VerbalPathways">
+
+    <link rel="icon" href="https://www.avautismcenter.com/favicon.ico">
+    <link rel="stylesheet" href="https://www.avautismcenter.com/communication-vital/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/blueimp-md5/2.18.0/js/md5.min.js"></script>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Marvel:wght@700&display=swap" rel="stylesheet">
+
+    <title>Profound Autism - Verbal Pathways</title>
+
+</head>
+<body>
+
+    <div id="header-placeholder"></div>
+
+    <div id="tabs" class="tab-container">
+        <button onclick="window.location.href='/#mission'">Mission</button>
+        <button onclick="window.location.href='/#about'">About Us</button>
+        <button onclick="window.location.href='/#contact'">Contact</button>
+    </div>
+    
+    <h1 class="aligncenter headlink">
+        <a href="/" style="position:relative;left:0px;" class="star-link no-link-icon headlink">Battling Anxiety</a>
+    </h1>
+
+    <!-- New Content Section -->
+    <section id="main-content" class="content-container">
+        <div class="centered-content">
+        </div>
+    </section>
+
+  <div id="footer-placeholder"></div>
+
+    <script>
+        const iframe = document.getElementById("statsIframe");
+
+        function adjustIframeHeight() {
+            const iframeContentHeight = iframe.contentWindow.document.body.scrollHeight;
+            iframe.style.height = iframeContentHeight + "px";
+        }
+
+        // Adjust iframe height on load
+        iframe.onload = adjustIframeHeight;
+
+        // Adjust iframe height on window resize or orientation change
+        window.addEventListener('resize', adjustIframeHeight);
+        window.addEventListener('orientationchange', adjustIframeHeight);
+
+
+            // Load the header
+    fetch('header.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('header-placeholder').innerHTML = data;
+      });
+
+    // Load the footer
+    fetch('footer.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('footer-placeholder').innerHTML = data;
+      });
+    </script>
+
+</body>
+</html>
+
+
+

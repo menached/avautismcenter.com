@@ -13,29 +13,29 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      # Step 1: Check out the Repository
       - name: Checkout Repository
         uses: actions/checkout@v3
 
-      - name: Deploy Application
-        env:
-          SERVER_IP: ${{ secrets.SERVER_IP }}
-          DEPLOY_KEY: ${{ secrets.DEPLOY_KEY }}
+      # Step 2: Install AWS CLI
+      - name: Install AWS CLI
         run: |
-          echo "Deploying to ${SERVER_IP}"
-          echo "${DEPLOY_KEY}" > deploy_key.pem
-          chmod 600 deploy_key.pem
+          sudo apt-get update
+          sudo apt-get install -y awscli
 
-          # Debug SSH connection
-          ssh -v -i deploy_key.pem -o StrictHostKeyChecking=no dmenache@${{ secrets.SERVER_IP }} <<EOF
-            echo "Connected to server"
-            whoami
-            pwd
-            ls -la /var/www/html
-            cd /var/www/html
-            git pull origin main
-            composer install --no-dev || echo "Composer install failed"
-          EOF
+      # Step 3: Configure AWS Credentials
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v3
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: us-west-2 # Update with your S3 region
 
-          # Cleanup
-          rm -f deploy_key.pem
+      # Step 4: Deploy Changes to S3 Bucket
+      - name: Deploy to S3
+        env:
+          S3_BUCKET: ${{ secrets.S3_BUCKET }}
+        run: |
+          echo "Syncing files to S3 bucket: ${S3_BUCKET}"
+          aws s3 sync . s3://${S3_BUCKET} --exclude ".git/*" --exclude ".github/*"
 

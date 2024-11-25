@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Outdoor Activities Carousel</title>
+
+    <!-- Link to Google Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <style>
+        /* Basic styles for the carousel */
+        .carousel-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100px;
+            width: 150px;
+            <!--background-color: #f0f0f0;-->
+            position: relative;
+            overflow: hidden;
+            <!--border: 2px solid #ccc;-->
+        }
+
+        .carousel-slide {
+            position: absolute;
+            font-size: 100px;
+            opacity: 0;
+            transition: opacity 1s;
+            transform: scale(4.0);
+        }
+
+        .active {
+            opacity: 1;
+        }
+
+        /* Optional: Add some styling for the activity name */
+        .activity-name {
+            text-align: center;
+            font-family: 'Arial', sans-serif;
+            font-size: 20px;
+            margin-top: 10px;
+            display:none;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="carousel-container">
+        <!-- Slide 1: Hiking -->
+        <div class="carousel-slide active" id="slide1">
+            <i class="material-icons">terrain</i>
+            <div class="activity-name">Hiking</div>
+        </div>
+
+        <!-- Slide 2: Biking -->
+        <div class="carousel-slide" id="slide2">
+            <i class="material-icons">directions_bike</i>
+            <div class="activity-name">Biking</div>
+        </div>
+
+        <!-- Slide 3: Fishing -->
+        <div class="carousel-slide" id="slide3">
+            <i class="material-icons">pool</i>
+            <div class="activity-name">Fishing</div>
+        </div>
+
+        <!-- Slide 4: Kayaking -->
+        <div class="carousel-slide" id="slide4">
+            <i class="material-icons">kayaking</i>
+            <div class="activity-name">Kayaking</div>
+        </div>
+
+        <!-- Slide 5: Running -->
+        <div class="carousel-slide" id="slide5">
+            <i class="material-icons">directions_run</i>
+            <div class="activity-name">Running</div>
+        </div>
+
+        <!-- Slide 6: Being Outdoors -->
+        <div class="carousel-slide" id="slide6">
+            <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=outdoor_grill" />
+        </div>
+    </div>
+
+    <script>
+        // Get all the slides
+        const slides = document.querySelectorAll('.carousel-slide');
+        let currentSlide = 0;
+
+        // Function to show the next slide
+        function showNextSlide() {
+            // Hide the current slide
+            slides[currentSlide].classList.remove('active');
+
+            // Calculate the next slide index
+            currentSlide = (currentSlide + 1) % slides.length;
+
+            // Show the next slide
+            slides[currentSlide].classList.add('active');
+        }
+
+        // Automatically change slides every 3 seconds
+        setInterval(showNextSlide, 3000);
+    </script>
+
+</body>
+</html>
+

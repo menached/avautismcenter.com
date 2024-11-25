@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Privacy Policy for Antelope Valley Autism Center, detailing how we handle and protect your data.">
+    <meta name="author" content="Antelope Valley Autism Center">
+    <link rel="icon" href="https://www.avautismcenter.com/favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Marvel:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://www.avautismcenter.com/style.css">
+    <title>Privacy Policy | Antelope Valley Autism Center</title>
+    <style>
+        /* Page-specific styling */
+        .privacy-container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            font-family: 'Marvel', sans-serif;
+            color: #333;
+        }
+
+        .privacy-container h1 {
+            text-align: center;
+            color: #007bff;
+            font-size: 2.5em;
+        }
+
+        .privacy-container h2 {
+            color: #0056b3;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+
+        .privacy-container p,
+        .privacy-container ul {
+            font-size: 1em;
+            line-height: 1.6;
+            margin: 10px 0;
+        }
+
+        .privacy-container ul {
+            padding-left: 20px;
+            list-style-type: disc;
+        }
+
+        @media only screen and (max-width: 768px) {
+            .privacy-container {
+                padding: 15px;
+                font-size: 0.9em;
+            }
+
+            .privacy-container h1 {
+                font-size: 2em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header placeholder -->
+    <div id="header-placeholder"></div>
+
+    <!-- Privacy Policy Content -->
+    <div class="privacy-container">
+        <h1>Privacy Policy</h1>
+        <p>
+            At Antelope Valley Autism Center, your privacy is of utmost importance to us. This Privacy Policy explains how we collect, use, and protect your information when you visit our website or engage with our services.
+        </p>
+
+        <h2>Information We Collect</h2>
+        <p>We may collect the following types of information:</p>
+        <ul>
+            <li><strong>Personal Information:</strong> Such as your name, email address, phone number, and other contact details provided when you fill out forms on our site.</li>
+            <li><strong>Usage Data:</strong> Information about your interactions with our website, such as pages visited, time spent on pages, and browser type.</li>
+            <li><strong>Cookies:</strong> We may use cookies to enhance your browsing experience. You can control cookies through your browser settings.</li>
+        </ul>
+
+        <h2>How We Use Your Information</h2>
+        <p>Your information is used for the following purposes:</p>
+        <ul>
+            <li>To provide and improve our services, ensuring a seamless user experience.</li>
+            <li>To communicate with you about updates, events, or programs that align with our mission.</li>
+            <li>To analyze website traffic and usage patterns to better serve our visitors.</li>
+        </ul>
+
+        <h2>Sharing Your Information</h2>
+        <p>We value your trust and commit to never selling, sharing, or trading your information with third parties for marketing purposes. We may share your information only in the following situations:</p>
+        <ul>
+            <li>When required by law or to comply with legal obligations.</li>
+            <li>With trusted service providers who assist in operating our website and services, under strict confidentiality agreements.</li>
+        </ul>
+
+        <h2>Your Rights</h2>
+        <p>You have the following rights regarding your personal data:</p>
+        <ul>
+            <li><strong>Access:</strong> Request a copy of the data we hold about you.</li>
+            <li><strong>Correction:</strong> Request corrections to inaccurate or incomplete data.</li>
+            <li><strong>Deletion:</strong> Request the deletion of your data, where legally permissible.</li>
+            <li><strong>Opt-Out:</strong> Opt-out of receiving marketing communications at any time.</li>
+        </ul>
+
+        <h2>Data Security</h2>
+        <p>
+            We employ robust security measures to protect your information from unauthorized access, alteration, disclosure, or destruction. While we strive to safeguard your data, no system can guarantee absolute security.
+        </p>
+
+        <h2>Children's Privacy</h2>
+        <p>
+            Protecting the privacy of children is important to us. We do not knowingly collect personal information from individuals under the age of 13 without parental consent. If you believe a child has provided us with personal data, please contact us to ensure its removal.
+        </p>
+
+        <h2>Changes to This Policy</h2>
+        <p>
+            This Privacy Policy may be updated periodically to reflect changes in our practices or legal requirements. We encourage you to review this page regularly to stay informed.
+        </p>
+
+        <h2>Contact Us</h2>
+        <p>
+            If you have any questions or concerns about our Privacy Policy or your data, please contact us:
+        </p>
+        <p>
+            <strong>Email:</strong> <a href="mailto:williams-team@inthingslimited.com">williams-team@inthingslimited.com</a><br>
+            <strong>Phone:</strong> <a href="tel:+16617433143">(661) 743-3143</a>
+        </p>
+    </div>
+
+    <!-- Footer placeholder -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Dynamic Header and Footer Script -->
+    <script>
+        // Load the header
+        fetch('header.html')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`Failed to load header: ${response.statusText}`);
+                }
+                return response.text();
+            })
+            .then(data => {
+                document.getElementById('header-placeholder').innerHTML = data;
+            })
+            .catch(error => {
+                console.error('Error loading header:', error);
+            });
+
+        // Load the footer
+        fetch('footer.html')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`Failed to load footer: ${response.statusText}`);
+                }
+                return response.text();
+            })
+            .then(data => {
+                document.getElementById('footer-placeholder').innerHTML = data;
+            })
+            .catch(error => {
+                console.error('Error loading footer:', error);
+            });
+    </script>
+</body>
+</html>
+

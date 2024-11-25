@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn more about the dedicated team at Antelope Valley Autism Center and our commitment to neuro-diverse individuals.">
+    <meta name="author" content="Antelope Valley Autism Center">
+    <link rel="icon" href="https://www.avautismcenter.com/favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Marvel:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://www.avautismcenter.com/style.css">
+    <title>About Us | Antelope Valley Autism Center</title>
+    <style>
+        /* Page-specific styling */
+        .about-container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            font-family: 'Marvel', sans-serif;
+            color: #333;
+        }
+
+        .about-container h1 {
+            text-align: center;
+            color: #007bff;
+            font-size: 2.5em;
+        }
+
+        .tab-container {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .tab-container button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin: 5px;
+            font-size: 1em;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .tab-container button:hover {
+            background-color: #0056b3;
+        }
+
+        .about-details ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 20px 0;
+        }
+
+        .about-details ul li {
+            margin-bottom: 1.5em;
+            display: flex;
+            align-items: center;
+        }
+
+        .about-details ul li i {
+            margin-right: 10px;
+            font-size: 1.5em;
+        }
+
+        .team-section {
+            margin-top: 20px;
+        }
+
+        .team-member {
+            margin-bottom: 20px;
+        }
+
+        .team-member h3 {
+            margin: 10px 0;
+            color: #007bff;
+        }
+
+        .team-member p {
+            margin: 5px 0;
+        }
+
+        @media only screen and (max-width: 768px) {
+            .tab-container button {
+                font-size: 0.9em;
+                padding: 8px 15px;
+            }
+
+            .about-container h1 {
+                font-size: 2em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header placeholder -->
+    <div id="header-placeholder"></div>
+
+    <!-- About Us Content -->
+    <div class="about-container">
+        <!-- Tab Buttons -->
+        <div id="tabs" class="tab-container">
+            <button onclick="window.location.href='mission.html'">Mission</button>
+            <button onclick="window.location.href='about_us.html'">About Us</button>
+            <button onclick="window.location.href='https://www.avautismcenter.com/contact.html'">Contact</button>
+        </div>
+
+        <!-- About Us Details -->
+        <h1>About Us</h1>
+        <p style="text-align:center; font-size:1.2em; margin-top:0.5em;">Meet the passionate team behind Antelope Valley Autism Center.</p>
+
+        <!-- Team Section -->
+        <div class="team-section">
+            <h2 style="text-align:center;">Meet the Team</h2>
+            <div class="team-member">
+                <h3><i class="fas fa-user-circle"></i> Jon Fleischer</h3>
+                <p><strong>Role:</strong> Founder and Visionary</p>
+                <p>Jon has dedicated his life to creating a supportive community for neuro-diverse individuals.</p>
+            </div>
+            <div class="team-member">
+                <h3><i class="fas fa-user-circle"></i> Larry Banchero</h3>
+                <p><strong>Role:</strong> Co-Founder</p>
+                <p>With a background in entrepreneurship, Larry brings innovative solutions to the team.</p>
+            </div>
+            <div class="team-member">
+                <h3><i class="fas fa-user-circle"></i> Brian Fleischer, Esq.</h3>
+                <p><strong>Role:</strong> Legal Advisor</p>
+                <p>Brian’s legal expertise ensures compliance and support for the center’s operations.</p>
+            </div>
+            <div class="team-member">
+                <h3><i class="fas fa-user-circle"></i> David Menache</h3>
+                <p><strong>Role:</strong> Technology Lead</p>
+                <p>David oversees the center’s technology and communication systems.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer placeholder -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Dynamic Header and Footer Script -->
+    <script>
+        // Load the header
+        fetch('header.html')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`Failed to load header: ${response.statusText}`);
+                }
+                return response.text();
+            })
+            .then(data => {
+                document.getElementById('header-placeholder').innerHTML = data;
+            })
+            .catch(error => {
+                console.error('Error loading header:', error);
+            });
+
+        // Load the footer
+        fetch('footer.html')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`Failed to load footer: ${response.statusText}`);
+                }
+                return response.text();
+            })
+            .then(data => {
+                document.getElementById('footer-placeholder').innerHTML = data;
+            })
+            .catch(error => {
+                console.error('Error loading footer:', error);
+            });
+    </script>
+</body>
+</html>
+

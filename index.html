@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-JZXF57K15R"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<script>
+    function loadTooltipContent() {
+    fetch('https://www.avautismcenter.com/chart.html')
+        .then(response => {
+            if (!response.ok) {
+                throw new Error(`Failed to load tooltip content: ${response.statusText}`);
+            }
+            return response.text();
+        })
+        .then(data => {
+            const tooltip = document.getElementById('tooltip-container');
+            tooltip.innerHTML = data; // Insert fetched content into the tooltip
+        })
+        .catch(error => {
+            console.error('Error loading tooltip content:', error);
+            const tooltip = document.getElementById('tooltip-container');
+            tooltip.innerHTML = '<p>Error loading content. Please try again later.</p>';
+        });
+}
+
+</script>
+<style>
+        h1 {
+            text-align: center;
+            font-size: 2.5em!important; /* Default for larger screens */
+            margin-bottom: 0;
+        }
+
+        @media only screen and (max-width: 768px) {
+            h1 {
+                font-size: 1.8em!important; /* Smaller size for mobile screens */
+                text-align: center!important;
+            }
+        }
+
+        @media only screen and (max-width: 480px) {
+            h1 {
+                font-size: 1.5em!important; /* Even smaller size for very small screens */
+                text-align: center!important;
+            }
+        }
+
+</style>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-JZXF57K15R');
+</script>
+    <!-- Basic Meta Tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Antelope Valley Autism Center: Unlocking verbal expression in a safe, supportive environment for individuals with communication challenges.">
+    <meta name="author" content="Antelope Valley Autism Center">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Antelope Valley Autism Center: Unlocking Verbal Expression in a Safe, Supportive Environment">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.avautismcenter.com">
+    <meta property="og:image" content="https://www.avautismcenter.com/verbal-pathways2.png?v=1">
+    <meta property="og:description" content="Join Antelope Valley Autism Center to support and enhance communication skills in a compassionate, autism-friendly community.">
+    <meta property="og:site_name" content="Antelope Valley Autism Center">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Antelope Valley Autism Center: Unlocking Verbal Expression in a Safe, Supportive Environment">
+    <meta name="twitter:description" content="Support individuals with communication challenges and join our safe, supportive environment.">
+    <meta name="twitter:image" content="https://www.avautismcenter.com/verbal-pathways2.png?v=1">
+    <meta name="twitter:site" content="@VerbalPathways"> <!-- Optional if you have a Twitter handle -->
+
+    <meta property="og:logo" content="https://www.avautismcenter.com/verbal-pathways2.png?v=1">
+
+    <!-- Favicon and Title -->
+    <link rel="icon" href="https://www.avautismcenter.com/favicon.ico">
+    <link rel="stylesheet" href="https://www.avautismcenter.com/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Marvel:wght@700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/blueimp-md5/2.18.0/js/md5.min.js"></script>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <title>Antelope Valley Autism Center: Unlocking Verbal Expression in a Safe, Supportive Environment</title>
+
+</head>
+<pbody>
+
+  <div id="header-placeholder"></div>
+
+    <div id="tabs" class="tab-container">
+        <button onclick="showSection('mission')">Mission</button>
+        <button onclick="showSection('about')">About Us</button>
+        <button onclick="window.location.href='https://www.avautismcenter.com/form.html'">Contact</button>
+
+    </div>
+
+    <!-- Placeholder for dynamic content -->
+    <div id="content" class="content-container">
+        <!-- Clickable banner image that triggers the Mission section -->
+
+
+        <div id="mission-banner" class="clickable-banner">
+    <img src="communication-vital-banner1.webp" alt="Welcome Banner" class="responsive-banner" onclick="showMissionSection()">
+    
+    <!-- Main Header and Tagline -->
+    <h1>Antelope Valley Autism Center</h1>
+    <p style="text-align:center; font-size:1.2em; margin-top:0.2em;">Specialized care for neuro-diverse, minimally verbal, young adults</p>
+    
+    <!-- Bullet Points with Icons and Descriptions -->
+    <ul style="list-style-type:none; padding:0;">
+        <li style="margin-bottom:1em;">
+            <i class="fas fa-home" style="color:#4CAF50; margin-right:0.5em;"></i>
+            <strong>Conducive Environment</strong>
+            <p>A welcoming, comforting environment where profoundly autistic individuals can thrive.</p>
+        </li>
+        <li style="margin-bottom:1em;">
+            <i class="fas fa-chalkboard-teacher" style="color:#2196F3; margin-right:0.5em;"></i>
+            <strong>Contextual Learning</strong>
+            <p>Real-life experience as the basis for social interaction and enhancing communication.</p>
+        </li>
+        <li style="margin-bottom:1em;">
+            <i class="fas fa-hands-helping" style="color:#FF9800; margin-right:0.5em;"></i>
+            <strong>Mentorship</strong>
+            <p>Providing support, assistance, and social engagement.</p>
+        </li>
+    </ul>
+</div>
+
+
+    <section id="team_reveal">
+        <div id="team-placeholder">
+            <!-- Default content to be shown initially -->
+            <p>Meet our amazing team! Scroll down to learn more...</p>
+        </div>
+        <div id="team-content" class="hidden">
+            <!-- This is where the team content will be loaded -->
+        <div id="team-full-bio" class="team-full-bio"></div>
+        </div>
+        <div id="team">
+            <div id="team-placeholder"></div>
+        </div>
+    </section>
+
+    <!-- Subscribe Button to Open Modal -->
+    <button data-tooltip="Let us know you stopped by!" onclick="toggleModal()" class="tooltip subscribe-button">Sign our Guestbook!</button>
+
+    <!-- Subscribe Modal -->
+    <div id="modal" class="modal hidden">
+        <div class="modal-content">
+            <span onclick="toggleModal()" class="close">&times;</span>
+            <p>Sign our Guestbook</p>
+            <!-- Form for subscribing -->
+            <form id="subscribe-form">
+                <input type="email" placeholder="Enter your email" id="modal-email" required>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Area to display response message -->
+    <div id="subscribe-message" class="hidden"></div>
+
+  <div id="footer-placeholder"></div>
+
+    <script src="https://www.avautismcenter.com/script.js" defer></script>
+<!-- Load the header and footer -->
+  <script>
+    // Load the header
+    fetch('header.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('header-placeholder').innerHTML = data;
+      });
+
+    // Load the footer
+    fetch('footer.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('footer-placeholder').innerHTML = data;
+      });
+  </script>
+</body>
+</html>
+

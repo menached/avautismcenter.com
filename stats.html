@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Autism Prevalence by Sex and Race/Ethnicity</title>
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- Import the Marvel Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Marvel:wght@700&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .tooltip {
+      position: absolute;
+      background-color: white;
+      border: 1px solid #ddd;
+      padding: 5px;
+      border-radius: 3px;
+      pointer-events: none;
+      opacity: 0;
+      transition: opacity 0.2s;
+      font-size: 14px;
+    }
+
+    /* Apply Marvel font to the titles inside the tooltips */
+    .tooltip-title {
+      font-family: 'Marvel', sans-serif;
+      font-weight: bold;
+      font-size: 18px;
+    }
+
+    #chart {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    svg {
+      width: 90vw;
+      height: 90vw;
+    }
+
+    .x-axis-label {
+      transform: rotate(-40deg);
+      text-anchor: end;
+    }
+  </style>
+</head>
+<body>
+  <div id="chart"></div>
+  <div class="tooltip" id="tooltip"></div>
+
+  <script>
+    const dataset = [
+      { category: "Male", profound_autism: 25.6, non_profound_autism: 74.4 },
+      { category: "Female", profound_autism: 31.9, non_profound_autism: 68.1 },
+      { category: "Non-Hispanic White", profound_autism: 21.3, non_profound_autism: 78.7 },
+      { category: "Non-Hispanic Asian/Native Hawaiian/Other Pacific Islander", profound_autism: 32.9, non_profound_autism: 67.1 },
+      { category: "Non-Hispanic American Indian/Alaska Native", profound_autism: 28.2, non_profound_autism: 71.8 },
+      { category: "Non-Hispanic Black", profound_autism: 37.4, non_profound_autism: 62.6 },
+      { category: "Hispanic", profound_autism: 31.9, non_profound_autism: 68.1 },
+      { category: "Non-Hispanic multiple races/other", profound_autism: 22.4, non_profound_autism: 77.6 }
+    ];
+
+    const margin = { top: 40, right: 20, bottom: 100, left: 0 };
+    const width = 600 - margin.left - margin.right;
+    const height = 600 - margin.top - margin.bottom;
+
+    const svg = d3.select("#chart")
+                  .append("svg")
+                  .attr("viewBox", `0 0 ${width + margin.left + margin.right} ${height + margin.top + margin.bottom}`)
+                  .append("g")
+                  .attr("transform", `translate(${margin.left}, ${margin.top})`);
+
+    const xScale = d3.scaleBand()
+                     .domain(dataset.map(d => d.category))
+                     .range([0, width])
+                     .padding(0.4);
+
+    const yScale = d3.scaleLinear()
+                     .domain([0, 100])
+                     .range([height, 0]);
+
+    const tooltip = d3.select("#tooltip");
+
+    svg.append("g")
+       .attr("transform", `translate(0, ${height})`)
+       .call(d3.axisBottom(xScale))
+       .selectAll("text")
+       .attr("class", "x-axis-label");
+
+    svg.selectAll(".bar-profound")
+       .data(dataset)
+       .enter()
+       .append("rect")
+       .attr("class", "bar-profound")
+       .attr("x", d => xScale(d.category))
+       .attr("width", xScale.bandwidth() / 2)
+       .attr("y", d => yScale(d.profound_autism))
+       .attr("height", d => height - yScale(d.profound_autism))
+       .attr("fill", "orange")
+       .on("mouseover", (event, d) => showTooltip(event, d, 'Profound Autism', d.profound_autism))
+       .on("mouseout", hideTooltip);
+
+    svg.selectAll(".bar-non-profound")
+       .data(dataset)
+       .enter()
+       .append("rect")
+       .attr("class", "bar-non-profound")
+       .attr("x", d => xScale(d.category) + xScale.bandwidth() / 2)
+       .attr("width", xScale.bandwidth() / 2)
+       .attr("y", d => yScale(d.non_profound_autism))
+       .attr("height", d => height - yScale(d.non_profound_autism))
+       .attr("fill", "steelblue")
+       .on("mouseover", (event, d) => showTooltip(event, d, 'Non-Profound Autism', d.non_profound_autism))
+       .on("mouseout", hideTooltip);
+
+    function showTooltip(event, d, group, value) {
+      tooltip.style("opacity", 1)
+             .style("left", event.pageX + "px")
+             .style("top", event.pageY + "px")
+             .html(`<div class="tooltip-title">${group}</div><div>${d.category}: ${value}%`);
+    }
+
+    function hideTooltip() {
+      tooltip.style("opacity", 0);
+    }
+  </script>
+</body>
+</html>
+

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Terms of Service for Antelope Valley Autism Center, outlining the rules and conditions for using our website and services.">
+    <meta name="author" content="Antelope Valley Autism Center">
+    <link rel="icon" href="https://www.avautismcenter.com/favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Marvel:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://www.avautismcenter.com/style.css">
+    <title>Terms of Service | Antelope Valley Autism Center</title>
+    <style>
+        /* Page-specific styling */
+        .terms-container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            font-family: 'Marvel', sans-serif;
+            color: #333;
+        }
+
+        .terms-container h1 {
+            text-align: center;
+            color: #007bff;
+            font-size: 2.5em;
+        }
+
+        .terms-container h2 {
+            color: #0056b3;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+
+        .terms-container p,
+        .terms-container ul {
+            font-size: 1em;
+            line-height: 1.6;
+            margin: 10px 0;
+        }
+
+        .terms-container ul {
+            padding-left: 20px;
+            list-style-type: disc;
+        }
+
+        @media only screen and (max-width: 768px) {
+            .terms-container {
+                padding: 15px;
+                font-size: 0.9em;
+            }
+
+            .terms-container h1 {
+                font-size: 2em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header placeholder -->
+    <div id="header-placeholder"></div>
+
+    <!-- Terms of Service Content -->
+    <div class="terms-container">
+        <h1>Terms of Service</h1>
+        <p>
+            Welcome to Antelope Valley Autism Center! By accessing or using our website, you agree to comply with and be bound by these Terms of Service. Please read them carefully before using our services.
+        </p>
+
+        <h2>Acceptance of Terms</h2>
+        <p>
+            By using our website, you acknowledge that you have read, understood, and agree to be bound by these terms, as well as our <a href="/privacy-policy.html">Privacy Policy</a>. If you do not agree, please refrain from using our website.
+        </p>
+
+        <h2>Use of the Website</h2>
+        <p>You agree to use our website for lawful purposes only. You are prohibited from:</p>
+        <ul>
+            <li>Posting or transmitting any material that violates applicable laws or regulations.</li>
+            <li>Engaging in unauthorized access, data mining, or other malicious activities.</li>
+            <li>Impersonating any person or entity or misrepresenting your affiliation with any organization.</li>
+        </ul>
+
+        <h2>Intellectual Property</h2>
+        <p>
+            All content on this website, including text, graphics, logos, and images, is the property of Antelope Valley Autism Center and is protected by applicable copyright and trademark laws. You may not use, reproduce, or distribute any content without our prior written consent.
+        </p>
+
+        <h2>Third-Party Links</h2>
+        <p>
+            Our website may contain links to third-party websites. These links are provided for your convenience, and we are not responsible for the content, privacy policies, or practices of these external sites.
+        </p>
+
+        <h2>Disclaimers</h2>
+        <p>
+            The information on this website is provided "as is" and without warranties of any kind, express or implied. We do not guarantee the accuracy, completeness, or reliability of the information provided.
+        </p>
+
+        <h2>Limitation of Liability</h2>
+        <p>
+            To the fullest extent permitted by law, Antelope Valley Autism Center shall not be held liable for any damages arising from the use or inability to use this website, including but not limited to direct, indirect, incidental, punitive, or consequential damages.
+        </p>
+
+        <h2>Termination</h2>
+        <p>
+            We reserve the right to terminate or suspend access to our website without prior notice or liability for any reason, including your breach of these Terms of Service.
+        </p>
+
+        <h2>Changes to These Terms</h2>
+        <p>
+            We may update these Terms of Service from time to time to reflect changes in our practices or legal obligations. We encourage you to review this page periodically to stay informed.
+        </p>
+
+        <h2>Governing Law</h2>
+        <p>
+            These Terms of Service are governed by the laws of the State of California. Any disputes arising from these terms or your use of our website shall be resolved in the courts of California.
+        </p>
+
+        <h2>Contact Us</h2>
+        <p>
+            If you have any questions or concerns about these Terms of Service, please contact us:
+        </p>
+        <p>
+            <strong>Email:</strong> <a href="mailto:williams-team@inthingslimited.com">williams-team@inthingslimited.com</a><br>
+            <strong>Phone:</strong> <a href="tel:+16617433143">(661) 743-3143</a>
+        </p>
+    </div>
+
+    <!-- Footer placeholder -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Dynamic Header and Footer Script -->
+    <script>
+        // Load the header
+        fetch('header.html')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`Failed to load header: ${response.statusText}`);
+                }
+                return response.text();
+            })
+            .then(data => {
+                document.getElementById('header-placeholder').innerHTML = data;
+            })
+            .catch(error => {
+                console.error('Error loading header:', error);
+            });
+
+        // Load the footer
+        fetch('footer.html')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`Failed to load footer: ${response.statusText}`);
+                }
+                return response.text();
+            })
+            .then(data => {
+                document.getElementById('footer-placeholder').innerHTML = data;
+            })
+            .catch(error => {
+                console.error('Error loading footer:', error);
+            });
+    </script>
+</body>
+</html>
+
