@@ -6,12 +6,13 @@ Welcome to the AV Autism Center repository. We use CI/CD pipleline to sync this 
 
 ## 🌟 About
 
-The AV Autism Center focuses on delivering tailored services, educational materials, and community support to enhance the lives of individuals on the autism spectrum. Our goal is to empower families and create an inclusive environment for everyone.
+The AV Autism Center focuses on providing tailored services, educational materials, and community support to enhance the lives of individuals on the autism spectrum. Our goal is to empower families and create an inclusive environment for everyone.
 
 ## 🛠️ Project Structure
 
 This repository includes:
 - **Static Website Files**: Designed to provide a user-friendly experience with essential resources and contact information.
+- **Image Archive**: [S3-hosted image archive](https://www.avautismcenter.com/images)
 - **Deployment Workflow**: Automated CI/CD pipeline for deploying updates to our [S3-hosted website](https://www.avautismcenter.com).
 
 ## 🚀 Features
