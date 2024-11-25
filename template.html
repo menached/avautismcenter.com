@@ -10,6 +10,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Marvel:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://www.avautismcenter.com/style.css">
     <title>David Menache | AV Autism Center</title>
+    <script>
+        // Gravatar URL generator
+        function getGravatarUrl(email) {
+            const hash = CryptoJS.MD5(email.trim().toLowerCase()); // Requires CryptoJS
+            return `https://www.gravatar.com/avatar/${hash}`;
+        }
+    </script>
+
 </head>
 <body>
     <!-- Header placeholder -->
@@ -47,7 +55,17 @@
 
     <!-- Begin Page Content -->
 
-    <h2><img src="${getGravatarUrl('dave@inthingslimited.com')}" alt="David Menache" class="gravatar-icon"> David Menache </h2>
+        <h2>
+        <img id="gravatar" alt="David Menache" class="gravatar-icon"> 
+        David Menache
+    </h2>
+    <p>David Menache is a full stack developer and certified AWS Solutions Architect. His professional background includes:</p>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+    <script>
+        // Set the Gravatar URL dynamically
+        document.getElementById('gravatar').src = getGravatarUrl('dave@inthingslimited.com');
+    </script>
+
     <p>David Menache is a a full stack developer and certified AWS Solutions Architect. His professional background includes:</p>
     <ul class="custom-list2">
         <li><i class="fas fa-star" style="color: gold;"></i> Developing and managing applications across diverse industries</li>
