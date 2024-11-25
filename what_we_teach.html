@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn more about the dedicated team at Antelope Valley Autism Center and our commitment to neuro-diverse individuals.">
+    <meta name="author" content="Antelope Valley Autism Center">
+    <link rel="icon" href="https://www.avautismcenter.com/favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Marvel:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://www.avautismcenter.com/style.css">
+    <title>About Us | Antelope Valley Autism Center</title>
+</head>
+<body>
+    <!-- Header placeholder -->
+    <div id="header-placeholder"></div>
+
+<div id="content" class="content-container">
+    <section id="mission">
+    <!-- About Us Content -->
+    <div class="about-container">
+        <div class="title-share">
+        </div>
+
+        <!-- About Us Details -->
+
+        <!-- Team Section -->
+        <div class="team-section">
+        </div>
+
+
+        <div class="title-share">
+          <h2><i class="aboutpage fa-solid fa-user-circle"></i> What We Teach</h2>
+            <div class="share-buttons">
+                <a href="#" onclick="shareOnFacebook()" class="share-button facebook">
+                    <i class="fab fa-facebook-f"></i> Share on Facebook
+                </a>
+                <a href="#" onclick="shareOnTwitter()" class="share-button twitter">
+                    <i class="fab fa-twitter"></i> Share on Twitter
+                </a>
+                <a href="#" onclick="shareOnLinkedIn()" class="share-button linkedin">
+                    <i class="fab fa-linkedin-in"></i> Share on LinkedIn
+                </a>
+            </div>
+        </div>
+
+        <h3><i class="fas fa-chalkboard-teacher"></i> <a href="#" onclick="showSection('whatWeTeach')">What we Teach</a></h3> 
+
+    <section>
+        <h2>Basic Life Skills</h2>
+        <ul>
+            <li><strong>Graduation Day!</strong></li>
+            <li>Personal hygiene and grooming</li>
+            <li>Eating skills</li>
+            <li>Nutrition and eating for health</li>
+            <li>Bathroom skills</li>
+            <li>Sleep hygiene skills</li>
+        </ul>
+
+        <h2>Intermediate Life Skills</h2>
+        <ul>
+            <li>Care of personal belongings</li>
+            <li>Washing, folding, and storing clothes</li>
+            <li>Cooking</li>
+            <li>Arts and crafts</li>
+        </ul>
+
+        <h2>Advanced Life Skills</h2>
+        <ul>
+            <li>Eating in restaurants</li>
+            <li>Handling money</li>
+            <li>Using mass transit</li>
+            <li>Community safety</li>
+            <li>Socializing, making friends, and building relationships</li>
+        </ul>
+
+        <h2>Advanced Plus</h2>
+        <ul>
+            <li>Air travel</li>
+            <li>Boating</li>
+            <li>Becoming a “leg up” mentor</li>
+        </ul>
+
+        <h2>Physical Education</h2>
+        <ul>
+            <li>Soccer field</li>
+            <li>Basketball court</li>
+            <li>Walking/running track</li>
+            <li>Swimming pool</li>
+            <li>Park</li>
+        </ul>
+
+        <h2>Outings</h2>
+        <p>We provide enrichment excursions and field trips to interesting and educational destinations reachable within 2 hours of the community.</p>
+    </section>
+
+    </div>
+    </div>
+
+
+
+    <!-- Footer placeholder -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Dynamic Header and Footer Script -->
+    <script>
+        // Load the header
+        fetch('header.html')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`Failed to load header: ${response.statusText}`);
+                }
+                return response.text();
+            })
+            .then(data => {
+                document.getElementById('header-placeholder').innerHTML = data;
+            })
+            .catch(error => {
+                console.error('Error loading header:', error);
+            });
+
+        // Load the footer
+        fetch('footer.html')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`Failed to load footer: ${response.statusText}`);
+                }
+                return response.text();
+            })
+            .then(data => {
+                document.getElementById('footer-placeholder').innerHTML = data;
+            })
+            .catch(error => {
+                console.error('Error loading footer:', error);
+            });
+    </script>
+</body>
+</html>
+
