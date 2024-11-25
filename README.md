@@ -1,7 +1,6 @@
 # AV Autism Center
 
-Welcome to the AV Autism Center repository. We use CI/CD pipleline to sync this repo with the live site.
-
+Welcome to the AV Autism Center repository. 
 - **This project is dedicated to providing information, resources, and support for individuals with autism and their families. 
 
 ## 🌟 About
