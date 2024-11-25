@@ -84,14 +84,14 @@ const contentData = {
             </ul>
         <h3><i class="fas fa-bullseye"></i> Our Aim</h3>
         <figure class="our-aim-image">
-            <img src="https://www.avautismcenter.com/OurAim.png" alt="Our Aim Supportive Environment">
+            <img src="https://www.avautismcenter.com/public/OurAim.png" alt="Our Aim Supportive Environment">
         </figure>
         <p>We aim to engage with, teach, and learn from a community of similarly language-challenged non-verbal adults and developmentally disabled individuals from all walks of life. Our strategy is to build a certified autism-friendly community where participants may live full time, part-time, or visit daily.</p>
     <!-- Clear the floats after the images -->
     <div style="clear: both;"></div>
         <h3><i class="fas fa-mountain"></i> Our Challenge</h3>
         <figure class="our-aim-image">
-            <img src="https://www.avautismcenter.com/frustrated-parent.png" alt="Our Aim Supportive Environment">
+            <img src="https://www.avautismcenter.com/public/frustrated-parent.png" alt="Our Aim Supportive Environment">
         </figure>
         <p>Many parents face the overwhelming prospect that there is no place for their aging family members to reside and thrive once they can no longer provide for them. This issue is growing rapidly and creates enormous emotional strain for parents.</p>
     <!-- Clear the floats after the images -->
@@ -99,7 +99,7 @@ const contentData = {
         <h3><i class="fas fa-chart-line"></i> Statistics</h3>
         <figure class="our-aim-image stats-image">
             <a class="no-link-icon" href="pa.html">
-                <img id="hover-stats-image" src="https://www.avautismcenter.com/trending-up.png" alt="Stats" style="display: inline-block;">
+                <img id="hover-stats-image" src="https://www.avautismcenter.com/public/trending-up.png" alt="Stats" style="display: inline-block;">
             </a>
             <figcaption class="fig-caption">
                 <a class="statslink" href="pa.html">Stats</a>
@@ -115,7 +115,7 @@ const contentData = {
         <h3><i class="fas fa-users"></i> Our Community</h3>
         <p>The hub includes sensory centers, tiny home living spaces, a store, a restaurant, a farm, and medical and security facilities.</p>
         <figure style="text-align: center;">
-            <img src="https://www.avautismcenter.com/tiny_homes.jpg" alt="Picnic Outing" style="width: 80%; max-width: 500px; border-radius: 10px;">
+            <img src="https://www.avautismcenter.com/public/tiny_homes.jpg" alt="Picnic Outing" style="width: 80%; max-width: 500px; border-radius: 10px;">
         </figure>
 
         <h3><i class="fas fa-chalkboard-teacher"></i><a href="#" onclick="showSection('whatWeTeach')"> What We Teach</a></h3> <!-- Clickable link for What we teach -->
@@ -188,7 +188,7 @@ const contentData = {
         </p>
         <p style="text-align:center;width:100%;">
         <a class="no-link-icon" href='mailto:williams-team@inthingslimited.com'>williams-team@inthingslimited.com</a><br><a class="no-link-icon" href='tel:+16617433143'>‪(661) 743-3143‬</a></p>
-        <p><img class="contactuspic" src="/autistic-bird.png"></p>
+        <p><img class="contactuspic" src="public/autistic-bird.png"></p>
     `
 };
 
@@ -438,7 +438,7 @@ contentData.williamsStory = `
         <p>William’s journey through a difficult childhood led to his care being taken over by Jon, who became his legal conservator. Jon’s experiences caring for William have deeply shaped his commitment to this cause.</p>
 
     <figure class="story-image">
-        <img src="https://www.avautismcenter.com/enjoying_literature.jpg" alt="Enjoying Literature">
+        <img src="https://www.avautismcenter.com/public/enjoying_literature.jpg" alt="Enjoying Literature">
         <figcaption>Enjoying Literature</figcaption>
     </figure>
 
@@ -446,14 +446,14 @@ contentData.williamsStory = `
     
 
     <figure class="story-image">
-        <img src="https://www.avautismcenter.com/favorite_ride_at_the_pier.jpg" alt="Favorite Ride at Pier">
+        <img src="https://www.avautismcenter.com/public/favorite_ride_at_the_pier.jpg" alt="Favorite Ride at Pier">
         <figcaption>Favorite Ride at the Pier</figcaption>
     </figure>
 
     <p>Jon became his full-time caretaker. Since then, Jon has dedicated his life to providing a safe, stable environment for William.</p>
 
     <figure class="story-image">
-        <img src="https://www.avautismcenter.com/ready_for_dinner_bubba_gumps.jpg" alt="Ready for Dinner at Bubba Gumps">
+        <img src="https://www.avautismcenter.com/public/ready_for_dinner_bubba_gumps.jpg" alt="Ready for Dinner at Bubba Gumps">
         <figcaption>Ready for Dinner at Bubba Gumps</figcaption>
     </figure>
 
@@ -474,7 +474,7 @@ contentData.Jon = `
     </ul>
     <p>Jon is also a TESOL certified teacher of English as a second language, helping students and professionals of all ages and diverse backgrounds. His entrepreneurial spirit and varied experiences have made him a dedicated advocate for individuals with communication challenges.</p>
     <figure style="max-width: 400px; margin: 20px auto; text-align: center;">
-        <img src="https://www.avautismcenter.com/blood_draw_at_doc.jpg" alt="Jon Fleischer at the doctor's office" style="width: 100%; height: auto; border-radius: 10px;">
+        <img src="https://www.avautismcenter.com/public/blood_draw_at_doc.jpg" alt="Jon Fleischer at the doctor's office" style="width: 100%; height: auto; border-radius: 10px;">
         <figcaption style="font-style: italic; margin-top: 10px;">Jon with William at a routine doctor's appointment.</figcaption>
     </figure>
     <h3>Personal Life</h3>
@@ -550,7 +550,7 @@ contentData.whatWeTeach = `
     <div class="meat">
     <h3>Basic Life Skills</h3>
     <figure class="whatweteach" style="width:40%!important;">
-    <img src="Graduation.jpg" alt="Graduation Day" style="width: 100%; height: auto;">
+    <img src="public/Graduation.jpg" alt="Graduation Day" style="width: 100%; height: auto;">
     <figcaption style="text-align: center;">Graduation Day!</figcaption>
     </figure>
     <ul class="whatwedolist">
@@ -590,17 +590,17 @@ contentData.whatWeTeach = `
     <h3>Outings</h3>
     <p>We provide enrichment excursions and field trips to interesting and educational destinations reachable within 2 hours of the community.</p>
     <figure style="text-align: center;">
-        <img src="https://www.avautismcenter.com/tiny_homes.jpg" alt="Picnic Outing" style="width: 80%; max-width: 500px; border-radius: 10px;">
+        <img src="https://www.avautismcenter.com/public/tiny_homes.jpg" alt="Picnic Outing" style="width: 80%; max-width: 500px; border-radius: 10px;">
     </figure>
     <h3> <a href="high-anxiety.html#legup"> Leg Up Program </a> </h3>
     <p>We pair advanced participants with beginners to encourage growth under the watchful eye of trusted caregivers.</p>
         <figure style="text-align: center;">
-            <img src="https://www.avautismcenter.com/leg-up.webp" alt="Leg Up Program" style="width: 80%; max-width: 500px; border-radius: 10px;">
+            <img src="https://www.avautismcenter.com/public/leg-up.webp" alt="Leg Up Program" style="width: 80%; max-width: 500px; border-radius: 10px;">
         </figure>
     <h3>In-House Events</h3>
     <p>Our community hosts picnics, cookouts, and campfires to encourage social interaction and fun.</p>
     <figure style="text-align: center;">
-        <img src="https://www.avautismcenter.com/picnic.jpg" alt="Picnic Outing" style="width: 80%; max-width: 500px; border-radius: 10px;">
+        <img src="https://www.avautismcenter.com/public/picnic.jpg" alt="Picnic Outing" style="width: 80%; max-width: 500px; border-radius: 10px;">
     </figure>
     <h3>Financial Assistance</h3>
     <ul class="whatwedolist">
@@ -671,14 +671,14 @@ contentData.theWhy = `
     <p>Jon, like many parents, faces the overwhelming problem of figuring out who will provide for his special needs nephew once he becomes incapacitated by age or death. He has become disillusioned by the lack of quality care available in the Antelope Valley, where William was born and raised. This has motivated him to dedicate the rest of his working years to building a high-quality, enduring program that will continue to provide all the support necessary for William and many others long after he is gone.</p>
     
     <figure class="story-image">
-        <img src="https://www.avautismcenter.com/blood_draw_at_doc.jpg" alt="Blood Draw at Doctor's Office">
+        <img src="https://www.avautismcenter.com/public/blood_draw_at_doc.jpg" alt="Blood Draw at Doctor's Office">
         <figcaption>Routine blood draw with William at the doctor's office</figcaption>
     </figure>
 
     <p>Jon is assembling a team of talented, dedicated professionals to undertake this awesome responsibility. His goal is to ensure that individuals with communication challenges and their families can access the care and support they need, even in the face of adversity.</p>
     
     <figure class="story-image">
-        <img src="https://www.avautismcenter.com/Graduation.jpg" alt="Graduation Day">
+        <img src="https://www.avautismcenter.com/public/Graduation.jpg" alt="Graduation Day">
         <figcaption>Graduation Day!</figcaption>
     </figure>
 
