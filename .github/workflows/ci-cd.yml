@@ -1,12 +1,12 @@
 name: CI/CD Pipeline
 
 on:
-  push:
-    branches:
-      - main
-  pull_request:
-    branches:
-      - main
+  workflow_dispatch:
+    inputs:
+      file_path:
+        description: 'Path of the file to deploy'
+        required: true
+        default: ''
 
 jobs:
   deploy:
@@ -31,17 +31,27 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: us-west-2 # Update with your S3 region
 
-      ## Step 4: Deploy Changes to S3 Bucket
-      #- name: Deploy to S3
-        #env:
-          #S3_BUCKET: ${{ secrets.S3_BUCKET }}
-        #run: |
-          #echo "Syncing files to S3 bucket: ${S3_BUCKET}"
-          #aws s3 sync . s3://${S3_BUCKET} --exclude ".git/*" --exclude ".github/*"
+      # Step 4: Sync the Specific File to S3
+      - name: Deploy File to S3
+        env:
+          S3_BUCKET: ${{ secrets.S3_BUCKET }}
+        run: |
+          if [ -z "${{ github.event.inputs.file_path }}" ]; then
+            echo "File path not provided. Exiting."
+            exit 1
+          fi
+          echo "Syncing file ${{ github.event.inputs.file_path }} to S3 bucket: $S3_BUCKET"
+          aws s3 cp ${{ github.event.inputs.file_path }} s3://${S3_BUCKET}/${{ github.event.inputs.file_path }}
 
-      ## Step 5: Invalidate CloudFront Cache
-      #- name: Invalidate CloudFront Cache
-        #run: |
-          #echo "Invalidating CloudFront cache..."
-          #aws cloudfront create-invalidation --distribution-id ${{ secrets.CLOUDFRONT_DIST_ID }} --paths "/*"
+      # Step 5: Invalidate the Specific File in CloudFront
+      - name: Invalidate CloudFront Cache
+        env:
+          CLOUDFRONT_DIST_ID: ${{ secrets.CLOUDFRONT_DIST_ID }}
+        run: |
+          if [ -z "${{ github.event.inputs.file_path }}" ]; then
+            echo "File path not provided. Exiting."
+            exit 1
+          fi
+          echo "Invalidating CloudFront cache for file: ${{ github.event.inputs.file_path }}"
+          aws cloudfront create-invalidation --distribution-id $CLOUDFRONT_DIST_ID --paths "/${{ github.event.inputs.file_path }}"
 
