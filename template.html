@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="David Menache is helping with IT and communications.">
-    <meta name="author" content="AV Autism Center : David Menache">
+    <meta name="description" content="AV Autism Center in Antelope Valley CA.">
+    <meta name="author" content="AV Autism Center">
     <link rel="icon" href="https://www.avautismcenter.com/favicon.ico">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Marvel:wght@700&display=swap" rel="stylesheet">
@@ -44,6 +44,23 @@
             </div>
         </div>
 
+
+    <!-- Begin Page Content -->
+
+    <h2><img src="${getGravatarUrl('dave@inthingslimited.com')}" alt="David Menache" class="gravatar-icon"> David Menache </h2>
+    <p>David Menache is a a full stack developer and certified AWS Solutions Architect. His professional background includes:</p>
+    <ul class="custom-list2">
+        <li><i class="fas fa-star" style="color: gold;"></i> Developing and managing applications across diverse industries</li>
+        <li><i class="fas fa-star" style="color: gold;"></i> Extensive expertise in databases, networks, mass communications, and advertising</li>
+        <li><i class="fas fa-star" style="color: gold;"></i> Leading a successful sales organization from his home in Nicaragua</li>
+    </ul>
+    <p>David’s technical skills and leadership have made him a key contributor to the team’s mission of building a supportive community for individuals with communication challenges.</p>
+    <h3>Personal Life</h3>
+    <p>In his personal time, David enjoys tending to animals and riding his horses along the beautiful beaches of Central America.</p>
+
+
+    <!-- End Page Content-->
+
     </div>
     </div>
 
@@ -81,6 +98,24 @@
             .catch(error => {
                 console.error('Error loading footer:', error);
             });
+
+        // Team data for display
+        const teamData = [
+            { name: "Jon Fleischer", role: "Founder", email: "jon@inthingslimited.com", bio: "Passionate about making a difference..." },
+            { name: "Larry Banchero", role: "Co-founder", email: "larry@inthingslimited.com", bio: "Entrepreneur and builder with a vast array of experience..." },
+            { name: "Brian Fleischer", role: "Legal Advisor", email: "brianf@inthingslimited.com", bio: "Experienced lawyer contributing to legal aspects of the project..." },
+            { name: "David Menache", role: "IT", email: "dave@inthingslimited.com", bio: "Assisting with website and communications..." }
+        ];
+
+
+        // Function to generate Gravatar URL
+        function getGravatarUrl(email, size = 80) {
+            const emailHash = md5(email.trim().toLowerCase());  // Hash email using MD5
+            return `https://www.gravatar.com/avatar/${emailHash}?s=${size}&d=identicon`;  // Gravatar URL
+        }
+
+
+
     </script>
 </body>
 </html>
