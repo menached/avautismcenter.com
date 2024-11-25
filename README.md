@@ -2,9 +2,8 @@
 
 Welcome to the AV Autism Center repository. 
 - **This project is dedicated to providing information, resources, and support for individuals with autism and their families. 
-- **This project is dedicated to providing information, resources, and support for individuals with autism and their families. 
 
-## 🌟 About
+## 🌟 About Us
 
 The AV Autism Center focuses on providing tailored services, educational materials, and community support to enhance the lives of individuals on the autism spectrum. Our goal is to empower families and create an inclusive environment for everyone.
 
