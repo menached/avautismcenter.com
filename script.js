@@ -405,7 +405,7 @@ function showLarrySection() {
 
 function showDavidSection() {
     // Display the mission section
-    showSection('David');
+    //showSection('David');
 
     // Scroll to the top of the page
     window.scrollTo({
