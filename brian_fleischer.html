@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="IT Manager at AV Autism Center in Antelope Valley CA.">
+    <meta name="author" content="AV Autism Center">
+    <link rel="icon" href="https://www.avautismcenter.com/favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Marvel:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://www.avautismcenter.com/style.css">
+    <meta property="og:url" content="https://www.avautismcenter.com/david_menache.html" />
+    <meta property="og:type" content="profile" />
+    <meta property="og:image" content="https://www.avautismcenter.com/public/dave.jpeg" />
+    <meta property="og:logo" content="https://www.avautismcenter.com/public/verbal-pathways2.png" />
+    <title>David Menache:IT | AV Autism Center</title>
+    <script>
+        // Gravatar URL generator
+        function getGravatarUrl(email) {
+            const hash = CryptoJS.MD5(email.trim().toLowerCase()); // Requires CryptoJS
+            return `https://www.gravatar.com/avatar/${hash}`;
+        }
+    </script>
+
+</head>
+<body>
+    <!-- Header placeholder -->
+    <div id="header-placeholder"></div>
+
+<div id="content" class="content-container">
+    <section id="mission">
+    <!-- About Us Content -->
+    <div class="about-container">
+        <div class="title-share">
+        </div>
+
+        <!-- About Us Details -->
+
+        <!-- Team Section -->
+        <div class="team-section">
+        </div>
+
+
+        <div class="title-share">
+            <div class="share-buttons">
+                <a href="#" onclick="shareOnFacebook()" class="share-button facebook">
+                    <i class="fab fa-facebook-f"></i> Share on Facebook
+                </a>
+                <a href="#" onclick="shareOnTwitter()" class="share-button twitter">
+                    <i class="fab fa-twitter"></i> Share on Twitter
+                </a>
+                <a href="#" onclick="shareOnLinkedIn()" class="share-button linkedin">
+                    <i class="fab fa-linkedin-in"></i> Share on LinkedIn
+                </a>
+            </div>
+        </div>
+
+
+    <!-- Begin Page Content -->
+
+        <h2>
+        <img id="gravatar" alt="David Menache" class="gravatar-icon"> 
+        David Menache
+    </h2>
+    <p>David Menache is a full stack developer and certified AWS Solutions Architect. His professional background includes:</p>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+    <script>
+        // Set the Gravatar URL dynamically
+        document.getElementById('gravatar').src = getGravatarUrl('dave@inthingslimited.com');
+    </script>
+
+    <p>David Menache is a a full stack developer and certified AWS Solutions Architect. His professional background includes:</p>
+    <ul class="custom-list2">
+        <li><i class="fas fa-star" style="color: gold;"></i> Developing and managing applications across diverse industries</li>
+        <li><i class="fas fa-star" style="color: gold;"></i> Extensive expertise in databases, networks, mass communications, and advertising</li>
+        <li><i class="fas fa-star" style="color: gold;"></i> Leading a successful sales organization from his home in Nicaragua</li>
+    </ul>
+    <p>David’s technical skills and leadership have made him a key contributor to the team’s mission of building a supportive community for individuals with communication challenges.</p>
+    <h3>Personal Life</h3>
+    <p>In his personal time, David enjoys tending to animals and riding his horses along the beautiful beaches of Central America.</p>
+
+
+    <!-- End Page Content-->
+
+    </div>
+    </div>
+
+    <!-- Footer placeholder -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Dynamic Header and Footer Script -->
+    <script>
+        // Load the header
+        fetch('header.html')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`Failed to load header: ${response.statusText}`);
+                }
+                return response.text();
+            })
+            .then(data => {
+                document.getElementById('header-placeholder').innerHTML = data;
+            })
+            .catch(error => {
+                console.error('Error loading header:', error);
+            });
+
+        // Load the footer
+        fetch('footer.html')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`Failed to load footer: ${response.statusText}`);
+                }
+                return response.text();
+            })
+            .then(data => {
+                document.getElementById('footer-placeholder').innerHTML = data;
+            })
+            .catch(error => {
+                console.error('Error loading footer:', error);
+            });
+
+        // Team data for display
+        const teamData = [
+            { name: "Jon Fleischer", role: "Founder", email: "jon@inthingslimited.com", bio: "Passionate about making a difference..." },
+            { name: "Larry Banchero", role: "Co-founder", email: "larry@inthingslimited.com", bio: "Entrepreneur and builder with a vast array of experience..." },
+            { name: "Brian Fleischer", role: "Legal Advisor", email: "brianf@inthingslimited.com", bio: "Experienced lawyer contributing to legal aspects of the project..." },
+            { name: "David Menache", role: "IT", email: "dave@inthingslimited.com", bio: "Assisting with website and communications..." }
+        ];
+
+
+        // Function to generate Gravatar URL
+        function getGravatarUrl(email, size = 80) {
+            const emailHash = md5(email.trim().toLowerCase());  // Hash email using MD5
+            return `https://www.gravatar.com/avatar/${emailHash}?s=${size}&d=identicon`;  // Gravatar URL
+        }
+
+
+
+    </script>
+</body>
+</html>
+
