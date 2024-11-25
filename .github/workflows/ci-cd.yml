@@ -37,11 +37,11 @@ jobs:
           S3_BUCKET: ${{ secrets.S3_BUCKET }}
         run: |
           echo "Syncing files to S3 bucket: ${S3_BUCKET}"
-          aws s3 sync . s3://${S3_BUCKET} --exclude ".git/*" --exclude ".github/*"
+            #aws s3 sync . s3://${S3_BUCKET} --exclude ".git/*" --exclude ".github/*"
 
       # Step 5: Invalidate CloudFront Cache
       - name: Invalidate CloudFront Cache
         run: |
           echo "Invalidating CloudFront cache..."
-          aws cloudfront create-invalidation --distribution-id ${{ secrets.CLOUDFRONT_DIST_ID }} --paths "/*"
+          #aws cloudfront create-invalidation --distribution-id ${{ secrets.CLOUDFRONT_DIST_ID }} --paths "/*"
 
