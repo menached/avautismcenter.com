@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="David Menache is helping with IT and communications.">
+    <meta name="author" content="AV Autism Center : David Menache">
+    <link rel="icon" href="https://www.avautismcenter.com/favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Marvel:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://www.avautismcenter.com/style.css">
+    <title>David Menache | AV Autism Center</title>
+</head>
+<body>
+    <!-- Header placeholder -->
+    <div id="header-placeholder"></div>
+
+<div id="content" class="content-container">
+    <section id="mission">
+    <!-- About Us Content -->
+    <div class="about-container">
+        <div class="title-share">
+        </div>
+
+        <!-- About Us Details -->
+
+        <!-- Team Section -->
+        <div class="team-section">
+        </div>
+
+
+        <div class="title-share">
+          <h2><i class="fas fa-chalkboard-teacher"></i> <a href="#" onclick="showSection('whatWeTeach')">David Menache</a></h2> 
+            <div class="share-buttons">
+                <a href="#" onclick="shareOnFacebook()" class="share-button facebook">
+                    <i class="fab fa-facebook-f"></i> Share on Facebook
+                </a>
+                <a href="#" onclick="shareOnTwitter()" class="share-button twitter">
+                    <i class="fab fa-twitter"></i> Share on Twitter
+                </a>
+                <a href="#" onclick="shareOnLinkedIn()" class="share-button linkedin">
+                    <i class="fab fa-linkedin-in"></i> Share on LinkedIn
+                </a>
+            </div>
+        </div>
+
+    </div>
+    </div>
+
+    <!-- Footer placeholder -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Dynamic Header and Footer Script -->
+    <script>
+        // Load the header
+        fetch('header.html')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`Failed to load header: ${response.statusText}`);
+                }
+                return response.text();
+            })
+            .then(data => {
+                document.getElementById('header-placeholder').innerHTML = data;
+            })
+            .catch(error => {
+                console.error('Error loading header:', error);
+            });
+
+        // Load the footer
+        fetch('footer.html')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`Failed to load footer: ${response.statusText}`);
+                }
+                return response.text();
+            })
+            .then(data => {
+                document.getElementById('footer-placeholder').innerHTML = data;
+            })
+            .catch(error => {
+                console.error('Error loading footer:', error);
+            });
+    </script>
+</body>
+</html>
+
