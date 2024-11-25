@@ -154,7 +154,7 @@ const contentData = {
                 <strong><a class="no-link-icon" href="#" onclick="showSection('Brian')">Brian Fleischer, Esq.</a>:</strong> Dual citizen of the U.S. and Mexico, a lawyer with decades of experience.
             </li>
             <li>
-                <strong><a class="no-link-icon" href="#" onclick="showSection('David')">David Menache</a>:</strong> Network engineer and tech entrepreneur, contributing his technical expertise.
+                <strong><a class="no-link-icon" href="david_menache.html" onclick="showSection('David')">David Menache</a>:</strong> Network engineer and tech entrepreneur, contributing his technical expertise.
             </li>
         </ul>
         <h3><i class="aboutpage fas fa-question-circle"></i> <a href="#" onclick="showSection('theWhy')">The Why</a></h3> 
