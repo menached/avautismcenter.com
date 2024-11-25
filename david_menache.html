@@ -34,6 +34,14 @@
     <meta property="og:image:secure_url" content="https://www.avautismcenter.com/public/david_menache.png?v=2" />
 
     <title>David Menache: IT | AV Autism Center</title>
+    
+    <script>
+        // Gravatar URL generator
+        function getGravatarUrl(email) {
+            const hash = CryptoJS.MD5(email.trim().toLowerCase()); // Requires CryptoJS
+            return `https://www.gravatar.com/avatar/${hash}`;
+        }
+    </script>
 </head>
 <body>
     <!-- Header placeholder -->
