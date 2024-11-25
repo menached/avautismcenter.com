@@ -31,17 +31,17 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: us-west-2 # Update with your S3 region
 
-      # Step 4: Deploy Changes to S3 Bucket
-      - name: Deploy to S3
-        env:
-          S3_BUCKET: ${{ secrets.S3_BUCKET }}
-        run: |
-          echo "Syncing files to S3 bucket: ${S3_BUCKET}"
-          aws s3 sync . s3://${S3_BUCKET} --exclude ".git/*" --exclude ".github/*"
+      ## Step 4: Deploy Changes to S3 Bucket
+      #- name: Deploy to S3
+        #env:
+          #S3_BUCKET: ${{ secrets.S3_BUCKET }}
+        #run: |
+          #echo "Syncing files to S3 bucket: ${S3_BUCKET}"
+          #aws s3 sync . s3://${S3_BUCKET} --exclude ".git/*" --exclude ".github/*"
 
-      # Step 5: Invalidate CloudFront Cache
-      - name: Invalidate CloudFront Cache
-        run: |
-          echo "Invalidating CloudFront cache..."
-          aws cloudfront create-invalidation --distribution-id ${{ secrets.CLOUDFRONT_DIST_ID }} --paths "/*"
+      ## Step 5: Invalidate CloudFront Cache
+      #- name: Invalidate CloudFront Cache
+        #run: |
+          #echo "Invalidating CloudFront cache..."
+          #aws cloudfront create-invalidation --distribution-id ${{ secrets.CLOUDFRONT_DIST_ID }} --paths "/*"
 
