@@ -1,5 +1,5 @@
 # AV Autism Center
-TESTING :GC
+
 Welcome to the AV Autism Center repository. We use CI/CD pipleline to sync this repo with the live site.
 
 - **This project is dedicated to providing information, resources, and support for individuals with autism and their families. 
@@ -20,6 +20,7 @@ This repository includes:
 - Resource hub with articles, guides, and tools.
 - Online support and contact information.
 - Modern, responsive design optimized for accessibility.
+- :GC for sync to github and cloud
 
 ## 📦 How to Use
 
