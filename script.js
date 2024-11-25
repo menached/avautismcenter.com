@@ -151,7 +151,7 @@ const contentData = {
                 <strong><a class="no-link-icon" href="#" onclick="showSection('Larry')">Larry Banchero</a>:</strong> Entrepreneur and expert in multiple industries.
             </li>
             <li>
-                <strong><a class="no-link-icon" href="#" onclick="showSection('Brian')">Brian Fleischer, Esq.</a>:</strong> Dual citizen of the U.S. and Mexico, a lawyer with decades of experience.
+                <strong><a class="no-link-icon" href="/brian_fleischer.html">Brian Fleischer, Esq.</a>:</strong> Dual citizen of the U.S. and Mexico, a lawyer with decades of experience.
             </li>
             <li>
                 <strong><a class="no-link-icon" href="/david_menache.html">David Menache</a>:</strong> Network engineer and tech entrepreneur, contributing his technical expertise.
