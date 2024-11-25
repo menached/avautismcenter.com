@@ -6,7 +6,7 @@ Welcome to the AV Autism Center repository. We use CI/CD pipleline to sync this 
 
 ## 🌟 About
 
-AV Autism Center focuses on delivering tailored services, educational materials, and community support to enhance the lives of individuals on the autism spectrum. Our goal is to empower families and create an inclusive environment for everyone.
+The AV Autism Center focuses on delivering tailored services, educational materials, and community support to enhance the lives of individuals on the autism spectrum. Our goal is to empower families and create an inclusive environment for everyone.
 
 ## 🛠️ Project Structure
 
