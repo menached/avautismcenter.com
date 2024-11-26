@@ -37,6 +37,21 @@
     <!-- LinkedIn (Optional) -->
     <meta property="og:image:secure_url" content="https://www.avautismcenter.com/public/mission-header.png" />
 <style>
+figcaption {
+    font-size: 1em; /* Default size for larger screens */
+}
+
+@media (max-width: 768px) {
+    figcaption {
+        font-size: 0.9em; /* Slightly smaller for tablets and small screens */
+    }
+}
+
+@media (max-width: 480px) {
+    figcaption {
+        font-size: 0.8em; /* Even smaller for very small screens */
+    }
+}
 .wooden-frame img:hover {
     transform: none !important; /* Disable scaling or transformations */
 }
