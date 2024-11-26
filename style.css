@@ -50,13 +50,13 @@
 @media (max-width: 467px) {
     .image-container {
         float: none; /* Reset float for smaller screens */
-        max-width: 50%; /* Limit to half its normal size */
+        max-width: 100%; /* Ensure container width is full */
         margin: 20px auto; /* Center the image with spacing */
         text-align: center; /* Center-align content */
     }
 
     .image-container img {
-        max-width: 100%; /* Ensure the image scales properly */
+        max-width: 50%; /* Reduce image size to 50% of the container */
         height: auto; /* Maintain aspect ratio */
     }
 
