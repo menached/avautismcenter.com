@@ -1,41 +1,37 @@
 /* General Styling */
 
-
-/* Default H1 Style (for large screens) */
 h1 {
-    font-size: 3rem; /* Large size for desktops */
-    /*text-align: center;*/
-    margin: 20px auto;
-    font-weight: bold;
+    text-align: left; /* Align the text to the left */
+    font-family: 'Marvel', sans-serif; /* Use Marvel font */
+    font-weight: 700; /* Bold weight */
+    font-size: 2.5em; /* Default large size */
+    line-height: 1.4; /* Adjust line height for spacing */
+    margin: 20px 0; /* Add vertical spacing */
+    display: flex; /* Enable flexbox for icon alignment */
+    align-items: center; /* Vertically align icon with text */
+    gap: 10px; /* Space between the icon and the text */
 }
 
-/* Medium Screens (Tablets) */
-@media (max-width: 1024px) {
-    h1 {
-        font-size: 2.5rem; /* Slightly smaller for tablets */
-    }
+/* Icon Styling */
+h1 .fas {
+    font-size: 0.9em; /* Scale the icon relative to the text */
+    color: inherit; /* Inherit the text color */
 }
 
-/* Small Screens (Mobile Landscape) */
+/* Responsive Rules for Smaller Screens */
 @media (max-width: 768px) {
     h1 {
-        font-size: 2rem; /* Smaller size for landscape phones */
+        font-size: 2rem; /* Slightly smaller for tablets and landscape phones */
     }
 }
 
-/* Extra Small Screens (Mobile Portrait) */
 @media (max-width: 480px) {
     h1 {
         font-size: 1.8rem; /* Compact size for portrait phones */
     }
 }
 
-/* Ultra-Small Screens (Under 360px) */
-@media (max-width: 360px) {
-    h1 {
-        font-size: 1.5rem; /* Ensure it fits tiny screens */
-    }
-}
+
 
 
 
