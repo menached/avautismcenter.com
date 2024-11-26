@@ -25,7 +25,7 @@
 @media (max-width: 768px) {
     .image-container {
         position: relative;
-        float: none; /* Disable floating */
+        float: left; /* Disable floating */
         text-align: center; /* Center the image */
         margin: 20px auto; /* Add margin around the image */
         max-width: 50%; /* Reduce width for smaller screens */
