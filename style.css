@@ -1,5 +1,6 @@
 /* General Styling */
 
+/* General styles for the custom list */
 .a-custom-list {
     list-style: none; /* Remove the default list dots */
     padding: 0; /* Remove default padding */
@@ -17,6 +18,19 @@
     height: 50px;
     border-radius: 50%; /* Make images circular */
     margin-right: 15px; /* Add space between the Gravatar and the text */
+}
+
+/* Hide link icons in mobile view */
+@media (max-width: 768px) {
+    .a-custom-list a.no-link-icon {
+        text-decoration: none; /* Optional: Ensure no underline or style */
+        pointer-events: none; /* Disable interaction if necessary */
+    }
+
+    .a-custom-list a.no-link-icon::before,
+    .a-custom-list a.no-link-icon::after {
+        content: none; /* Hide pseudo-elements often used for icons */
+    }
 }
 
 
