@@ -25,7 +25,7 @@
     }
 }
 
-@media (min-width: 769px and max-width: 1023px;) {
+@media (max-width: 1023px;) {
     .image-container {
         align: left; /* Float the container to the right */
         margin: 0 0 20px 20px; /* Add space around the image (left, bottom) */
@@ -34,15 +34,6 @@
     }
 }
 
-@media (max-width: 768px) {
-    .image-container {
-        position: relative;
-        align: none; /* Disable floating */
-        text-align: left; /* Left the image */
-        margin: 20px auto; /* Add margin around the image */
-        max-width: 50%; /* Reduce width for smaller screens */
-    }
-}
 
 
 /* General Styling */
