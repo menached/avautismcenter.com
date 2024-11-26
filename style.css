@@ -4,7 +4,7 @@
 
 /* General Styling for the Image */
 .image-container {
-    margin: 0 auto 20px; /* Center on larger screens */
+    margin: 0 auto 20px; /* Default for larger screens */
     max-width: 100%; /* Full width by default */
     text-align: center; /* Center-align image on larger screens */
 }
@@ -39,7 +39,6 @@
     }
 
     .image-container {
-        float: right; /* Float the container to the right */
         max-width: 30%; /* Limit the size of the container */
         margin: 0 0 20px 20px; /* Add spacing */
         text-align: right; /* Align content inside the container */
@@ -49,21 +48,24 @@
 /* One-Column Layout for Smaller Screens */
 @media (max-width: 620px) {
     .image-container {
-        float: left; /* Align image to the left */
         max-width: 50%; /* Reduce image size */
-        margin: 0 20px 20px 0; /* Add spacing to the right */
-        text-align: left; /* Align content inside the container */
+        margin: 20px 0; /* Add spacing above and below */
+        text-align: left; /* Align image to the left */
     }
 
     .image-container img {
-        max-width: 100%; /* Ensure the image scales properly */
-        height: auto; /* Maintain aspect ratio */
+        display: block; /* Ensure it behaves like a block element */
+        margin: 0 auto; /* Center horizontally within the container */
     }
 
     .two-column-layout {
         flex-direction: column; /* Stack elements vertically */
     }
 }
+
+
+
+
 
 /* Outings Section */
 h2 {
