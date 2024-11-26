@@ -81,40 +81,47 @@
             
     <div style="position: relative; text-align: right;" class="image-container alignright">
 <style>
-    figure {
-        display: inline-block; /* Ensures the figure width matches the image width */
-        text-align: center;    /* Centers the caption */
-        margin: 20px auto;     /* Adds space around the figure */
-    }
-
-    img {
-        max-width: 100%;       /* Ensures the image is responsive */
-        height: auto;
-        display: block;        /* Ensures no extra space below the image */
-    }
-
-    figcaption {
-        font-size: 1em;
-        color: #555;
-        margin-top: 5px;
-        line-height: 1.4;
-    }
-    figcaption {
-    font-size: 1em; /* Default size for larger screens */
+/* Default styles for larger screens */
+figure {
+    text-align: center;
+    margin: 20px auto;
 }
 
+figcaption {
+    font-size: 1em;
+    margin-top: 5px;
+    line-height: 1.4;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Adjust for tablets and small screens (up to 768px wide) */
 @media (max-width: 768px) {
     figcaption {
-        font-size: 0.8em; /* Slightly smaller for tablets and small screens */
+        font-size: 0.9em; /* Slightly smaller text */
+    }
+    img {
+        max-width: 90%; /* Reduce image size slightly */
     }
 }
 
+/* Adjust for very small screens (up to 480px wide, portrait view) */
 @media (max-width: 480px) {
     figcaption {
-        font-size: 0.7em; /* Even smaller for very small screens */
+        font-size: 0.8em; /* Smaller caption text */
+    }
+    img {
+        max-width: 80%; /* Further reduce image size */
+    }
+    figure {
+        margin: 10px auto; /* Reduce figure margin for tighter layout */
     }
 }
-
 </style>
 
         <figure>
