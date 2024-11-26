@@ -5,8 +5,26 @@
         </a>
         </span>
     </header>
-        <div id="tabs" class="tab-container">
-            <button onclick="window.location.href='https://www.avautismcenter.com/mission.html'">Mission</button>
-            <button onclick="window.location.href='https://www.avautismcenter.com/form.html'">Mentorship Questionare</button>
-            <button onclick="window.location.href='https://www.avautismcenter.com/about.html'">About Us</button>
-        </div>
+
+    <div class="button-container">
+        <button onclick="window.location.href='https://www.avautismcenter.com/mission.html'">Mission</button>
+        <button onclick="window.location.href='https://www.avautismcenter.com/form.html'">Mentorship Questionare</button>
+        <button onclick="window.location.href='https://www.avautismcenter.com/about.html'">About Us</button>
+    </div>
+
+    <style>
+        .button-container {
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: space-between; /* Adjust spacing if needed */
+            overflow-x: auto; /* Allow scrolling if the screen is too small */
+            gap: 10px; /* Add spacing between buttons */
+        }
+
+        .button-container button {
+            white-space: nowrap; /* Prevent text from wrapping */
+            padding: 10px 20px;
+            font-size: 16px; /* Adjust as needed */
+        }
+    </style>
+
