@@ -197,21 +197,21 @@ h2.advanced {
 
 /* Beginner Heading Style */
 h2.beginner {
-    background-color: #FFDDC1; /* Pastel peach */
+    /*background-color: #FFDDC1; [> Pastel peach <]*/
     color: #FF5733; /* Vibrant coral */
     /*border: 2px solid #FFCBA4; [> Slightly darker border <]*/
 }
 
 /* Intermediate Heading Style */
 h2.intermediate {
-    background-color: #C1E1C1; /* Pastel mint green */
+    /*background-color: #C1E1C1; [> Pastel mint green <]*/
     color: #28A745; /* Bold green */
     /*border: 2px solid #A2D5A2; [> Slightly darker border <]*/
 }
 
 /* Advanced Heading Style */
 h2.advanced {
-    background-color: #D1C1FF; /* Pastel lavender */
+    /*background-color: #D1C1FF; [> Pastel lavender <]*/
     color: #6A0DAD; /* Rich purple */
     /*border: 2px solid #B9A2D5; [> Slightly darker border <]*/
 }
@@ -223,7 +223,7 @@ h2.advancedplus {
     /*border: 2px solid #F8BBD0; [> Slightly darker border <]*/
 }
 h2.outings {
-    background-color: #FFDDC1; /* Pastel peach */
+    /*background-color: #FFDDC1; [> Pastel peach <]*/
     color: #FF5733; /* Vibrant coral */
     /*border: 2px solid #FFCBA4; [> Slightly darker border <]*/
 }
