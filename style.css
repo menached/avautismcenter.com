@@ -1,4 +1,17 @@
 /* General Styling */
+
+.a-custom-list {
+    list-style: none; /* Remove the default list dots */
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Optional: Remove default margin */
+}
+
+.a-custom-list li {
+    margin-bottom: 15px; /* Add spacing between list items if needed */
+    display: flex; /* Ensure the Gravatar and text align horizontally */
+    align-items: center; /* Vertically center the Gravatar and text */
+}
+
         .centered-content {
             max-width: 800px;
             margin: 0 auto;
