@@ -171,11 +171,11 @@ html, body {
 
 /* General Styling for H2s */
 h2 {
-    text-align: center; /* Center the text for all headings */
+    /*text-align: center; [> Center the text for all headings <]*/
     font-family: 'Marvel', sans-serif; /* Or any font you prefer */
     font-weight: bold;
-    padding: 10px;
-    margin: 20px auto;
+    /*padding: 10px;*/
+    /*margin: 20px auto;*/
     /*border-radius: 10px; [> Add rounded corners <]*/
     /*box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); [> Subtle shadow <]*/
     max-width: 80%; /* Restrict width for better layout */
@@ -185,21 +185,21 @@ h2 {
 h2.beginner {
     background-color: #FFDDC1; /* Pastel peach */
     color: #FF5733; /* Vibrant coral */
-    border: 2px solid #FFCBA4; /* Slightly darker border */
+    /*border: 2px solid #FFCBA4; [> Slightly darker border <]*/
 }
 
 /* Intermediate Heading Style */
 h2.intermediate {
     background-color: #C1E1C1; /* Pastel mint green */
     color: #28A745; /* Bold green */
-    border: 2px solid #A2D5A2; /* Slightly darker border */
+    /*border: 2px solid #A2D5A2; [> Slightly darker border <]*/
 }
 
 /* Advanced Heading Style */
 h2.advanced {
     background-color: #D1C1FF; /* Pastel lavender */
     color: #6A0DAD; /* Rich purple */
-    border: 2px solid #B9A2D5; /* Slightly darker border */
+    /*border: 2px solid #B9A2D5; [> Slightly darker border <]*/
 }
 
 
