@@ -1,6 +1,37 @@
 /* General Styling */
 .alignright {text-align:right;}
 
+.image-container {
+    float: right; /* Float the container to the right */
+    margin: 0 0 20px 20px; /* Add space around the image (left, bottom) */
+    max-width: 50%; /* Limit the size of the container */
+    text-align: right; /* Align the content inside the container */
+}
+
+.image-container img {
+    max-width: 100%; /* Ensure the image scales within the container */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px; /* Optional: rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: subtle shadow */
+}
+
+/* Clear float for the next section */
+.two-column-layout div ul:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+@media (max-width: 768px) {
+    .image-container {
+        float: none; /* Disable floating */
+        text-align: center; /* Center the image */
+        margin: 20px auto; /* Add margin around the image */
+        max-width: 80%; /* Reduce width for smaller screens */
+    }
+}
+
+
 /* General Styling */
 .two-column-layout {
     display: flex;
@@ -27,20 +58,6 @@
     }
 }
 
-/* Image Styling */
-.image-container {
-    position: relative;
-    float:right;
-    text-align: right;
-    margin: 30px auto;
-}
-
-.image-container img {
-    max-width: 400px; /* Smaller image size */
-    height: auto;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
 
 /* Outings Section */
 h2 {
