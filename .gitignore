@@ -7,6 +7,7 @@
 !larry_banchero.html            # Allow larry_banchero.html
 !jon_fleischer.html             # Allow jon_fleischer.html
 !brian_fleischer.html           # Allow brian_fleischer.html
+!william_fleischer.html         # Allow william_fleischer.html
 .github/*                       # Ignore everything in .github
 !.github/workflows/             # Allow the workflows directory
 !public/*                       # Allow the workflows directory
