@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <!-- Homepage -->
+    <url>
+        <loc>https://www.avautismcenter.com/</loc>
+        <lastmod>2024-11-26</lastmod>
+        <priority>1.0</priority>
+    </url>
+
+    <!-- Mission -->
+    <url>
+        <loc>https://www.avautismcenter.com/mission.html</loc>
+        <lastmod>2024-11-26</lastmod>
+        <priority>0.9</priority>
+    </url>
+
+    <!-- Mentorship Questionnaire -->
+    <url>
+        <loc>https://www.avautismcenter.com/form.html</loc>
+        <lastmod>2024-11-26</lastmod>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- About Us -->
+    <url>
+        <loc>https://www.avautismcenter.com/about.html</loc>
+        <lastmod>2024-11-26</lastmod>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- Privacy Policy -->
+    <url>
+        <loc>https://www.avautismcenter.com/privacy-policy.html</loc>
+        <lastmod>2024-11-26</lastmod>
+        <priority>0.5</priority>
+    </url>
+
+    <!-- Terms of Service -->
+    <url>
+        <loc>https://www.avautismcenter.com/terms.html</loc>
+        <lastmod>2024-11-26</lastmod>
+        <priority>0.5</priority>
+    </url>
+
+    <!-- David Menache Profile -->
+    <url>
+        <loc>https://www.avautismcenter.com/david_menache.html</loc>
+        <lastmod>2024-11-26</lastmod>
+        <priority>0.7</priority>
+    </url>
+
+    <!-- Jon Fleischer Profile -->
+    <url>
+        <loc>https://www.avautismcenter.com/jon_fleischer.html</loc>
+        <lastmod>2024-11-26</lastmod>
+        <priority>0.7</priority>
+    </url>
+
+    <!-- Larry Banchero Profile -->
+    <url>
+        <loc>https://www.avautismcenter.com/larry_banchero.html</loc>
+        <lastmod>2024-11-26</lastmod>
+        <priority>0.7</priority>
+    </url>
+
+    <!-- Brian Fleischer Profile -->
+    <url>
+        <loc>https://www.avautismcenter.com/brian_fleischer.html</loc>
+        <lastmod>2024-11-26</lastmod>
+        <priority>0.7</priority>
+    </url>
+</urlset>
+
