@@ -1,12 +1,6 @@
 /* General Styling */
 .alignright {text-align:right;}
 
-.image-container {
-    float: right; /* Float the container to the right */
-    margin: 0 0 20px 20px; /* Add space around the image (left, bottom) */
-    max-width: 20%; /* Limit the size of the container */
-    text-align: right; /* Align the content inside the container */
-}
 
 .image-container img {
     max-width: 100%; /* Ensure the image scales within the container */
@@ -20,6 +14,16 @@
     content: '';
     display: block;
     clear: both;
+}
+
+
+@media (min-width: 769px) {
+    .image-container {
+        float: right; /* Float the container to the right */
+        margin: 0 0 20px 20px; /* Add space around the image (left, bottom) */
+        max-width: 20%; /* Limit the size of the container */
+        text-align: right; /* Align the content inside the container */
+    }
 }
 
 @media (max-width: 768px) {
