@@ -51,7 +51,7 @@
 }
 
 /* Two-Column Layout for Larger Screens */
-@media (min-width: 768px) {
+@media (min-width: 468px) {
     .two-column-layout {
         flex-direction: row; /* Switch to horizontal layout */
         justify-content: space-between;
