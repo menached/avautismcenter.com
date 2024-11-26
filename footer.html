@@ -1,3 +1,14 @@
+<script>
+    const quotes = [
+  '“Autism is not a disability, it’s a different ability.”',
+  '“Inclusion is the art of seeing people, not just labels.”',
+  '“Celebrate diversity, embrace humanity.”'
+];
+document.addEventListener('DOMContentLoaded', () => {
+  const quote = quotes[new Date().getDay() % quotes.length];
+  document.getElementById('footer-placeholder').innerHTML = `<p>${quote}</p>`;
+});
+</script>
 <footer class="site-footer">
     <div class="footer-content">
         <p>&copy; 2024 AV Autism Center. All rights reserved.</p>
