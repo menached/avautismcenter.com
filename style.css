@@ -128,18 +128,6 @@ header:hover {
     /* Avoid changing padding, margin, or border on hover */
 }
 
-#tabs {
-    text-align: center;
-    margin-top: 20px;
-}
-
-#tabs button {
-    margin: 0 10px;
-    padding: 10px 20px;
-    background-color: #ff6600;
-    border: none;
-    cursor: pointer;
-}
 
 /* Mobile-specific styles */
 @media (max-width: 768px) {
