@@ -50,16 +50,20 @@
 @media (max-width: 467px) {
     .image-container {
         float: none; /* Reset float for smaller screens */
-        max-width: 100%; /* Full width */
+        max-width: 50%; /* Limit to half its normal size */
         margin: 20px auto; /* Center the image with spacing */
         text-align: center; /* Center-align content */
+    }
+
+    .image-container img {
+        max-width: 100%; /* Ensure the image scales properly */
+        height: auto; /* Maintain aspect ratio */
     }
 
     .two-column-layout {
         flex-direction: column; /* Stack elements vertically */
     }
 }
-
 
 
 /* Outings Section */
