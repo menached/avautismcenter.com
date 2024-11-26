@@ -1,59 +1,47 @@
 /* General Styling */
 
-/* Aligns the image-container to the right */
-.image-container.alignright {
-    float: right;
-    margin: 0 0 20px 20px; /* Adds space around the image (top, right, bottom, left) */
-    max-width: 40%; /* Ensures the image container does not take too much space */
+/* Default styles for the layout */
+.two-column-layout {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px; /* Add spacing between columns */
 }
 
-/* Styling for the wooden frame */
-.wooden-frame {
-    border: 10px solid #8B4513; /* Wooden frame border */
-    padding: 5px; /* Space between image and frame */
-    background-color: #DEB887; /* Inner frame color */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5); /* Adds depth */
-    border-radius: 5px; /* Smooth edges */
-    display: inline-block;
+.image-container {
+    flex: 0 0 40%; /* Image container takes 40% of the width */
 }
 
-/* Ensures the image is responsive */
-.wooden-frame img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-}
-
-/* Caption styling */
-figcaption {
-    font-size: 0.9em; /* Slightly smaller text */
-    text-align: center;
-    margin-top: 5px;
-    line-height: 1.4;
-    color: #555; /* Soft gray for better readability */
+.content {
+    flex: 1; /* Content takes the remaining space */
 }
 
 /* Responsive adjustments for smaller screens */
 @media (max-width: 768px) {
-    .image-container.alignright {
-        float: none; /* Removes floating on smaller screens */
-        margin: 20px auto; /* Center the image container */
-        max-width: 80%; /* Make the image container take up more space */
+    .two-column-layout {
+        flex-direction: column; /* Stack columns vertically */
+        align-items: center; /* Center-align the content */
     }
-    figcaption {
-        font-size: 0.8em; /* Slightly smaller font size for captions */
+
+    .image-container {
+        flex: none; /* Remove width constraints */
+        max-width: 80%; /* Image container width on smaller screens */
+        margin: 20px auto; /* Center the image container */
+    }
+
+    .wooden-frame img {
+        max-width: 100%; /* Ensure image fits the container */
+        height: auto;
     }
 }
 
 @media (max-width: 480px) {
-    .image-container.alignright {
-        max-width: 100%; /* Allow full width for very small screens */
+    .image-container {
+        max-width: 100%; /* Full width for very small screens */
     }
-    .wooden-frame {
-        padding: 3px; /* Reduce padding for tighter layouts */
-    }
-    figcaption {
-        font-size: 0.7em; /* Smaller caption font */
+
+    .wooden-frame img {
+        max-width: 100%; /* Ensure the image scales properly */
+        height: auto; /* Maintain aspect ratio */
     }
 }
 
