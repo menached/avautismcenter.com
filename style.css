@@ -1,21 +1,28 @@
 /* General Styling */
 
-/* Default styles for the layout */
+/* General Layout for Two Columns */
 .two-column-layout {
     display: flex;
-    justify-content: space-between;
-    gap: 20px; /* Add spacing between columns */
+    justify-content: space-between; /* Space between columns */
+    gap: 20px;
 }
 
+/* Styling for the Image Container */
 .image-container {
-    flex: 0 0 40%; /* Image container takes 40% of the width */
+    flex: 0 0 40%; /* Take 40% width by default */
+    margin: 0 auto; /* Center horizontally */
+    text-align: center; /* Center text inside */
 }
 
-.content {
-    flex: 1; /* Content takes the remaining space */
+/* Image inside the Wooden Frame */
+.wooden-frame img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Responsive adjustments for smaller screens */
+/* Responsive Adjustments for Smaller Screens */
 @media (max-width: 768px) {
     .two-column-layout {
         flex-direction: column; /* Stack columns vertically */
@@ -23,17 +30,19 @@
     }
 
     .image-container {
-        flex: none; /* Remove width constraints */
+        flex: none;
         max-width: 80%; /* Image container width on smaller screens */
         margin: 20px auto; /* Center the image container */
+        text-align: center; /* Ensure text is centered */
     }
 
     .wooden-frame img {
-        max-width: 100%; /* Ensure image fits the container */
+        max-width: 100%; /* Ensure image scales properly */
         height: auto;
     }
 }
 
+/* Extra Small Screens (Portrait Mobile) */
 @media (max-width: 480px) {
     .image-container {
         max-width: 100%; /* Full width for very small screens */
@@ -41,7 +50,7 @@
 
     .wooden-frame img {
         max-width: 100%; /* Ensure the image scales properly */
-        height: auto; /* Maintain aspect ratio */
+        height: auto;
     }
 }
 
