@@ -3,7 +3,8 @@
 .having-fun {
 position:relative;
 float:left;
-max-width:18%;
+width:20%;
+max-width:300px;
 padding-right:10px;
 
 }
