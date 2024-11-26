@@ -27,7 +27,7 @@
         float: none; /* Disable floating */
         text-align: center; /* Center the image */
         margin: 20px auto; /* Add margin around the image */
-        max-width: 80%; /* Reduce width for smaller screens */
+        max-width: 50%; /* Reduce width for smaller screens */
     }
 }
 
