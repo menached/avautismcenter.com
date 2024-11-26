@@ -1,5 +1,10 @@
 /* General Styling */
 
+.having-fun {
+position:relative;
+float:left;
+max-width:20%;
+}
 
 h1 {
     font-family: 'Marvel', sans-serif; /* Use your preferred font */
