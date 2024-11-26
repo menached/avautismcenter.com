@@ -1,36 +1,60 @@
 /* General Styling */
 
-<style>
-
-figcaption {
-    font-size: 1em; /* Default size for larger screens */
+/* Aligns the image-container to the right */
+.image-container.alignright {
+    float: right;
+    margin: 0 0 20px 20px; /* Adds space around the image (top, right, bottom, left) */
+    max-width: 40%; /* Ensures the image container does not take too much space */
 }
 
+/* Styling for the wooden frame */
+.wooden-frame {
+    border: 10px solid #8B4513; /* Wooden frame border */
+    padding: 5px; /* Space between image and frame */
+    background-color: #DEB887; /* Inner frame color */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5); /* Adds depth */
+    border-radius: 5px; /* Smooth edges */
+    display: inline-block;
+}
+
+/* Ensures the image is responsive */
+.wooden-frame img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Caption styling */
+figcaption {
+    font-size: 0.9em; /* Slightly smaller text */
+    text-align: center;
+    margin-top: 5px;
+    line-height: 1.4;
+    color: #555; /* Soft gray for better readability */
+}
+
+/* Responsive adjustments for smaller screens */
 @media (max-width: 768px) {
+    .image-container.alignright {
+        float: none; /* Removes floating on smaller screens */
+        margin: 20px auto; /* Center the image container */
+        max-width: 80%; /* Make the image container take up more space */
+    }
     figcaption {
-        font-size: 0.9em; /* Slightly smaller for tablets and small screens */
+        font-size: 0.8em; /* Slightly smaller font size for captions */
     }
 }
 
 @media (max-width: 480px) {
-    figcaption {
-        font-size: 0.7em; /* Even smaller for very small screens */
+    .image-container.alignright {
+        max-width: 100%; /* Allow full width for very small screens */
     }
-}
-.wooden-frame img:hover {
-    transform: none !important; /* Disable scaling or transformations */
-}
-.wooden-frame {
-    border: 10px solid #8B4513; /* Brown frame color */
-    padding: 5px; /* Space between image and border */
-    background-color: #DEB887; /* Optional inner background */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5); /* Adds depth */
-    border-radius: 5px; /* Smooth edges for realism */
-    display: inline-block; /* Ensure frame wraps around the image */
-}
-img {
-    max-width: 100%;
-    display: block; /* Removes extra inline spacing */
+    .wooden-frame {
+        padding: 3px; /* Reduce padding for tighter layouts */
+    }
+    figcaption {
+        font-size: 0.7em; /* Smaller caption font */
+    }
 }
 
 
