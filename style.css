@@ -1,5 +1,44 @@
 /* General Styling */
 
+
+/* Default H1 Style (for large screens) */
+h1 {
+    font-size: 3rem; /* Large size for desktops */
+    text-align: center;
+    margin: 20px auto;
+    font-weight: bold;
+}
+
+/* Medium Screens (Tablets) */
+@media (max-width: 1024px) {
+    h1 {
+        font-size: 2.5rem; /* Slightly smaller for tablets */
+    }
+}
+
+/* Small Screens (Mobile Landscape) */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem; /* Smaller size for landscape phones */
+    }
+}
+
+/* Extra Small Screens (Mobile Portrait) */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.8rem; /* Compact size for portrait phones */
+    }
+}
+
+/* Ultra-Small Screens (Under 360px) */
+@media (max-width: 360px) {
+    h1 {
+        font-size: 1.5rem; /* Ensure it fits tiny screens */
+    }
+}
+
+
+
 /* General Two-Column Layout */
 .two-column-layout {
     display: flex;
