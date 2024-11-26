@@ -556,7 +556,7 @@ header:hover {
 
 .reveal {
     opacity: 0;
-    transition: opacity 1s ease-in;
+    /*transition: opacity 1s ease-in;*/
 }
 
 .reveal.visible {
@@ -1286,11 +1286,11 @@ a:hover::before {
 
 img {
     border-radius: 10px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /*transition: transform 0.3s ease, box-shadow 0.3s ease;*/
 }
 
 img:hover {
-    transform: scale(1.05); /* Slight zoom-in on hover */
+    /*transform: scale(1.05); [> Slight zoom-in on hover <]*/
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Add a shadow on hover */
 }
 
