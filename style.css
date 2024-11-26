@@ -180,6 +180,20 @@ h2 {
     /*box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); [> Subtle shadow <]*/
     max-width: 80%; /* Restrict width for better layout */
 }
+h2:hover {
+    transform: scale(1.05); /* Slight zoom */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Enhance shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+h2.beginner {
+    background: linear-gradient(45deg, #FFDDC1, #FFDAB9);
+}
+h2.intermediate {
+    background: linear-gradient(45deg, #C1E1C1, #A8E4A0);
+}
+h2.advanced {
+    background: linear-gradient(45deg, #D1C1FF, #C5B4E3);
+}
 
 /* Beginner Heading Style */
 h2.beginner {
