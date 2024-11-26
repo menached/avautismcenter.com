@@ -1,147 +1,1569 @@
-/* General Page Styling */
+/* General Styling */
+
+.a-custom-list {
+    list-style: none; /* Remove the default list dots */
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Optional: Remove default margin */
+}
+
+.a-custom-list li {
+    margin-bottom: 15px; /* Add spacing between list items */
+    display: flex; /* Horizontal layout by default */
+    align-items: flex-start; /* Align items to the top */
+    gap: 10px; /* Space between Gravatar and text */
+}
+
+.a-custom-list img.gravatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%; /* Make images circular */
+    margin-right: 10px; /* Space between image and content */
+}
+
+/* Name and description styling */
+.a-custom-list li strong {
+    display: block;
+    margin-bottom: 5px; /* Space between the name and description */
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.a-custom-list li span.description {
+    font-size: 14px;
+    color: #555; /* Subtle color for descriptions */
+}
+
+/* Mobile-specific styles */
+@media (max-width: 768px) {
+    .a-custom-list li {
+        flex-direction: column; /* Stack Gravatar, name, and description */
+        align-items: center; /* Center-align items on mobile */
+        text-align: center; /* Center-align text */
+    }
+
+    .a-custom-list img.gravatar {
+        margin-right: 0; /* Remove side margin */
+        margin-bottom: 10px; /* Add space below Gravatar */
+    }
+
+    .a-custom-list li strong {
+        font-size: 18px; /* Slightly larger font for names on mobile */
+        margin-bottom: 5px;
+    }
+
+    .a-custom-list li span.description {
+        font-size: 16px; /* Make descriptions slightly larger for readability */
+    }
+}
+
+
+        .centered-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+        }
+
+        /*h1 {*/
+            /*text-align: center;*/
+            /*font-size: 2.5em!important; [> Default for larger screens <]*/
+            /*margin-bottom: 0;*/
+        /*}*/
+
+        /*@media only screen and (max-width: 768px) {*/
+            /*h1 {*/
+                /*font-size: 1.8em!important; [> Smaller size for mobile screens <]*/
+                /*text-align: center!important;*/
+            /*}*/
+        /*}*/
+
+        /*@media only screen and (max-width: 480px) {*/
+            /*h1 {*/
+                /*font-size: 1.5em!important; [> Even smaller size for very small screens <]*/
+                /*text-align: center!important;*/
+            /*}*/
+        /*}*/
+
+
+
+
+        /* Tagline Styling */
+        .header-tagline {
+            font-size: 1.2rem;
+            white-space: nowrap; /* Prevent wrapping */
+        }
+
+        iframe {
+            width: 100%;
+            border: none;
+            box-sizing: border-box;
+        }
+
+        /* Responsive Styling */
+        @media (max-width: 900px) {
+            .centered-content {
+                padding: 10px;
+            }
+        }
+
+        /* Mobile Portrait View */
+        @media (max-width: 600px) {
+            /*h1 {*/
+                /*font-size: 1.6rem;*/
+            /*}*/
+            
+            /* Make tagline smaller and adjust padding */
+            .header-tagline {
+                font-size: 0.6rem; /* Reduce font size further for portrait view */
+                padding: 0 2px;  /* Reduce padding to fit the text properly */
+            }
+
+            iframe {
+                width: calc(100% - 10px); /* Full width minus padding */
+            }
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    color: #333;
-    background-color: #f9f9f9;
 }
 
-/* Mission Container */
-.mission-container {
-    max-width: 1200px;
-    margin: 20px auto;
-    padding: 20px;
-    background-color: #ffffff;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+.alignleft { 
+    text-align: left;
 }
 
-/* Typography */
-h1, h2, h3 {
+.Marvel { font-family: Marvel; 
+    font-weight: 700; /* Ensure bold weight */
+    font-size: 1em; /* Increase size */
+}
+
+/* Apply Marvel font to all headings */
+h1, h2, h3, h4, h5, h6 {
     font-family: 'Marvel', sans-serif;
-    font-weight: 700;
-    margin-bottom: 15px;
+    font-weight: 700; /* Ensure bold weight */
+    font-size: 1.5em; /* Increase size */
+
 }
 
-h1 {
-    text-align: center;
-    font-size: 2.5em;
-    color: #007bff;
-}
 
-h2 {
-    font-size: 2em;
-    color: #0056b3;
-}
-
-p {
-    font-size: 1em;
-    margin-bottom: 20px;
-}
-
-a {
-    color: #007bff;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-a:hover {
-    color: #0056b3;
-}
-
-/* Tabs */
-.tab-container {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.tab-container button {
-    background-color: #007bff;
+header {
+    background: #0044cc;
     color: white;
-    border: none;
-    padding: 10px 20px;
-    margin: 5px;
-    font-size: 1em;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: center;
+}
+
+header:hover {
+    /*background-color: #0044cc; [> Only change color or background, no dimension changes <]*/
+    /* Avoid changing padding, margin, or border on hover */
+}
+
+#tabs {
+    display: flex; /* Use flexbox for alignment */
+    justify-content: center; /* Center buttons horizontally */
+    align-items: center; /* Center vertically */
+    margin-top: 20px;
+    gap: 10px; /* Add space between buttons */
+    overflow-x: hidden; /* Prevent scrollbar visibility */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens if needed */
+}
+
+#tabs button {
+    margin: 0; /* Remove default margin */
+    padding: 8px 18px; /* Standard padding */
+    background-color: #ff7f00; /* Slightly darker, richer orange */
+    color: white; /* Ensure text remains visible */
+    border: none; /* Remove default border */
+    cursor: pointer;
+    white-space: nowrap; /* Prevent text wrapping */
+    border-radius: 5px; /* Optional for a polished look */
+    font-size: 14px; /* Base font size */
+    font-weight: 500; /* Medium weight for standard view */
+}
+
+/* Mobile-specific styles */
+@media (max-width: 768px) {
+    #tabs {
+        flex-wrap: nowrap; /* Prevent wrapping on smaller screens */
+    }
+
+    #tabs button {
+        padding: 8px 16px; /* Make buttons smaller for mobile */
+        font-size: 13px; /* Slightly smaller font size for mobile */
+        font-weight: 500; /* Keep consistent weight */
+    }
+}
+
+/* Larger screen styles */
+@media (min-width: 768px) {
+    #tabs button {
+        font-size: 18px; /* Larger font size for wider screens */
+        padding: 10px 20px; /* Adjust padding for proportions */
+        font-weight: 600; /* Heavier font weight for emphasis */
+    }
+}
+
+/* Extra-large screen styles */
+@media (min-width: 1024px) {
+    #tabs button {
+        font-size: 20px; /* Even larger font size for extra-large screens */
+        padding: 12px 24px; /* Increase padding further for proportions */
+        font-weight: 700; /* Boldest font weight for impact */
+    }
+}
+
+
+
+
+/*#tabs {*/
+    /*text-align: center;*/
+    /*margin-top: 20px;*/
+/*}*/
+
+/*#tabs button {*/
+    /*margin: 0 10px;*/
+    /*padding: 10px 20px;*/
+    /*background-color: #ff6600;*/
+    /*border: none;*/
+    /*cursor: pointer;*/
+/*}*/
+
+#content {
+    padding: 20px;
+    max-width: 800px; /* Same as the banner image's max-width */
+    margin: 0 auto;
+}
+
+/* Responsive adjustments for wider screens */
+@media (min-width: 801px) {
+    #content {
+        padding: 0 20px; /* Add horizontal padding for a bit of space */
+    }
+}
+
+
+
+.reveal {
+    opacity: 0;
+    transition: opacity 1s ease-in;
+}
+
+.reveal.visible {
+    opacity: 1;
+}
+
+/* Modal Styles */
+.modal.hidden {
+    display: none;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    background: white;
+    padding: 20px;
+    width: 300px;
+    text-align: center;
     border-radius: 5px;
+}
+
+.close {
+    cursor: pointer;
+    float: right;
+    font-size: 1.5rem;
+}
+
+
+
+/*.modal.hidden {*/
+    /*display: none;*/
+/*}*/
+
+/*.modal {*/
+    /*position: fixed;*/
+    /*top: 0;*/
+    /*left: 0;*/
+    /*width: 100%;*/
+    /*height: 100%;*/
+    /*background: rgba(0, 0, 0, 0.5);*/
+    /*display: flex;*/
+    /*align-items: center;*/
+    /*justify-content: center;*/
+/*}*/
+
+/*.modal-content {*/
+    /*background: white;*/
+    /*padding: 20px;*/
+    /*width: 300px;*/
+    /*text-align: center;*/
+    /*border-radius: 5px;*/
+/*}*/
+
+/*.close {*/
+    /*cursor: pointer;*/
+    /*float: right;*/
+    /*font-size: 1.5rem;*/
+/*}*/
+
+
+/* Footer Styles */
+.site-footer {
+    background-color: #e6f7ff; /* Light blue */
+    color: #0056b3; /* Deep blue text for readability */
+    text-align: center;
+    padding: 20px 10px;
+    border-top: none; /* Remove the line */
+    font-family: 'Marvel'!important, sans-serif;
+    font-size: 0.9em;
+}
+
+.site-footer .footer-links a {
+    color: #007bff; /* Medium blue for links */
+    text-decoration: none;
+}
+
+.site-footer .footer-links a:hover {
+    color: #0056b3; /* Deep blue hover effect */
+    text-decoration: underline;
+}
+
+.site-footer .social-media-links a {
+    color: #0056b3;
+}
+
+.site-footer .social-media-links a:hover {
+    color: #007bff;
+}
+
+footer a {
+    color: #0044cc;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Disable hover effect on the specific image */
+img.no-hover:hover {
+    transform: none;
+    box-shadow: none;
+}
+
+/* Only apply styles for screens 600px or less in width and in portrait mode */
+@media (max-width: 600px) and (orientation: portrait) {
+    footer .footer-container {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    footer .footer-item {
+        width: auto;
+        margin: 0 10px 10px 10px; /* Consistent side margins for all items */
+    }
+}
+
+/* Styling for the banner image */
+.responsive-banner {
+    /*width: 100%;*/
+    /*height: auto;*/
+    /*display: block;*/
+    /*margin: 0 auto 20px;*/
+    /*max-width: 800px;*/
+    /*border-radius: 10px;*/
+
+    /*width: 100%;*/
+    /*max-width: 800px; [> Ensure image aligns with content width <]*/
+    /*height: auto;*/
+    /*display: block;*/
+    /*margin: 0 auto 20px;*/
+    /*border-radius: 10px;*/
+
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto 20px;
+    max-width: 800px;
+    border-radius: 10px;
+}
+
+/* Meet Our Team Section */
+#team {
+    padding: 40px 20px;
+    margin: 20px auto;
+    max-width: 800px;
+    text-align: center;
+    border-top: 2px solid #ddd;
+}
+
+#team h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+#team div {
+    margin: 20px 0;
+}
+
+#team-placeholder {
+    text-align: center;
+    font-size: 1.5rem;
+    padding: 20px;
+    color: #777;
+    display: block;  /* Ensure it's displayed by default */
+}
+
+#team div {
+    display: none; /* Hide team content initially */
+}
+
+#team.visible div {
+    display: block; /* Show team content when the section becomes visible */
+    transition: opacity 0.5s ease-in; /* Smooth transition */
+}
+
+
+/*#team-placeholder {*/
+    /*text-align: center;*/
+    /*font-size: 1.5rem;*/
+    /*padding: 20px;*/
+    /*color: #777;*/
+/*}*/
+
+/*#team div {*/
+    /*display: none; [> Hide team content initially <]*/
+/*}*/
+
+/*#team.visible div {*/
+    /*display: block; [> Show team content when the section becomes visible <]*/
+    /*transition: opacity 0.5s ease-in; [> Add a smooth transition <]*/
+/*}*/
+
+
+/* Subscribe Button as a Call to Action */
+.subscribe-button {
+    display: block;
+    width: 80%;
+    max-width: 300px;
+    margin: 40px auto;
+    padding: 15px 30px;
+    font-size: 1.5rem;
+    background-color: #ff6600;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    text-align: center;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
-.tab-container button:hover {
-    background-color: #0056b3;
+.subscribe-button:hover {
+    background-color: #ff4500;
 }
 
-/* Mission Details */
-.mission-details ul {
+/* Remove underline and color change for links */
+a {
+    text-decoration: none; /* Remove the underline */
+    color: inherit; /* Keep the text color the same */
+    position: relative; /* To position the link icon */
+}
+
+/* Add a tiny link symbol next to each hyperlink */
+a::after {
+    content: "🔗"; /* Unicode link symbol or you can use a custom icon */
+    font-size: 0.8em; /* Adjust the size of the icon */
+    margin-left: 5px; /* Space between the text and the icon */
+    vertical-align: middle; /* Align the icon with the text */
+}
+
+/* Add hover effect if needed */
+a:hover::after {
+    /*color: #007BFF; [> Change icon color on hover, adjust as needed <]*/
+}
+
+#subscribe-message {
+  display: none;  /* Hidden by default */
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: #f0f0f0;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin: 20px auto;
+  width: 50%;
+  font-family: Arial, sans-serif;
+  font-size: 18px;
+  color: #333;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+#subscribe-message p {
+  margin: 0;
+}
+
+#content-container p {
+  font-size: .9em;
+}
+
+.hidden {
+  display: none;  /* Class to hide elements */
+}
+
+@media (min-width: 801px) {
+    #tabs {
+        margin-bottom: 20px;  /* Adds space below the buttons */
+    }
+
+    .responsive-banner {
+        margin-bottom: 20px;  /* Adds space below the banner image */
+    }
+
+    #content {
+        padding-top: 20px;  /* Adds padding above the content on wider screens */
+    }
+    .highanxietypic {
+        width:30%!important; 
+    }
+}
+
+.star-link {
+    text-decoration: none;  /* Remove underline */
+    font-size: 3rem;  /* Adjust this to make the star symbol giant */
+    margin-left: 10px;  /* Space between the title and the star */
+    vertical-align: middle;  /* Align star with the title text */
+    color: #ffcc00;  /* Optional: Set a color for the star */
+}
+
+.star-link:hover {
+    color: #ffaa00;  /* Change color on hover */
+}
+
+
+/* For all links: Keep the link icon as is */
+a::after {
+    content: "🔗"; /* The link symbol */
+    font-size: 0.8em; /* Adjust the size of the icon */
+    margin-left: 5px; /* Space between the text and the icon */
+    vertical-align: middle; /* Align the icon with the text */
+}
+
+/* Disable the link icon for the star link */
+.no-link-icon::after {
+    content: ''; /* No icon for the star link */
+}
+
+/* Styles for smaller screens (mobile) */
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 1.2rem; /* Adjust the title size for mobile */
+        white-space: nowrap; /* Prevent the title text from wrapping */
+    }
+
+    /* Adjust the star icon size for mobile */
+    .star-link {
+        font-size: 2rem; /* Reduce star icon size on mobile */
+    }
+    #subscribe-message {
+        font-size: 14px;  /* Reduce font size for smaller screens */
+        width: 80%;  /* Increase width to prevent wrapping */
+    }
+    
+    #subscribe-message p {
+        white-space: nowrap;  /* Prevent the message from wrapping */
+    }
+}
+
+.gravatar-icon {
+    border-radius: 50%;  /* Make the image circular */
+    width: 80px;  /* Adjust the size */
+    height: 80px;
+    margin-right: 10px;  /* Space between image and text */
+    vertical-align: middle;  /* Align vertically */
+}
+
+.custom-list {
+    list-style-type: none;  /* Remove default bullets */
+    padding-left: 40px;     /* Add padding to create space for the icons */
+}
+
+.custom-list li {
+    position: relative;     /* Set relative positioning to place the icon */
+    margin-bottom: 10px;    /* Add space between list items */
+    line-height: 1.6;       /* Adjust line height for readability */
+}
+
+.custom-list li::before {
+    content: '';
+    position: absolute;
+    left: -30px;            /* Adjust the position of the icon */
+    top: 0;
+    width: 24px;            /* Width of the silhouette icon */
+    height: 24px;           /* Height of the silhouette icon */
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png');  /* Replace with your icon */
+    background-size: contain;  /* Make sure the image fits the container */
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.fancy-icons-list {
     list-style: none;
-    padding: 0;
-    margin: 20px 0;
+    padding-left: 0;
 }
 
-.mission-details ul li {
+.fancy-icons-list li {
+    font-size: 18px;
+    margin-bottom: 10px;
     display: flex;
     align-items: center;
-    margin-bottom: 1.5em;
 }
 
-.mission-details ul li i {
-    font-size: 1.5em;
+.fancy-icons-list li i {
+    color: #ff6600;  /* Customize icon color */
     margin-right: 10px;
-    color: #007bff;
+    font-size: 1.2em; /* Adjust icon size */
 }
 
-/* Images and Story Layout */
+h3 i.fa-bullseye {
+    color: #000;  /* Customize icon color */
+    margin-right: 8px;  /* Adjust spacing between icon and text */
+    font-size: 1.2em;  /* Adjust icon size */
+}
+.contactuspic {
+    width: 80%; /* Adjusts the image width to 100% of the parent container */
+    height: auto; /* Automatically adjusts the height to maintain aspect ratio */
+    max-width:400px;
+    display: block; /* Removes the small gap under the image in some browsers */
+    margin: 0 auto; /* Optional: centers the image horizontally if it is inside a block element */
+    border-radius: 10px;
+
+}
+.jonpics {
+    width: 80%; /* Adjusts the image width to 100% of the parent container */
+    height: auto; /* Automatically adjusts the height to maintain aspect ratio */
+    max-width:400px;
+    display: block; /* Removes the small gap under the image in some browsers */
+    margin: 0 auto; /* Optional: centers the image horizontally if it is inside a block element */
+    border-radius: 10px;
+}
+.whatweteach {
+    width: 50%; /* Adjusts the image width to 100% of the parent container */
+    height: auto; /* Automatically adjusts the height to maintain aspect ratio */
+    max-width:300px;
+    display: block; /* Removes the small gap under the image in some browsers */
+    margin: 0 auto; /* Optional: centers the image horizontally if it is inside a block element */
+    border-radius: 10px;
+    float: right;
+}
+
+/*.fa-book-open, .fa-question-circle, .fa-rocket, .fa-info-circle, .fa-envelope, .fa-share-alt, .fa-chalkboard-teacher {*/
+    /*margin-right: 10px;  [> Adds space between the icon and the text <]*/
+/*}*/
+.aboutpage .fa-book-open, 
+.aboutpage .fa-users, 
+.aboutpage .fa-question-circle, 
+.aboutpage .fa-rocket, 
+.aboutpage .fa-info-circle, 
+.aboutpage .fa-envelope, 
+.aboutpage .fa-share-alt, 
+.aboutpage .fa-chalkboard-teacher {
+.fa-users, .fa-book-open, .fa-question-circle, .fa-rocket, .fa-info-circle, .fa-envelope, .fa-share-alt, .fa-chalkboard-teacher {
+    color: black!important;  /* Customize the icon color */
+    margin-right: 10px;  /* Adds space between the icon and the text */
+}
+    color: black !important;  /* Customize the icon color */
+    margin-right: 10px;  /* Adds space between the icon and the text */
+}
+
+
+
+/*.story-image {*/
+    /*max-width: 200px;*/
+    /*margin: 20px 0;*/
+    /*align: center;*/
+    /*text-align: center;*/
+/*}*/
+
+/*.story-image img {*/
+    /*width: 80%;*/
+    /*height: auto;*/
+    /*border-radius: 5px;*/
+/*}*/
+
+/*.story-image figcaption {*/
+    /*font-size: 0.9rem;*/
+    /*color: #555;*/
+    /*margin-top: 5px;*/
+/*}*/
+
+/* Responsive adjustments */
+@media (max-width: 800px) {
+    .story-image {
+        max-width: 150px;
+        float: none;
+        margin: 10px auto;
+    }
+}
+
+
 .story-image {
-    max-width: 300px;
-    margin: 20px auto;
-    text-align: center;
-    float: none;
+    max-width: 300px; /* Set the maximum width of the image */
+    margin: 20px auto; /* Center the image with auto margins */
+    text-align: center; /* Ensure the text inside is centered */
+    float: none; /* Clear float to center the images */
 }
 
 .story-image img {
     width: 100%;
     height: auto;
     border-radius: 5px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .story-image figcaption {
     font-size: 0.9rem;
     color: #555;
     margin-top: 5px;
+    text-align: center; /* Ensure the text is centered */
+}
+
+
+/*[> Style for images and captions in William's Story <]*/
+/*.story-image {*/
+    /*max-width: 400px; [> Set a max-width for the images <]*/
+    /*margin: 20px auto; [> Center the images and add space above and below <]*/
+    /*display: block;*/
+    /*clear: both; [> Ensure that the image does not overlap content <]*/
+/*}*/
+
+/*.story-image img {*/
+    /*max-width: 80%; [> Make the image responsive <]*/
+    /*height: auto; [> Maintain the aspect ratio <]*/
+    /*border-radius: 8px; [> Optional: round the corners of the images <]*/
+/*}*/
+
+/*.story-image figcaption {*/
+    /*text-align: center;*/
+    /*font-size: 0.9rem;*/
+    /*margin-top: 5px;*/
+    /*color: #555; [> Caption styling <]*/
+/*}*/
+
+/* To handle smaller screens, make sure the images are responsive */
+@media (max-width: 800px) {
+    .story-image {
+        max-width: 60%; /* For smaller screens, make the images full width */
+        padding: 20px;
+    }
+}
+
+/* Ensure that text and images in the section don't overlap other sections */
+#williams-story {
+    clear: both; /* Ensures the section clears any floating elements */
+    padding: 20px;
+}
+
+/* Carousel container */
+.carousel {
+    position: relative;
+    max-width: 400px; /* Maximum width for larger screens */
+    margin: 20px auto;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+/* Reduce carousel size for smaller screens */
+@media (max-width: 800px) {
+    .carousel {
+        max-width: 200px; /* Reduce image size for smaller screens */
+    }
+}
+
+/* Navigation buttons */
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    font-size: 18px; /* Adjust font size for larger screens */
+    padding: 8px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    cursor: pointer;
+    border-radius: 50%;
+    transform: translateY(-50%);
+}
+
+.prev {
+    left: 0;
+}
+
+.next {
+    right: 0;
+}
+
+/* Reduce button size for smaller screens */
+@media (max-width: 800px) {
+    .prev, .next {
+        font-size: 14px; /* Smaller buttons */
+        padding: 6px;
+    }
+}
+
+/* Image visibility for carousel */
+.carousel-images figure {
+    display: none;
     text-align: center;
+    max-width: 100%; /* Keep images responsive */
+}
+
+/* Show the active image */
+.carousel-images figure.active {
+    display: block;
+}
+
+.our-aim-image {
+    width: 33%;  /* take up 50% of the screen on larger screens */
+    max-width: 33%;
+    float: right;
+    margin: 0 0 10px 20px;
+}
+.our-aim-image img {
+    max-width: 70%;
+    height: auto;
+    /*text-align:center;*/
+    /*padding-left:20px;*/
+    /*border-radius: 8px;*/
+}
+
+
+/*.our-aim-image {*/
+    /*width: 33%;  [> Take up 50% of the screen on larger screens <]*/
+    /*max-width: 33%;*/
+    /*float: right;*/
+    /*margin: 0 0 10px 20px;*/
+/*}*/
+
+/*.our-aim-image img {*/
+    /*max-width: 70%;*/
+    /*height: auto;*/
+    /*text-align:center;*/
+    /*padding-left:20px;*/
+    /*border-radius: 8px;*/
+/*}*/
+
+/*.our-aim-image figcaption {*/
+    /*text-align: center;*/
+    /*font-size: 0.9rem;*/
+    /*color: #555;*/
+    /*margin-top: 5px;*/
+/*}*/
+
+/*.our-aim-image img {*/
+    /*width: 100%; [> Ensure image fills the container <]*/
+    /*height: auto;*/
+    /*border-radius: 10px; [> Rounded corners for all sides <]*/
+    /*box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); [> Subtle shadow <]*/
+    /*transition: transform 0.3s ease, box-shadow 0.3s ease; [> Smooth hover transition <]*/
+/*}*/
+
+/*.our-aim-image img:hover {*/
+    /*transform: scale(1.05); [> Slight zoom on hover <]*/
+    /*box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); [> Darker shadow on hover <]*/
+    /*outline: none; [> Prevent outline effect on focus <]*/
+/*}*/
+
+/*.our-aim-image {*/
+    /*overflow: hidden; [> Prevent any overflow showing on hover <]*/
+    /*margin-left: auto; [> Align image to the right <]*/
+    /*float: right; [> Ensure the image floats right <]*/
+/*}*/
+
+
+
+/* Further adjust for very small mobile screens */
+@media (max-width: 600px) {
+    .our-aim-image {
+        width: 33%;  /* Continue to take up 1/3 of the screen */
+        max-width: 150px;  /* Set a maximum width for very small screens */
+        float: right;
+        margin: 0 0 10px 10px;
+    }
+}
+
+/* Media query for screens 800px and larger */
+@media only screen and (min-width: 801px) {
+    .mission-image, .our-aim-image {
+        width: 33%; /* Set the width to half of its current size */
+    }
+}
+
+button {
+    font-family: 'Marvel', sans-serif; /* Apply Marvel font */
+    padding: 10px 20px;
+    border: 2px solid #0044cc;
+    background-color: #0044cc;
+    color: white;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: all 0.3s ease; /* Smooth transition */
+    border-radius: 8px;
+}
+
+button:hover {
+    background-color: white;
+    color: #0044cc;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Add shadow on hover */
+    transform: scale(1.05); /* Slight scaling on hover */
+}
+
+
+a {
+    color: #0044cc;
+    text-decoration: none;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+a:hover {
+    color: #ff6600; /* Change link color on hover */
+}
+
+a::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #ff6600;
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 0.3s ease-in-out;
+}
+
+a:hover::before {
+    visibility: visible;
+    transform: scaleX(1); /* Smooth underline on hover */
+}
+
+
+img {
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+img:hover {
+    transform: scale(1.05); /* Slight zoom-in on hover */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Add a shadow on hover */
+}
+
+
+.card {
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px); /* Raise the card on hover */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Darker shadow */
+}
+
+
+.fa {
+    font-size: 2rem;
+    color: #0044cc;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.fa:hover {
+    color: #ff6600; /* Change color on hover */
+    transform: rotate(20deg) scale(1.2); /* Rotate and scale on hover */
+}
+
+
+h1:hover, h2:hover, h3:hover {
+    /*background-color: #0044cc;*/
+    /*color: white;*/
+    /*padding: 5px;*/
+    /*border-radius: 5px;*/
+    /*transition: background-color 0.3s ease, color 0.3s ease;*/
+}
+
+
+
+/* General tooltip styling */
+.tooltip {
+    position: relative; /* Establish a containing block for the tooltip */
+    cursor: pointer;
+}
+
+/* Hidden by default */
+.tooltip::before, 
+.tooltip::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    left: 50%;
+    bottom: -150%;
+    transform: translateX(-50%);
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    white-space: nowrap;
+    z-index: 1000;
+}
+
+/* Tooltip box */
+.tooltip::before {
+    background-color: #0044cc;  /* Background color of tooltip */
+    color: white;
+    padding: 10px 15px;
+    font-size: 1.2rem;       /* Larger font size */
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+    transform: translateX(-50%) translateY(10px); /* Adjust position */
+}
+
+/* Tooltip arrow */
+.tooltip::after {
+    content: '';
+    width: 0;
+    height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-top: 8px solid #0044cc; /* Tooltip arrow color */
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: -5px;
+    display:none;
+}
+
+/* Show tooltip on hover */
+.tooltip:hover::before, 
+.tooltip:hover::after {
+    visibility: visible;
+    opacity: 1;
+    transform: translateX(-50%) translateY(0); /* Move up smoothly */
+}
+/* Media query for smaller screens */
+@media (max-width: 600px) {
+    .tooltip::before {
+        font-size: 1rem;  /* Reduce font size for mobile */
+        white-space: normal; /* Allow tooltip to wrap text */
+        max-width: 90vw;  /* Limit tooltip width to viewport width */
+    }
+}
+
+
+/* Container for the title and share buttons */
+.title-share {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+.title-share h2 {
+    flex: 1;
+    margin: 0;
+    font-size: 1.5em;
+}
+
+.share-buttons {
+    display: flex;
+    gap: 10px; /* Add space between the buttons */
+}
+
+.share-button {
+    padding: 3px 8px;
+    font-size: 0.7em;
+    border-radius: 4px;
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.share-button i {
+    font-size: 0.8em;
+    margin-right: 5px;
+}
+
+.share-button.facebook {
+    background-color: #3b5998;
+}
+
+.share-button.twitter {
+    background-color: #1da1f2;
+}
+
+.share-button.linkedin {
+    background-color: #0077b5;
+}
+
+.share-button:hover {
+    opacity: 0.8;
+}
+
+/* Smaller buttons for portrait mobile */
+@media (max-width: 600px) and (orientation: portrait) {
+    .share-button {
+        padding: 2px 5px;
+        font-size: 0.5em;
+    }
+
+    .share-button i {
+        font-size: 0.6em;
+        margin-right: 3px;
+    }
+
+    .title-share {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .share-buttons {
+        margin-top: 10px; /* Space between title and buttons on small screens */
+    }
+}
+/* General h2 hover effect removal for What We Teach */
+.title-share h2:hover, .meat h3:hover {
+    background-color: transparent;
+    color: inherit;
+    padding: 0;
+}
+
+/* Remove hover effect, text decoration, and tooltip for Verbal Pathways title and star */
+header h1 .star-link,
+header h1 a {
+    text-decoration: none !important; /* Remove underline */
+    color: inherit; /* Keep text color the same */
+    pointer-events: none; /* Disable the hover effect */
+}
+
+header h1 .star-link:hover::before,
+header h1 a:hover::before {
+    content: ''; /* Remove any hover content */
+    visibility: hidden; /* Ensure tooltip is hidden */
+    transform: none; /* Prevent any transformations */
+    margin-bottom:0px;
+    padding-bottom:0px;
+}
+
+/* Remove tooltip */
+header h1 .tooltip::before,
+header h1 .tooltip::after {
+    display: none; /* Remove tooltip elements */
+    margin-bottom:0px;
+    padding-bottom:0px;
+}
+
+/* Remove hover color change for both */
+header h1 a:hover, header h1 .star-link:hover {
+    color: inherit !important; /* Disable hover color change */
+    margin-bottom:0px;
+    padding-bottom:0px;
+}
+
+.header-tagline {            
+    width:100%;
+    text-align:center;
+    margin-top:0px;
+    padding-top:0px;
+
 }
 
 /* Responsive Adjustments */
-@media (max-width: 768px) {
-    h1 {
-        font-size: 2em;
+@media (min-width: 601px) {
+.header-tagline {    
+    width:100%;
+    text-align:center;
+    margin-top:0px;
+    padding-top:0px;
+    font-size:1.3em;
     }
-
-    .tab-container button {
-        font-size: 0.9em;
-        padding: 8px 15px;
+.header {
+    padding:10px;
     }
+.header p {
+font-size:1.3em;
+}
+}
 
-    .story-image {
-        max-width: 100%;
+/* Responsive Adjustments */
+@media (min-width: 601px) {
+.header-tagline2 {    
+    width:100%;
+    text-align:center;
+    margin-top:0px;
+    padding-top:0px;
+    font-size:1.1em;
+    }
+.header {
+    padding:10px;
+    }
+.header p {
+font-size:1.1em;
+}
+}
+
+
+
+/* Responsive Adjustments */
+@media (max-width: 600px) {
+.header-tagline {    
+    width:100%;
+    text-align:center;
+    margin-top:0px;
+    padding-top:0px;
+    font-size:.7em;
+    }
+.header {
+    padding:10px;
+    }
+.header p {
+font-size:.7em;
+}
+}
+
+/* Responsive Adjustments */
+@media (max-width: 600px) {
+.header-tagline2 {    
+    width:100%;
+    text-align:center;
+    margin-top:0px;
+    padding-top:0px;
+    font-size:.6em;
+    }
+.header {
+    padding:10px;
+    }
+.header p {
+font-size:.6em;
+}
+}
+
+
+/* Custom tooltip styles */
+#tooltip-container {
+    position: absolute;
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 10px;
+    width: 300px; /* Adjust the width as needed */
+    max-height: 400px; /* Limit height */
+    overflow-y: auto;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    display: none;
+    z-index: 1000;
+}
+
+#tooltip-container.tooltip-visible {
+    display: block;
+}
+
+#tooltip-container.tooltip-hidden {
+    display: none;
+}
+
+.our-aim-image {
+    margin-left: 10px; /* Add slight space to the left if needed */
+    float: right; /* Keep it floated to the right */
+}
+.custom-list2 {
+    list-style-type: none; /* Remove the default bullet points */
+    padding-left: 0; /* Adjust padding if necessary */
+}
+
+.custom-list2 li {
+    margin-bottom: 10px; /* Add spacing between list items */
+}
+
+.no-link-icon::after {
+    content: none; /* Disable the link icon */
+}
+
+
+h3:hover {
+    background-color: transparent; /* Remove background color on hover */
+    color: inherit; /* Ensure no color change */
+    padding: 0; /* Ensure no extra padding */
+    transition: none; /* Disable any transition */
+}
+
+/* Responsive Adjustments */
+@media (min-width: 601px) {
+    .stats-image {
+        position:relative;
+        left:-30px;
+        text-align: center;
     }
 }
 
 @media (max-width: 600px) {
-    p {
-        font-size: 0.9em;
-    }
-
-    .tab-container button {
-        font-size: 0.8em;
-        padding: 6px 10px;
-    }
-
-    h1 {
-        font-size: 1.8em;
+    .fig-caption {
+        text-align: center; 
+        margin-top: 0px;
+        position:relative;
+        left:-17px;
     }
 }
+
+.whatwedolist {
+    list-style: none; /* Removes the default bullet points */
+    padding-left: 0;  /* Ensures proper alignment */
+}
+
+.whatwedolist li {
+    display: flex; /* Ensures the icon and text are on the same line */
+    align-items: center; /* Vertically centers the text with the icon */
+}
+
+.whatwedolist li i {
+    margin-right: 10px; /* Adds some space between the star and the text */
+}
+
+.leftpic {
+    position:relative;float:left;
+    max-width:200px;
+    padding-right:25px;
+    padding-bottom:10px;
+}
+.bigpic {
+    text-align: center;
+    width:60%;
+    max-width:500px;
+    padding-right:20%;
+    padding-left:20%;
+}
+.rightpic {
+    position:relative;float:right;
+    max-width:200px;
+    padding-right:30px;
+    padding-left:30px;
+}
+.leftalign { 
+    text-align:left;
+}
+.anxietylist {
+    text-align:left;
+    list-style-type: none;  /* Remove default bullets */
+    padding-left: 40px;     /* Add padding to create space for the icons */
+}
+.aligncenter { 
+    text-align:center;
+}
+
+
+header a img {
+    text-decoration: none; /* Disable text decoration for the link inside the header */
+}
+
+header a:hover {
+    text-decoration: none; /* Disable underline on hover for the link in the header */
+}
+
+header a:hover::before {
+    content: none; /* Disable the hover underline effect for links in the header */
+}
+
+header a img:hover {
+    transform: none; /* Disable image hover effect if you have one */
+    box-shadow: none; /* Disable any hover shadow on the image */
+}
+
+
+header a {
+    display: inline-block; /* Ensures the link wraps tightly around the image */
+    line-height: 0; /* Removes extra space caused by line height */
+    vertical-align: middle; /* Aligns the image properly */
+}
+
+header a img {
+    display: block; /* Ensures the image takes up only its own space */
+    max-height: 100%; /* Ensures the image doesn't exceed its container's height */
+    height: auto; /* Maintains the aspect ratio of the image */
+    margin: 0; /* Removes any default margins */
+    padding: 0; /* Removes any default padding */
+    border: none; /* Removes any default borders */
+}
+
+
+headlink a {
+    display: inline-block; /* Ensures the link wraps tightly around the image */
+    line-height: 0; /* Removes extra space caused by line height */
+    vertical-align: middle; /* Aligns the image properly */
+}
+
+headlink a img {
+    display: block; /* Ensures the image takes up only its own space */
+    max-height: 100%; /* Ensures the image doesn't exceed its container's height */
+    height: auto; /* Maintains the aspect ratio of the image */
+    margin: 0; /* Removes any default margins */
+    padding: 0; /* Removes any default padding */
+    border: none; /* Removes any default borders */
+}
+
+.no-hover {
+    color: inherit !important;
+    background-color: transparent !important;
+    text-decoration: none !important;
+    border-bottom: none !important;
+}
+
+.no-hover:hover,
+.no-hover:focus,
+.no-hover:active {
+    color: inherit !important;
+    background-color: transparent !important;
+    text-decoration: none !important;
+    border-bottom: none !important;
+}
+
+
+/*.no-hover {*/
+    /*color: inherit !important;*/
+    /*background-color: transparent !important;*/
+    /*text-decoration: none !important;*/
+/*}*/
+
+/*.no-hover:hover, */
+/*.no-hover:focus, */
+/*.no-hover:active {*/
+    /*color: inherit !important;*/
+    /*background-color: transparent !important;*/
+    /*text-decoration: none !important;*/
+/*}*/
+
+
+.no-hover-link, .no-hover-link:hover, .no-hover-link:focus, .no-hover-link:active {
+    text-decoration: none !important;
+    border-bottom: none !important;
+    color: inherit !important;
+    background-color: transparent !important;
+}
+
+
+@media (max-width: 600px) {
+  textarea {
+    font-size: 14px; /* Optional: Adjust font size */
+    padding: 8px; /* Optional: Adjust padding */
+  }
+}
+
+
+textarea {
+  width: 100%;
+  max-width: 100%; /* Ensures it doesn't exceed the container width */
+  box-sizing: border-box; /* Includes padding in the width calculation */
+  resize: vertical; /* Prevents horizontal resizing */
+}
+
+
+
+
+
+        /* Page-specific styling */
+        .mission-container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            font-family: 'Marvel', sans-serif;
+            color: #333;
+        }
+
+        .mission-container h1 {
+            text-align: center;
+            color: #007bff;
+            font-size: 2.5em;
+        }
+
+        .tab-container {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .tab-container button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin: 5px;
+            font-size: 1em;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .tab-container button:hover {
+            background-color: #0056b3;
+        }
+
+        .mission-details ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 20px 0;
+        }
+
+        .mission-details ul li {
+            margin-bottom: 1.5em;
+            display: flex;
+            align-items: center;
+        }
+
+        .mission-details ul li i {
+            margin-right: 10px;
+            font-size: 1.5em;
+        }
+
+        @media only screen and (max-width: 768px) {
+            .tab-container button {
+                font-size: 0.9em;
+                padding: 8px 15px;
+            }
+
+            .mission-container h1 {
+                font-size: 2em;
+            }
+        }
 
