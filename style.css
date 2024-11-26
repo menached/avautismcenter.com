@@ -4,9 +4,8 @@
 
 /* General Styling for the Image */
 .image-container {
-    margin: 20px auto; /* Default for spacing */
+    margin: 20px auto; /* Default margin for all screens */
     max-width: 100%; /* Full width by default */
-    text-align: center; /* Center-align image by default */
 }
 
 .image-container img {
@@ -16,55 +15,47 @@
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: subtle shadow */
 }
 
-/* General Styling for Two-Column Layout */
-.two-column-layout {
-    display: flex;
-    flex-direction: column; /* Default for smaller screens */
-    gap: 20px;
-    margin: 0 auto;
-    max-width: 1200px;
-    padding: 20px;
-}
-
-.two-column-layout div {
-    flex: 1;
-    padding: 10px;
-}
-
 /* Two-Column Layout for Larger Screens */
 @media (min-width: 621px) {
     .two-column-layout {
-        flex-direction: row; /* Switch to horizontal layout */
-        justify-content: space-between;
+        display: flex; /* Two-column layout */
+        flex-direction: row; /* Horizontal alignment */
+        gap: 20px; /* Space between columns */
+        justify-content: space-between; /* Spread columns out */
     }
 
     .image-container {
-        max-width: 30%; /* Limit the size of the container */
-        margin: 0 0 20px 20px; /* Add spacing */
-        text-align: right; /* Align content inside the container */
+        max-width: 30%; /* Smaller image for larger screens */
+        margin: 0 0 20px 20px; /* Space around the image */
+        text-align: right; /* Align container to the right */
     }
 
     .image-container img {
-        display: inline-block; /* Image aligns inline for better control */
+        display: inline; /* Inline element for alignment */
     }
 }
 
 /* One-Column Layout for Smaller Screens */
 @media (max-width: 620px) {
+    .two-column-layout {
+        display: flex; /* Single-column layout */
+        flex-direction: column; /* Stack elements vertically */
+        gap: 20px; /* Space between elements */
+    }
+
     .image-container {
-        max-width: 50%; /* Reduce image size */
-        margin: 20px 20px 20px 0; /* Add spacing to the right */
-        text-align: left; /* Align image to the left */
+        max-width: 100%; /* Full width for smaller screens */
+        margin: 20px 0; /* Center the image with spacing */
+        text-align: center; /* Center-align the content */
     }
 
     .image-container img {
-        display: inline-block; /* Ensure proper alignment */
-    }
-
-    .two-column-layout {
-        flex-direction: column; /* Stack elements vertically */
+        display: block; /* Block element for stacking */
+        margin: 0 auto; /* Center the image */
     }
 }
+
+
 
 /* Outings Section */
 h2 {
