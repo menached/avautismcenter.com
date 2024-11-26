@@ -2,12 +2,6 @@
 .alignright {text-align:right;}
 
 
-/* General Styling for the Image */
-.image-container {
-    margin: 20px auto; /* Default margin for all screens */
-    max-width: 100%; /* Full width by default */
-}
-
 .image-container img {
     max-width: 100%; /* Ensure the image scales within the container */
     height: auto; /* Maintain aspect ratio */
@@ -15,37 +9,71 @@
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: subtle shadow */
 }
 
-/* Two-Column Layout for Larger Screens */
-@media (min-width: 769px) {
+/* Clear float for the next section */
+.two-column-layout div ul:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+@media (min-width: 468px) {
     .image-container {
+        float: right; /* Float the container to the right */
+        margin: 0 0 20px 20px; /* Add space around the image (left, bottom) */
         max-width: 30%; /* Limit the size of the container */
-        margin: 0 0 20px 20px; /* Add spacing between the image and text */
-        float: right; /* Float the image to the right */
-        position: relative; /* Enable positioning for offset */
-        right: -100px; /* Offset the image 100px to the right */
-        text-align: right; /* Align content inside the container */
+        text-align: right; /* Align the content inside the container */
     }
-
     .image-container img {
-        display: inline; /* Default inline behavior */
+        max-width: 100%; /* Ensure the image scales within the container */
+        height: auto; /* Maintain aspect ratio */
+        border-radius: 8px; /* Optional: rounded corners */
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: subtle shadow */
     }
 }
 
-/* One-Column Layout for Smaller Screens */
-@media (max-width: 768px) {
+@media (max-width: 467px;) {
     .image-container {
-        max-width: 100%; /* Full width for smaller screens */
-        margin: 20px 0; /* Center the image with spacing */
-        float: none; /* Reset float */
-        text-align: center; /* Center-align the content */
-        position: static; /* Disable relative positioning */
+        align: none; /* Float the container to the right */
+        margin: 0 0 20px 20px; /* Add space around the image (left, bottom) */
+        max-width: 20%; /* Limit the size of the container */
+        text-align: left; /* Align the content inside the container */
     }
-
     .image-container img {
-        display: block; /* Block element for stacking */
-        margin: 0 auto; /* Center the image */
+        max-width: 100%; /* Ensure the image scales within the container */
+        height: auto; /* Maintain aspect ratio */
+        border-radius: 8px; /* Optional: rounded corners */
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: subtle shadow */
     }
 }
+
+
+
+/* General Styling */
+.two-column-layout {
+    display: flex;
+    flex-direction: column; /* Default for smaller screens */
+    gap: 20px;
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 20px;
+}
+
+.two-column-layout div {
+    flex: 1;
+}
+
+/* Two-Column Layout for Larger Screens */
+@media (min-width: 468px) {
+    .two-column-layout {
+        flex-direction: row; /* Switch to horizontal layout */
+        justify-content: space-between;
+    }
+
+    .two-column-layout div {
+        padding: 10px;
+    }
+}
+
 
 /* Outings Section */
 h2 {
