@@ -1,6 +1,5 @@
 /* General Styling */
 
-/* General styles for the custom list */
 .a-custom-list {
     list-style: none; /* Remove the default list dots */
     padding: 0; /* Remove default padding */
@@ -8,31 +7,54 @@
 }
 
 .a-custom-list li {
-    margin-bottom: 15px; /* Add spacing between list items if needed */
-    display: flex; /* Ensure the Gravatar and text align horizontally */
-    align-items: center; /* Vertically center the Gravatar and text */
+    margin-bottom: 15px; /* Add spacing between list items */
+    display: flex; /* Horizontal layout by default */
+    align-items: flex-start; /* Align items to the top */
+    gap: 10px; /* Space between Gravatar and text */
 }
 
 .a-custom-list img.gravatar {
     width: 50px;
     height: 50px;
     border-radius: 50%; /* Make images circular */
-    margin-right: 15px; /* Add space between the Gravatar and the text */
+    margin-right: 10px; /* Space between image and content */
 }
 
-/* Hide link icons in mobile view */
+/* Name and description styling */
+.a-custom-list li strong {
+    display: block;
+    margin-bottom: 5px; /* Space between the name and description */
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.a-custom-list li span.description {
+    font-size: 14px;
+    color: #555; /* Subtle color for descriptions */
+}
+
+/* Mobile-specific styles */
 @media (max-width: 768px) {
-    .a-custom-list a.no-link-icon {
-        text-decoration: none; /* Optional: Ensure no underline or style */
-        pointer-events: none; /* Disable interaction if necessary */
+    .a-custom-list li {
+        flex-direction: column; /* Stack Gravatar, name, and description */
+        align-items: center; /* Center-align items on mobile */
+        text-align: center; /* Center-align text */
     }
 
-    .a-custom-list a.no-link-icon::before,
-    .a-custom-list a.no-link-icon::after {
-        content: none; /* Hide pseudo-elements often used for icons */
+    .a-custom-list img.gravatar {
+        margin-right: 0; /* Remove side margin */
+        margin-bottom: 10px; /* Add space below Gravatar */
+    }
+
+    .a-custom-list li strong {
+        font-size: 18px; /* Slightly larger font for names on mobile */
+        margin-bottom: 5px;
+    }
+
+    .a-custom-list li span.description {
+        font-size: 16px; /* Make descriptions slightly larger for readability */
     }
 }
-
 
 
         .centered-content {
