@@ -1,4 +1,9 @@
 /* General Styling */
+.leftie-content {
+text-align:left;
+margin-left:10px;
+margin-right:10px;
+}
 
 .having-fun {
 position:relative;
