@@ -147,6 +147,7 @@ header:hover {
     white-space: nowrap; /* Prevent text wrapping */
     border-radius: 5px; /* Optional for a polished look */
     font-size: 14px; /* Base font size */
+    font-weight: 500; /* Medium weight for standard view */
 }
 
 /* Mobile-specific styles */
@@ -158,16 +159,29 @@ header:hover {
     #tabs button {
         padding: 8px 16px; /* Make buttons smaller for mobile */
         font-size: 13px; /* Slightly smaller font size for mobile */
+        font-weight: 500; /* Keep consistent weight */
     }
 }
 
 /* Larger screen styles */
-@media (min-width: 1024px) {
+@media (min-width: 768px) {
     #tabs button {
-        font-size: 16px; /* Larger font size for wider screens */
-        padding: 12px 24px; /* Increase padding for better proportions */
+        font-size: 18px; /* Larger font size for wider screens */
+        padding: 10px 20px; /* Adjust padding for proportions */
+        font-weight: 600; /* Heavier font weight for emphasis */
     }
 }
+
+/* Extra-large screen styles */
+@media (min-width: 1024px) {
+    #tabs button {
+        font-size: 20px; /* Even larger font size for extra-large screens */
+        padding: 12px 24px; /* Increase padding further for proportions */
+        font-weight: 700; /* Boldest font weight for impact */
+    }
+}
+
+
 
 
 /*#tabs {*/
