@@ -16,13 +16,21 @@
     clear: both;
 }
 
-
-@media (min-width: 769px) {
+@media (min-width: 1024px) {
     .image-container {
         float: right; /* Float the container to the right */
         margin: 0 0 20px 20px; /* Add space around the image (left, bottom) */
-        max-width: 20%; /* Limit the size of the container */
+        max-width: 30%; /* Limit the size of the container */
         text-align: right; /* Align the content inside the container */
+    }
+}
+
+@media (min-width: 769px and max-width: 1023px;) {
+    .image-container {
+        align: left; /* Float the container to the right */
+        margin: 0 0 20px 20px; /* Add space around the image (left, bottom) */
+        max-width: 20%; /* Limit the size of the container */
+        text-align: left; /* Align the content inside the container */
     }
 }
 
