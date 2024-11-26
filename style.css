@@ -2,6 +2,13 @@
 .alignright {text-align:right;}
 
 
+/* General Styling for the Image */
+.image-container {
+    margin: 0 auto 20px; /* Center on smaller screens, add spacing */
+    max-width: 100%; /* Full width by default */
+    text-align: center; /* Center-align image */
+}
+
 .image-container img {
     max-width: 100%; /* Ensure the image scales within the container */
     height: auto; /* Maintain aspect ratio */
@@ -9,46 +16,7 @@
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: subtle shadow */
 }
 
-/* Clear float for the next section */
-.two-column-layout div ul:after {
-    content: '';
-    display: block;
-    clear: both;
-}
-
-@media (min-width: 468px) {
-    .image-container {
-        float: right; /* Float the container to the right */
-        margin: 0 0 20px 20px; /* Add space around the image (left, bottom) */
-        max-width: 30%; /* Limit the size of the container */
-        text-align: right; /* Align the content inside the container */
-    }
-    .image-container img {
-        max-width: 100%; /* Ensure the image scales within the container */
-        height: auto; /* Maintain aspect ratio */
-        border-radius: 8px; /* Optional: rounded corners */
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: subtle shadow */
-    }
-}
-
-@media (max-width: 467px;) {
-    .image-container {
-        align: none; /* Float the container to the right */
-        margin: 0 0 20px 20px; /* Add space around the image (left, bottom) */
-        max-width: 20%; /* Limit the size of the container */
-        text-align: left; /* Align the content inside the container */
-    }
-    .image-container img {
-        max-width: 100%; /* Ensure the image scales within the container */
-        height: auto; /* Maintain aspect ratio */
-        border-radius: 8px; /* Optional: rounded corners */
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: subtle shadow */
-    }
-}
-
-
-
-/* General Styling */
+/* General Styling for Two-Column Layout */
 .two-column-layout {
     display: flex;
     flex-direction: column; /* Default for smaller screens */
@@ -60,6 +28,7 @@
 
 .two-column-layout div {
     flex: 1;
+    padding: 10px;
 }
 
 /* Two-Column Layout for Larger Screens */
@@ -69,10 +38,28 @@
         justify-content: space-between;
     }
 
-    .two-column-layout div {
-        padding: 10px;
+    .image-container {
+        float: right; /* Float the container to the right */
+        max-width: 30%; /* Limit the size of the container */
+        margin: 0 0 20px 20px; /* Add spacing */
+        text-align: right; /* Align content inside the container */
     }
 }
+
+/* One-Column Layout for Smaller Screens */
+@media (max-width: 467px) {
+    .image-container {
+        float: none; /* Reset float for smaller screens */
+        max-width: 100%; /* Full width */
+        margin: 20px auto; /* Center the image with spacing */
+        text-align: center; /* Center-align content */
+    }
+
+    .two-column-layout {
+        flex-direction: column; /* Stack elements vertically */
+    }
+}
+
 
 
 /* Outings Section */
