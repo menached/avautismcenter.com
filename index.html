@@ -26,22 +26,23 @@
 
 </script>
 <script>
+document.addEventListener('DOMContentLoaded', () => {
     const quotes = [
         '“Autism is not a disability, it’s a different ability.”',
         '“Inclusion is the art of seeing people, not just labels.”',
         '“Celebrate diversity, embrace humanity.”'
     ];
 
-    document.addEventListener('DOMContentLoaded', () => {
-        const quote = quotes[new Date().getDay() % quotes.length];
-        const footerPlaceholder = document.getElementById('footer-placeholder');
+    const quote = quotes[new Date().getDay() % quotes.length];
+    const footerPlaceholder = document.querySelector('.footer-placeholder'); // Target class instead of ID
 
-        if (footerPlaceholder) {
-            footerPlaceholder.innerHTML = `<p>${quote}</p>`;
-        } else {
-            console.error('Element with ID "footer-placeholder" not found.');
-        }
-    });
+    if (footerPlaceholder) {
+        footerPlaceholder.innerHTML = `<p>${quote}</p>`;
+    } else {
+        console.error('Element with class "footer-placeholder" not found.');
+    }
+});
+
 </script>
 
 <style>
