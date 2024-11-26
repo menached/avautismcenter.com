@@ -4,7 +4,7 @@
 .image-container {
     float: right; /* Float the container to the right */
     margin: 0 0 20px 20px; /* Add space around the image (left, bottom) */
-    max-width: 50%; /* Limit the size of the container */
+    max-width: 40%; /* Limit the size of the container */
     text-align: right; /* Align the content inside the container */
 }
 
@@ -24,6 +24,7 @@
 
 @media (max-width: 768px) {
     .image-container {
+        position: relative;
         float: none; /* Disable floating */
         text-align: center; /* Center the image */
         margin: 20px auto; /* Add margin around the image */
