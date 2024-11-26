@@ -130,34 +130,34 @@ header:hover {
 #tabs {
     display: flex; /* Use flexbox for layout */
     justify-content: center; /* Center buttons horizontally */
-    align-items: center; /* Center vertically, if needed */
+    align-items: center; /* Center vertically */
     margin-top: 20px;
     padding: 0 10px; /* Add slight padding on the left and right */
     gap: 10px; /* Space between buttons */
-    overflow-x: auto; /* Allow horizontal scrolling on mobile if necessary */
+    overflow: hidden; /* Prevent horizontal scrolling */
+    flex-wrap: wrap; /* Allow buttons to wrap to new lines if necessary */
 }
 
 #tabs button {
     margin: 0; /* Remove default margin */
     padding: 10px 20px; /* Button padding */
-    background-color: #cc5200; /* Darker orange */
+    background-color: #ff9900; /* Normal orange */
     color: white; /* Ensure text is readable */
     font-size: 16px; /* Adjust font size for readability */
     border: none; /* Remove default border */
     cursor: pointer;
     white-space: nowrap; /* Prevent text wrapping */
-    border-radius: 5px; /* Slightly rounded corners for a polished look */
+    border-radius: 5px; /* Slightly rounded corners */
 }
 
 /* Mobile-specific styles */
 @media (max-width: 768px) {
     #tabs {
-        flex-wrap: nowrap; /* Prevent buttons from wrapping */
         padding: 0 15px; /* Increase padding for better spacing on mobile */
     }
 
     #tabs button {
-        padding: 12px 24px; /* Increase padding for easier tapping on mobile */
+        padding: 12px 24px; /* Larger padding for easier tapping on mobile */
         font-size: 14px; /* Slightly smaller font size for compact mobile view */
     }
 }
