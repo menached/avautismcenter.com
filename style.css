@@ -130,25 +130,34 @@ header:hover {
 #tabs {
     display: flex; /* Use flexbox for alignment */
     justify-content: center; /* Center buttons horizontally */
-    align-items: center; /* Center vertically, if needed */
+    align-items: center; /* Center vertically */
     margin-top: 20px;
     gap: 10px; /* Add space between buttons */
-    overflow-x: auto; /* Allow scrolling on mobile if necessary */
+    overflow-x: hidden; /* Prevent scrollbar visibility */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens if needed */
 }
 
 #tabs button {
     margin: 0; /* Remove default margin */
-    padding: 10px 20px;
-    background-color: orange;
-    border: none;
+    padding: 8px 18px; /* Slightly smaller padding for mobile */
+    background-color: #ff7f00; /* Slightly darker, richer orange */
+    color: white; /* Ensure text remains visible */
+    border: none; /* Remove default border */
     cursor: pointer;
     white-space: nowrap; /* Prevent text wrapping */
+    border-radius: 5px; /* Optional for a polished look */
+    font-size: 14px; /* Slightly smaller font for better fit on mobile */
 }
 
 /* Mobile-specific styles */
 @media (max-width: 768px) {
     #tabs {
-        flex-wrap: nowrap; /* Ensure buttons don't wrap on smaller screens */
+        flex-wrap: nowrap; /* Prevent wrapping on smaller screens */
+    }
+
+    #tabs button {
+        padding: 8px 16px; /* Make buttons smaller for mobile */
+        font-size: 13px; /* Further reduce font size for compact layout */
     }
 }
 
