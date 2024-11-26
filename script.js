@@ -267,6 +267,12 @@ function loadTeam() {
 // Function to reveal the team content when the user scrolls down
 function revealTeamOnScroll() {
     const teamSection = document.getElementById('team');
+    
+    if (!teamSection) {
+        console.error('Element with ID "team" not found in the DOM.');
+        return;
+    }
+    
     const sectionTop = teamSection.getBoundingClientRect().top;
 
     if (sectionTop < window.innerHeight) {
