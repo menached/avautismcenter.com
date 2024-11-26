@@ -2,6 +2,7 @@
 !readme.html            # Allow readme.html
 !header.html            # Allow .gitignore
 !style.css              # Allow style.css
+!script.js              # Allow script.js
 !david_menache.html            # Allow david_menache.html
 !larry_banchero.html            # Allow larry_banchero.html
 !jon_fleischer.html            # Allow jon_fleischer.html
