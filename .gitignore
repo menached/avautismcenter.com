@@ -1,5 +1,6 @@
 /*                              # Ignore everything
 !readme.html                    # Allow readme.html
+!public/mission-header.png       # Allow david_menache.png
 !index.html                     # Allow index.html
 !about.html                     # Allow about.html
 !mission.html                   # Allow mission.html
