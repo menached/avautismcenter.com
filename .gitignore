@@ -1,5 +1,6 @@
 /*                      # Ignore everything
 !readme.html            # Allow readme.html
+!header.html            # Allow readme.html
 !david_menache.html            # Allow david_menache.html
 !larry_banchero.html            # Allow larry_banchero.html
 !jon_fleischer.html            # Allow jon_fleischer.html
