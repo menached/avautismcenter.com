@@ -2,6 +2,7 @@
 .alignright {text-align:right;}
 
 
+
 /* General Styling for the Image */
 .image-container {
     margin: 20px auto; /* Default margin for all screens */
@@ -26,12 +27,13 @@
 
     .image-container {
         max-width: 30%; /* Smaller image for larger screens */
-        margin: 0 0 20px 20px; /* Space around the image */
-        text-align: right; /* Align container to the right */
+        margin: 0 0 20px 20px; /* Add space between image and text */
+        float: right; /* Float image to the right */
+        text-align: right; /* Align content inside the container */
     }
 
     .image-container img {
-        display: inline; /* Inline element for alignment */
+        display: inline; /* Default inline behavior */
     }
 }
 
@@ -46,6 +48,7 @@
     .image-container {
         max-width: 100%; /* Full width for smaller screens */
         margin: 20px 0; /* Center the image with spacing */
+        float: none; /* Reset float */
         text-align: center; /* Center-align the content */
     }
 
@@ -54,8 +57,6 @@
         margin: 0 auto; /* Center the image */
     }
 }
-
-
 
 /* Outings Section */
 h2 {
