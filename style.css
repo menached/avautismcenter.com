@@ -139,14 +139,14 @@ header:hover {
 
 #tabs button {
     margin: 0; /* Remove default margin */
-    padding: 8px 18px; /* Slightly smaller padding for mobile */
+    padding: 8px 18px; /* Standard padding */
     background-color: #ff7f00; /* Slightly darker, richer orange */
     color: white; /* Ensure text remains visible */
     border: none; /* Remove default border */
     cursor: pointer;
     white-space: nowrap; /* Prevent text wrapping */
     border-radius: 5px; /* Optional for a polished look */
-    font-size: 14px; /* Slightly smaller font for better fit on mobile */
+    font-size: 14px; /* Base font size */
 }
 
 /* Mobile-specific styles */
@@ -157,7 +157,15 @@ header:hover {
 
     #tabs button {
         padding: 8px 16px; /* Make buttons smaller for mobile */
-        font-size: 13px; /* Further reduce font size for compact layout */
+        font-size: 13px; /* Slightly smaller font size for mobile */
+    }
+}
+
+/* Larger screen styles */
+@media (min-width: 1024px) {
+    #tabs button {
+        font-size: 16px; /* Larger font size for wider screens */
+        padding: 12px 24px; /* Increase padding for better proportions */
     }
 }
 
