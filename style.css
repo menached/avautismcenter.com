@@ -182,7 +182,7 @@ h2 {
 }
 h2:hover {
     /*transform: scale(1.05); [> Slight zoom <]*/
-    /*box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); [> Enhance shadow <]*/
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Enhance shadow */
     /*transition: transform 0.3s ease, box-shadow 0.3s ease;*/
 }
 h2.beginner {
@@ -225,7 +225,6 @@ h2.advancedplus {
 h2.outings {
     /*background-color: #FFDDC1; [> Pastel peach <]*/
     color: #FF5733; /* Vibrant coral */
-    margin-right:10px;
     /*border: 2px solid #FFCBA4; [> Slightly darker border <]*/
 }
 
@@ -233,7 +232,6 @@ h2.outings {
 h2.physicaleducation {
     /*background-color: #C1D1FF; [> Pastel blue <]*/
     color: #1E88E5; /* Rich blue */
-    padding-right:10px;
     /*border: 2px solid #A2B9E5; [> Slightly darker border <]*/
 }
 
