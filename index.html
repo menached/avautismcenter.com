@@ -27,21 +27,14 @@
 </script>
 <script>
     const quotes = [
-        '“Autism is not a disability, it’s a different ability.”',
-        '“Inclusion is the art of seeing people, not just labels.”',
-        '“Celebrate diversity, embrace humanity.”'
-    ];
-
-    document.addEventListener('DOMContentLoaded', () => {
-        const quote = quotes[new Date().getDay() % quotes.length];
-        const footerPlaceholder = document.getElementById('footer-placeholder');
-
-        if (footerPlaceholder) {
-            footerPlaceholder.innerHTML = `<p>${quote}</p>`;
-        } else {
-            console.error('Element with ID "footer-placeholder" not found.');
-        }
-    });
+  '“autism is not a disability, it’s a different ability.”',
+  '“inclusion is the art of seeing people, not just labels.”',
+  '“celebrate diversity, embrace humanity.”'
+];
+document.addeventlistener('domcontentloaded', () => {
+  const quote = quotes[new date().getday() % quotes.length];
+  document.getelementbyid('footer-placeholder').innerhtml = `<p>${quote}</p>`;
+});
 </script>
 
 <style>
