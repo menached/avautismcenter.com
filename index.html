@@ -27,14 +27,21 @@
 </script>
 <script>
     const quotes = [
-  '“autism is not a disability, it’s a different ability.”',
-  '“inclusion is the art of seeing people, not just labels.”',
-  '“celebrate diversity, embrace humanity.”'
-];
-document.addeventlistener('domcontentloaded', () => {
-  const quote = quotes[new date().getday() % quotes.length];
-  document.getelementbyid('footer-placeholder').innerhtml = `<p>${quote}</p>`;
-});
+        '“Autism is not a disability, it’s a different ability.”',
+        '“Inclusion is the art of seeing people, not just labels.”',
+        '“Celebrate diversity, embrace humanity.”'
+    ];
+
+    document.addEventListener('DOMContentLoaded', () => {
+        const quote = quotes[new Date().getDay() % quotes.length];
+        const footerPlaceholder = document.getElementById('footer-placeholder');
+
+        if (footerPlaceholder) {
+            footerPlaceholder.innerHTML = `<p>${quote}</p>`;
+        } else {
+            console.error('Element with ID "footer-placeholder" not found.');
+        }
+    });
 </script>
 
 <style>
@@ -154,8 +161,8 @@ document.addeventlistener('domcontentloaded', () => {
     <!-- Area to display response message -->
     <div id="subscribe-message" class="hidden"></div>
 
+  <div id="team"></div>
   <div id="footer-placeholder"></div>
-
     <script src="https://www.avautismcenter.com/script.js" defer></script>
 <!-- Load the header and footer -->
   <script>
