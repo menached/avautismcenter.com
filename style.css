@@ -39,7 +39,7 @@
         text-align: left; /* Align the content inside the container */
     }
     .image-container img {
-        max-width: 100%; /* Ensure the image scales within the container */
+        max-width: 50%; /* Ensure the image scales within the container */
         height: auto; /* Maintain aspect ratio */
         border-radius: 8px; /* Optional: rounded corners */
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: subtle shadow */
