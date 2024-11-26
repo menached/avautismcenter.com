@@ -68,14 +68,22 @@
     <div style="position: relative; text-align: right;" class="image-container alignright">
 <style>
     figure {
-        text-align: center;
-        margin: 20px 0;
+        display: inline-block; /* Ensures the figure width matches the image width */
+        text-align: center;    /* Centers the caption */
+        margin: 20px auto;     /* Adds space around the figure */
+    }
+
+    img {
+        max-width: 100%;       /* Ensures the image is responsive */
+        height: auto;
+        display: block;        /* Ensures no extra space below the image */
     }
 
     figcaption {
         font-size: 1em;
         color: #555;
         margin-top: 5px;
+        line-height: 1.4;
     }
 </style>
 
