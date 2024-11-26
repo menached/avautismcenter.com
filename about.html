@@ -75,20 +75,37 @@
         <p>We are dedicated to building a certified autism-friendly community that offers opportunities for non-verbal adults and individuals with communication challenges. Our aim is to create a welcoming environment that supports growth and development for all.</p>
         <h3><i class="aboutpage fa-solid fa-users"></i> The Who</h3>
         <p>We are a group of like-minded individuals passionate about making a difference:</p>
+
         <ul class="custom-list">
             <li>
+                <img class="gravatar" data-email="jon@example.com" alt="Jon Fleischer">
                 <strong><a class="no-link-icon" href="https://www.avautismcenter.com/jon_fleischer.html">Jon Fleischer</a>:</strong> Founding member and bilingual financial services veteran.
             </li>
             <li>
+                <img class="gravatar" data-email="larry@example.com" alt="Larry Banchero">
                 <strong><a class="no-link-icon" href="https://www.avautismcenter.com/larry_banchero.html">Larry Banchero</a>:</strong> Entrepreneur and expert in multiple industries.
             </li>
             <li>
+                <img class="gravatar" data-email="brian@example.com" alt="Brian Fleischer">
                 <strong><a class="no-link-icon" href="https://www.avautismcenter.com/brian_fleischer.html">Brian Fleischer, Esq.</a>:</strong> Dual citizen of the U.S. and Mexico, a lawyer with decades of experience.
             </li>
             <li>
+                <img class="gravatar" data-email="david@example.com" alt="David Menache">
                 <strong><a class="no-link-icon" href="https://www.avautismcenter.com/david_menache.html">David Menache</a>:</strong> Network engineer and tech entrepreneur, contributing his technical expertise.
             </li>
         </ul>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+<script>
+    // Generate Gravatar URL for each <img> with the class 'gravatar'
+    document.querySelectorAll('.gravatar').forEach((img) => {
+        const email = img.getAttribute('data-email').trim().toLowerCase();
+        const hash = CryptoJS.MD5(email).toString();
+        img.src = `https://www.gravatar.com/avatar/${hash}?s=50&d=identicon`; // 50px size and default identicon fallback
+    });
+</script>
+
+
         <h3><i class="aboutpage fas fa-question-circle"></i> The Why</h3> 
         <p>Jon, like many parents, is concerned about providing for his special needs nephew once he’s unable. This program was created to ensure continued care and support for William and others like him.</p>
         <h3><i class="aboutpage fas fa-file"></i> <a href="william_fleischer.html">William's Story</a></h3> 
