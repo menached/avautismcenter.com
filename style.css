@@ -411,26 +411,6 @@ p {
             }
         }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
@@ -454,6 +434,74 @@ h1, h2, h3, h4, h5, h6 {
     /*font-size: 1.5em; [> Increase size <]*/
 
 }
+
+
+
+
+
+
+
+#tabs {
+    display: flex; /* Use flexbox for alignment */
+    justify-content: center; /* Center buttons horizontally */
+    align-items: center; /* Center vertically */
+    margin-top: 20px;
+    gap: 10px; /* Add space between buttons */
+    overflow-x: hidden; /* Prevent scrollbar visibility */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens if needed */
+}
+
+#tabs button {
+    margin: 0; /* Remove default margin */
+    padding: 8px 18px; /* Standard padding */
+    background-color: #ff7f00; /* Slightly darker, richer orange */
+    color: white; /* Ensure text remains visible */
+    border: none; /* Remove default border */
+    cursor: pointer;
+    white-space: nowrap; /* Prevent text wrapping */
+    border-radius: 5px; /* Optional for a polished look */
+    font-size: 14px; /* Base font size */
+    font-weight: 500; /* Medium weight for standard view */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transitions */
+}
+
+/* Hover effect without "jogging" */
+#tabs button:hover {
+    background-color: #e67300; /* Slightly darker orange on hover */
+    transform: none; /* Disable scaling or movement */
+}
+
+/* Mobile-specific styles */
+@media (max-width: 768px) {
+    #tabs {
+        flex-wrap: nowrap; /* Prevent wrapping on smaller screens */
+    }
+
+    #tabs button {
+        padding: 8px 16px; /* Make buttons smaller for mobile */
+        font-size: 13px; /* Slightly smaller font size for mobile */
+        font-weight: 500; /* Keep consistent weight */
+    }
+}
+
+/* Larger screen styles */
+@media (min-width: 768px) {
+    #tabs button {
+        font-size: 18px; /* Larger font size for wider screens */
+        padding: 10px 20px; /* Adjust padding for proportions */
+        font-weight: 600; /* Heavier font weight for emphasis */
+    }
+}
+
+/* Extra-large screen styles */
+@media (min-width: 1024px) {
+    #tabs button {
+        font-size: 20px; /* Even larger font size for extra-large screens */
+        padding: 12px 24px; /* Increase padding further for proportions */
+        font-weight: 700; /* Boldest font weight for impact */
+    }
+}
+
 
 
 header {
