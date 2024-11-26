@@ -1,20 +1,37 @@
 /* General Styling */
 
 <style>
-    .wooden-frame {
-        border: 10px solid #8B4513; /* Brown frame color */
-        padding: 5px; /* Space between image and border */
-        background-color: #DEB887; /* Lighter brown inner background (optional) */
-        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5); /* Adds depth to the frame */
-        border-radius: 5px; /* Smooth edges for a more realistic look */
-        display: inline-block; /* Adjusts frame to image size */
-    }
 
-    img {
-        max-width: 100%; /* Ensures responsiveness */
-        display: block; /* Removes inline space below the image */
+figcaption {
+    font-size: 1em; /* Default size for larger screens */
+}
+
+@media (max-width: 768px) {
+    figcaption {
+        font-size: 0.9em; /* Slightly smaller for tablets and small screens */
     }
-</style>
+}
+
+@media (max-width: 480px) {
+    figcaption {
+        font-size: 0.7em; /* Even smaller for very small screens */
+    }
+}
+.wooden-frame img:hover {
+    transform: none !important; /* Disable scaling or transformations */
+}
+.wooden-frame {
+    border: 10px solid #8B4513; /* Brown frame color */
+    padding: 5px; /* Space between image and border */
+    background-color: #DEB887; /* Optional inner background */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5); /* Adds depth */
+    border-radius: 5px; /* Smooth edges for realism */
+    display: inline-block; /* Ensure frame wraps around the image */
+}
+img {
+    max-width: 100%;
+    display: block; /* Removes extra inline spacing */
+}
 
 
 .fas:hover {
