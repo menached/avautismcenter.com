@@ -25,9 +25,9 @@
     }
 }
 
-@media (max-width: 769px;) {
+@media (max-width: 767px;) {
     .image-container {
-        align: left; /* Float the container to the right */
+        align: none; /* Float the container to the right */
         margin: 0 0 20px 20px; /* Add space around the image (left, bottom) */
         max-width: 20%; /* Limit the size of the container */
         text-align: left; /* Align the content inside the container */
