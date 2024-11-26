@@ -446,42 +446,43 @@ header:hover {
 /*}*/
 
 
+/* Footer Styles */
 .site-footer {
     background-color: #e6f7ff; /* Light blue */
-    color: #0056b3; /* Deep blue text */
+    color: #0056b3; /* Deep blue text for readability */
     text-align: center;
     padding: 20px 10px;
-    font-family: Arial, sans-serif;
+    border-top: none; /* Remove the line */
+    font-family: 'Marvel'!important, sans-serif;
     font-size: 0.9em;
 }
 
-.footer-content {
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.footer-content p {
-    white-space: nowrap; /* Prevent wrapping */
-    margin: 0; /* Remove default margins */
-    font-size: 0.9em; /* Adjust font size if needed */
-}
-
-.footer-links a {
-    color: #007bff;
+.site-footer .footer-links a {
+    color: #007bff; /* Medium blue for links */
     text-decoration: none;
-    margin: 0 5px; /* Space between links */
 }
 
-.footer-links a:hover {
-    color: #0056b3; /* Hover color */
+.site-footer .footer-links a:hover {
+    color: #0056b3; /* Deep blue hover effect */
     text-decoration: underline;
 }
 
-.social-media-links a {
+.site-footer .social-media-links a {
     color: #0056b3;
-    text-d
+}
 
+.site-footer .social-media-links a:hover {
+    color: #007bff;
+}
 
+footer a {
+    color: #0044cc;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
 
 /* Disable hover effect on the specific image */
 img.no-hover:hover {
