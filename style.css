@@ -1,36 +1,51 @@
 /* General Styling */
 
+
 h1 {
-    text-align: left; /* Align the text to the left */
-    font-family: 'Marvel', sans-serif; /* Use Marvel font */
+    font-family: 'Marvel', sans-serif; /* Use your preferred font */
     font-weight: 700; /* Bold weight */
-    font-size: 2.5em; /* Default large size */
-    line-height: 1.4; /* Adjust line height for spacing */
+    font-size: 3rem; /* Default size for desktops */
+    line-height: 1.4; /* Adjust line spacing */
     margin: 20px 0; /* Add vertical spacing */
-    display: flex; /* Enable flexbox for icon alignment */
-    align-items: center; /* Vertically align icon with text */
-    gap: 10px; /* Space between the icon and the text */
+    display: flex; /* Flexbox for proper alignment */
+    align-items: center; /* Vertically align icon and text */
+    gap: 15px; /* Space between icon and text */
+    text-align: left; /* Align the heading to the left */
 }
 
-/* Icon Styling */
+/* Font Awesome Icon Styling */
 h1 .fas {
-    font-size: 0.9em; /* Scale the icon relative to the text */
-    color: inherit; /* Inherit the text color */
+    font-size: 1em; /* Default icon size relative to text */
+    color: inherit; /* Ensure it matches the text color */
 }
 
-/* Responsive Rules for Smaller Screens */
-@media (max-width: 768px) {
+/* Responsive Adjustments */
+@media (max-width: 1024px) { /* Tablets */
     h1 {
-        font-size: 2rem; /* Slightly smaller for tablets and landscape phones */
+        font-size: 2.5rem; /* Slightly smaller text */
+    }
+    h1 .fas {
+        font-size: 0.9em; /* Scale down the icon */
     }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 768px) { /* Mobile Landscape */
     h1 {
-        font-size: 1.8rem; /* Compact size for portrait phones */
+        font-size: 2rem; /* Smaller text for mobile */
+    }
+    h1 .fas {
+        font-size: 0.8em; /* Adjust icon size */
     }
 }
 
+@media (max-width: 480px) { /* Mobile Portrait */
+    h1 {
+        font-size: 1.8rem; /* Compact size for smaller screens */
+    }
+    h1 .fas {
+        font-size: 0.7em; /* Adjust icon for small screens */
+    }
+}
 
 
 
