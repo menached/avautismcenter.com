@@ -1,23 +1,24 @@
-/*                              # Ignore everything
-!readme.html                    # Allow readme.html
-!public/mission-header.png       # Allow david_menache.png
-!index.html                     # Allow index.html
-!about.html                     # Allow about.html
-!mission.html                   # Allow mission.html
-!.gitignore                     # Allow .gitignore
-!header.html                    # Allow .header.html
-!style.css                      # Allow style.css
-!script.js                      # Allow script.js
-!david_menache.html             # Allow david_menache.html
-!public/david_menache.png       # Allow david_menache.png
-!jon_fleischer.html             # Allow jon_fleischer.html
-!public/jon_fleischer.png       # Allow jon_fleischer.png
-!larry_banchero.html            # Allow larry_banchero.html
-!public/larry_banchero.png      # Allow larry_banchero.png
-!brian_fleischer.html           # Allow brian_fleischer.html
-!public/brian_fleischer.png     # Allow brian_fleischer.png
-!william_fleischer.html         # Allow william_fleischer.html
-.github/*                       # Ignore everything in .github
-!.github/workflows/             # Allow the workflows directory
-!public/*                       # Allow the workflows directory
-!.github/workflows/ci-cd.yml    # Specifically allow ci-cd.yml
+/*                                  # Ignore everything
+!readme.html                        # Allow readme.html
+!public/mission-header.png          # Allow david_menache.png
+!public/life-skills-level-2.webp    # Allow david_menache.png
+!index.html                         # Allow index.html
+!about.html                         # Allow about.html
+!mission.html                       # Allow mission.html
+!.gitignore                         # Allow .gitignore
+!header.html                        # Allow .header.html
+!style.css                          # Allow style.css
+!script.js                          # Allow script.js
+!david_menache.html                 # Allow david_menache.html
+!public/david_menache.png           # Allow david_menache.png
+!jon_fleischer.html                 # Allow jon_fleischer.html
+!public/jon_fleischer.png           # Allow jon_fleischer.png
+!larry_banchero.html                # Allow larry_banchero.html
+!public/larry_banchero.png          # Allow larry_banchero.png
+!brian_fleischer.html               # Allow brian_fleischer.html
+!public/brian_fleischer.png         # Allow brian_fleischer.png
+!william_fleischer.html             # Allow william_fleischer.html
+.github/*                           # Ignore everything in .github
+!.github/workflows/                 # Allow the workflows directory
+!public/*                           # Allow the workflows directory
+!.github/workflows/ci-cd.yml        # Specifically allow ci-cd.yml
