@@ -141,6 +141,32 @@ header:hover {
     cursor: pointer;
 }
 
+/* Mobile-specific styles */
+@media (max-width: 768px) {
+    #tabs {
+        display: flex; /* Use flexbox for layout */
+        flex-wrap: nowrap; /* Prevent wrapping on mobile */
+        justify-content: center; /* Center align buttons */
+        gap: 10px; /* Add space between buttons */
+        overflow-x: auto; /* Allow horizontal scrolling if necessary */
+        white-space: nowrap; /* Prevent wrapping */
+    }
+}
+
+
+/*#tabs {*/
+    /*text-align: center;*/
+    /*margin-top: 20px;*/
+/*}*/
+
+/*#tabs button {*/
+    /*margin: 0 10px;*/
+    /*padding: 10px 20px;*/
+    /*background-color: #ff6600;*/
+    /*border: none;*/
+    /*cursor: pointer;*/
+/*}*/
+
 #content {
     padding: 20px;
     max-width: 800px; /* Same as the banner image's max-width */
