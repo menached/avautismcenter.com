@@ -4,7 +4,7 @@
 /* Default H1 Style (for large screens) */
 h1 {
     font-size: 3rem; /* Large size for desktops */
-    text-align: center;
+    /*text-align: center;*/
     margin: 20px auto;
     font-weight: bold;
 }
