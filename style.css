@@ -183,7 +183,7 @@ h2 {
 h2:hover {
     transform: scale(1.05); /* Slight zoom */
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Enhance shadow */
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /*transition: transform 0.3s ease, box-shadow 0.3s ease;*/
 }
 h2.beginner {
     background: linear-gradient(45deg, #FFDDC1, #FFDAB9);
@@ -221,6 +221,11 @@ h2.advancedplus {
     /*background-color: #FFD1DC; [> Pastel pink <]*/
     color: #E91E63; /* Vibrant pink */
     /*border: 2px solid #F8BBD0; [> Slightly darker border <]*/
+}
+h2.outings {
+    background-color: #FFDDC1; /* Pastel peach */
+    color: #FF5733; /* Vibrant coral */
+    /*border: 2px solid #FFCBA4; [> Slightly darker border <]*/
 }
 
 /* Physical Education Heading Style */
