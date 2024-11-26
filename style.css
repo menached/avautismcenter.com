@@ -2,7 +2,6 @@
 .alignright {text-align:right;}
 
 
-
 /* General Styling for the Image */
 .image-container {
     margin: 20px auto; /* Default margin for all screens */
@@ -17,18 +16,13 @@
 }
 
 /* Two-Column Layout for Larger Screens */
-@media (min-width: 621px) {
-    .two-column-layout {
-        display: flex; /* Two-column layout */
-        flex-direction: row; /* Horizontal alignment */
-        gap: 20px; /* Space between columns */
-        justify-content: space-between; /* Spread columns out */
-    }
-
+@media (min-width: 769px) {
     .image-container {
-        max-width: 30%; /* Smaller image for larger screens */
-        margin: 0 0 20px 20px; /* Add space between image and text */
-        float: right; /* Float image to the right */
+        max-width: 30%; /* Limit the size of the container */
+        margin: 0 0 20px 20px; /* Add spacing between the image and text */
+        float: right; /* Float the image to the right */
+        position: relative; /* Enable positioning for offset */
+        right: -100px; /* Offset the image 100px to the right */
         text-align: right; /* Align content inside the container */
     }
 
@@ -38,18 +32,13 @@
 }
 
 /* One-Column Layout for Smaller Screens */
-@media (max-width: 620px) {
-    .two-column-layout {
-        display: flex; /* Single-column layout */
-        flex-direction: column; /* Stack elements vertically */
-        gap: 20px; /* Space between elements */
-    }
-
+@media (max-width: 768px) {
     .image-container {
         max-width: 100%; /* Full width for smaller screens */
         margin: 20px 0; /* Center the image with spacing */
         float: none; /* Reset float */
         text-align: center; /* Center-align the content */
+        position: static; /* Disable relative positioning */
     }
 
     .image-container img {
