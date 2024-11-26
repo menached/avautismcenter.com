@@ -1,5 +1,22 @@
 /* General Styling */
 
+<style>
+    .wooden-frame {
+        border: 10px solid #8B4513; /* Brown frame color */
+        padding: 5px; /* Space between image and border */
+        background-color: #DEB887; /* Lighter brown inner background (optional) */
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5); /* Adds depth to the frame */
+        border-radius: 5px; /* Smooth edges for a more realistic look */
+        display: inline-block; /* Adjusts frame to image size */
+    }
+
+    img {
+        max-width: 100%; /* Ensures responsiveness */
+        display: block; /* Removes inline space below the image */
+    }
+</style>
+
+
 .fas:hover {
   color: #f39c12;
   transform: scale(1.2);
