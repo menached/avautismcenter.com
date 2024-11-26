@@ -5,6 +5,7 @@
 !404.html                           # Allow 404.html
 !battling-anxiety.html              # Allow battling-anxiety.html
 !public/mission-header.png          # Allow mission-header.png
+!public/having-fun.webp             # Allow mission-header.png
 !public/life-skills.webp            # Allow mission-header.png
 !public/life-skills-level-2.webp    # Allow life-skills-level-2.png
 !index.html                         # Allow index.html
