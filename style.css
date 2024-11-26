@@ -1,4 +1,13 @@
 /* General Styling */
+
+.fas:hover {
+  color: #f39c12;
+  transform: scale(1.2);
+  transition: transform 0.2s, color 0.2s;
+}
+
+
+
 .alignright {text-align:right;}
 
 
