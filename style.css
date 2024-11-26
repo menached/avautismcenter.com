@@ -1,48 +1,41 @@
 /* General Styling */
 
-/* General Layout for Two Columns */
+/* General Two-Column Layout */
 .two-column-layout {
     display: flex;
-    justify-content: space-between; /* Space between columns */
+    justify-content: space-between;
+    flex-wrap: wrap; /* Allow columns to wrap on smaller screens */
     gap: 20px;
 }
 
 /* Styling for the Image Container */
 .image-container {
-    flex: 0 0 40%; /* Take 40% width by default */
+    flex: 0 0 40%; /* Default width for the image container */
     margin: 0 auto; /* Center horizontally */
-    text-align: center; /* Center text inside */
+    text-align: center;
 }
 
-/* Image inside the Wooden Frame */
-.wooden-frame img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-/* Responsive Adjustments for Smaller Screens */
+/* Fix for Mobile and Mobile Landscape Views */
 @media (max-width: 768px) {
     .two-column-layout {
-        flex-direction: column; /* Stack columns vertically */
+        flex-direction: column; /* Stack content vertically */
         align-items: center; /* Center-align the content */
     }
 
     .image-container {
         flex: none;
-        max-width: 80%; /* Image container width on smaller screens */
+        max-width: 80%; /* Adjust the width on smaller screens */
         margin: 20px auto; /* Center the image container */
-        text-align: center; /* Ensure text is centered */
+        text-align: center; /* Center-align the image */
     }
 
     .wooden-frame img {
-        max-width: 100%; /* Ensure image scales properly */
+        max-width: 100%; /* Ensure the image fits the container */
         height: auto;
     }
 }
 
-/* Extra Small Screens (Portrait Mobile) */
+/* Extra Small Screens (Mobile Portrait and Landscape) */
 @media (max-width: 480px) {
     .image-container {
         max-width: 100%; /* Full width for very small screens */
@@ -52,6 +45,31 @@
         max-width: 100%; /* Ensure the image scales properly */
         height: auto;
     }
+}
+
+/* Fix for Header Alignment */
+header {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    box-sizing: border-box; /* Ensure padding is included in width calculations */
+}
+
+/* Additional Fix for Mobile and Landscape Views */
+@media (max-width: 768px) {
+    header {
+        width: 100%; /* Ensure it spans the full width */
+        padding: 10px; /* Add some padding for readability */
+    }
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    box-sizing: border-box; /* Include padding in width calculations */
 }
 
 
