@@ -362,28 +362,6 @@ p {
             text-align: center;
         }
 
-        /*h1 {*/
-            /*text-align: center;*/
-            /*font-size: 2.5em!important; [> Default for larger screens <]*/
-            /*margin-bottom: 0;*/
-        /*}*/
-
-        /*@media only screen and (max-width: 768px) {*/
-            /*h1 {*/
-                /*font-size: 1.8em!important; [> Smaller size for mobile screens <]*/
-                /*text-align: center!important;*/
-            /*}*/
-        /*}*/
-
-        /*@media only screen and (max-width: 480px) {*/
-            /*h1 {*/
-                /*font-size: 1.5em!important; [> Even smaller size for very small screens <]*/
-                /*text-align: center!important;*/
-            /*}*/
-        /*}*/
-
-
-
 
         /* Tagline Styling */
         .header-tagline {
@@ -406,9 +384,6 @@ p {
 
         /* Mobile Portrait View */
         @media (max-width: 600px) {
-            /*h1 {*/
-                /*font-size: 1.6rem;*/
-            /*}*/
             
             /* Make tagline smaller and adjust padding */
             .header-tagline {
