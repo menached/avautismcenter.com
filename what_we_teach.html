@@ -85,6 +85,7 @@
         display: inline-block; /* Ensures the figure width matches the image width */
         text-align: center;    /* Centers the caption */
         margin: 20px auto;     /* Adds space around the figure */
+        max-width: 80%;       /* Ensures the image is responsive */
     }
 
     img {
@@ -105,13 +106,13 @@
 
 @media (max-width: 768px) {
     figcaption {
-        font-size: 0.9em; /* Slightly smaller for tablets and small screens */
+        font-size: 0.8em; /* Slightly smaller for tablets and small screens */
     }
 }
 
 @media (max-width: 480px) {
     figcaption {
-        font-size: 0.8em; /* Even smaller for very small screens */
+        font-size: 0.7em; /* Even smaller for very small screens */
     }
 }
 
