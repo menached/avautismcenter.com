@@ -29,6 +29,8 @@
 
 /* Image Styling */
 .image-container {
+    position: relative;
+    float:right;
     text-align: right;
     margin: 30px auto;
 }
