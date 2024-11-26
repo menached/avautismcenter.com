@@ -12,6 +12,15 @@
     align-items: center; /* Vertically center the Gravatar and text */
 }
 
+.a-custom-list img.gravatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%; /* Make images circular */
+    margin-right: 15px; /* Add space between the Gravatar and the text */
+}
+
+
+
         .centered-content {
             max-width: 800px;
             margin: 0 auto;
