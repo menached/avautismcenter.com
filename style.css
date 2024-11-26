@@ -4,9 +4,9 @@
 
 /* General Styling for the Image */
 .image-container {
-    margin: 0 auto 20px; /* Default for larger screens */
+    margin: 20px auto; /* Default for spacing */
     max-width: 100%; /* Full width by default */
-    text-align: center; /* Center-align image on larger screens */
+    text-align: center; /* Center-align image by default */
 }
 
 .image-container img {
@@ -43,29 +43,28 @@
         margin: 0 0 20px 20px; /* Add spacing */
         text-align: right; /* Align content inside the container */
     }
+
+    .image-container img {
+        display: inline-block; /* Image aligns inline for better control */
+    }
 }
 
 /* One-Column Layout for Smaller Screens */
 @media (max-width: 620px) {
     .image-container {
         max-width: 50%; /* Reduce image size */
-        margin: 20px 0; /* Add spacing above and below */
+        margin: 20px 20px 20px 0; /* Add spacing to the right */
         text-align: left; /* Align image to the left */
     }
 
     .image-container img {
-        display: block; /* Ensure it behaves like a block element */
-        margin: 0 auto; /* Center horizontally within the container */
+        display: inline-block; /* Ensure proper alignment */
     }
 
     .two-column-layout {
         flex-direction: column; /* Stack elements vertically */
     }
 }
-
-
-
-
 
 /* Outings Section */
 h2 {
