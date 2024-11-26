@@ -216,6 +216,20 @@ h2.advanced {
     /*border: 2px solid #B9A2D5; [> Slightly darker border <]*/
 }
 
+/* Advanced Plus Heading Style */
+h2.advancedplus {
+    background-color: #FFD1DC; /* Pastel pink */
+    color: #E91E63; /* Vibrant pink */
+    border: 2px solid #F8BBD0; /* Slightly darker border */
+}
+
+/* Physical Education Heading Style */
+h2.physicaleducation {
+    background-color: #C1D1FF; /* Pastel blue */
+    color: #1E88E5; /* Rich blue */
+    border: 2px solid #A2B9E5; /* Slightly darker border */
+}
+
 
 
 
