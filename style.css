@@ -281,7 +281,7 @@ margin-bottom:10px;
 /* Styling for the Image Container */
 .image-container {
     flex: 0 0 40%; /* Default width for the image container */
-    margin: 0 auto; /* Center horizontally */
+    margin: 50px auto; /* Center horizontally */
     text-align: center;
 }
 
@@ -294,8 +294,8 @@ margin-bottom:10px;
 
     .image-container {
         flex: none;
-        max-width: 70%; /* Adjust the width on smaller screens */
-        margin: 50px auto; /* Center the image container */
+        max-width: 80%; /* Adjust the width on smaller screens */
+        margin: 20px auto; /* Center the image container */
         text-align: center; /* Center-align the image */
     }
 }
