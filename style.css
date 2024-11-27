@@ -7,8 +7,20 @@ p {
     margin: 10px 0;
 }
 
+.announcement{
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #555;
+    text-align: center;
+    margin: 10px 0;
 
+}
+.homelist{
+    font-size: 1.2rem;
+} 
+.homelistitem{
 
+}
 
 h1 {
     font-family: 'Marvel', sans-serif; /* Use your preferred font */
