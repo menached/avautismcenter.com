@@ -15,7 +15,7 @@ html, body {
     box-sizing: border-box; /* Include padding in width calculations */
 }
 
-.jon-and-willie-at-doc {
+.jonandwillieatdoc {
     max-width:300px;
     position:relative;
     float:left;
