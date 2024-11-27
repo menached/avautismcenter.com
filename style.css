@@ -25,12 +25,24 @@ html, body {
     display: inline-block; /* Ensure the frame wraps around the image */
 }
 
+
 .wooden-frame img {
     max-width: 100%; /* Makes sure the image is responsive */
     height: auto; /* Maintains the aspect ratio */
     display: block; /* Removes any extra inline spacing */
     border-radius: 3px; /* Slight rounding for the image itself */
 }
+
+#hover-stats-image {
+    width: 100%; /* Adjust to fit its container */
+    max-width: 600px; /* Limit the maximum width */
+    aspect-ratio: 16 / 9; /* Define a landscape aspect ratio */
+    object-fit: cover; /* Ensures the image covers the defined aspect ratio */
+    display: block; /* Removes inline spacing if it's inside an inline container */
+    margin: 0 auto; /* Optional: centers the image */
+    border-radius: 8px; /* Optional: smoothens the edges */
+}
+
 
 
 .announcement{
