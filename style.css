@@ -1373,7 +1373,7 @@ button:hover {
 
 
 a {
-    color: #0044cc;
+    /*color: #0044cc;*/
     text-decoration: none;
     position: relative;
     transition: all 0.3s ease;
