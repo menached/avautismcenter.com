@@ -1,5 +1,17 @@
 /* General Styling */
 .color-red {font-color:FF0000;}
+
+/* Target only the icon inside the h1 */
+h1 > i {
+    color: #FF5733; /* Replace with your desired color */
+}
+
+/* Optional: Add hover effect for the icon */
+h1 > i:hover {
+    color: #C70039; /* Replace with another color for hover effect */
+}
+
+
 .share-button::before,
 .share-button::after {
     content: none; /* Removes any added content */
