@@ -509,12 +509,12 @@ header {
 }
 
 
-        .centered-content {
-            max-width: 800px;
-            margin: 0 auto;
-            text-align: center;
-            padding: 20px;
-        }
+.centered-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+    padding: 20px;
+}
 
         header {
             text-align: center;
