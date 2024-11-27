@@ -18,8 +18,8 @@ html, body {
 .jonandwillieatdoc {
     max-width:300px;
     position:relative;
-    float:left;
-    margin-right:20px;
+    float:right;
+    margin-left:20px;
 }
 
 .wooden-frame {
