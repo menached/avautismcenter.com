@@ -1,18 +1,14 @@
 /* General Styling */
-.leftie-content {
-text-align:left;
-margin-left:10%;
-margin-right:10%;
+
+p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #555;
+    margin: 10px 0;
 }
 
-.having-fun {
-position:relative;
-float:right;
-width:30%;
-max-width:300px;
-padding-left:20px;
-margin-bottom:10px;
-}
+
+
 
 h1 {
     font-family: 'Marvel', sans-serif; /* Use your preferred font */
@@ -170,6 +166,20 @@ h2 .fas {
 
 
 
+.leftie-content {
+text-align:left;
+margin-left:10%;
+margin-right:10%;
+}
+
+.having-fun {
+position:relative;
+float:right;
+width:30%;
+max-width:300px;
+padding-left:20px;
+margin-bottom:10px;
+}
 
 
 
@@ -335,16 +345,6 @@ html, body {
 }
 
 
-
-
-
-
-p {
-    font-size: 1rem;
-    line-height: 1.6;
-    color: #555;
-    margin: 10px 0;
-}
 
 
 .image-container {
