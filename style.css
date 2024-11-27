@@ -63,6 +63,52 @@ h1 .fas {
 
 
 
+
+
+
+
+
+/* Font Awesome Icon Styling */
+h2 .fas {
+    font-size: 1em; /* Default icon size relative to text */
+    color: inherit; /* Ensure it matches the text color */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) { /* Tablets */
+    h2 {
+        font-size: 2.1rem; /* Slightly smaller text */
+    }
+    h2 .fas {
+        font-size: 2.1em; /* Scale down the icon */
+    }
+}
+
+@media (max-width: 768px) { /* Mobile Landscape */
+    h2 {
+        font-size: 1.8rem; /* Smaller text for mobile */
+    }
+    h2 .fas {
+        font-size: 1.8em; /* Adjust icon size */
+    }
+}
+
+@media (max-width: 480px) { /* Mobile Portrait */
+    h2 {
+        font-size: 1.4rem; /* Compact size for smaller screens */
+    }
+    h2 .fas {
+        font-size: 1.4em; /* Adjust icon for small screens */
+    }
+}
+
+
+
+
+
+
+
+
 /* General Two-Column Layout */
 .two-column-layout {
     display: flex;
