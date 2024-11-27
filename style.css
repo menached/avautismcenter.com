@@ -1,5 +1,10 @@
 /* General Styling */
 
+.share-button::before,
+.share-button::after {
+    content: none; /* Removes any added content */
+}
+
 p {
     font-size: 1rem;
     line-height: 1.6;
