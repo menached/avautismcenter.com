@@ -1328,17 +1328,18 @@ h3 i.fa-bullseye {
 /* Further adjust for very small mobile screens */
 @media (max-width: 600px) {
     .our-aim-image {
-        width: 33%;  /* Continue to take up 1/3 of the screen */
+        /*width: 33%;  [> Continue to take up 1/3 of the screen <]*/
         max-width: 150px;  /* Set a maximum width for very small screens */
-        float: right;
-        margin: 0 0 10px 10px;
+        /*float: right;*/
+        /*margin: 0 0 10px 10px;*/
     }
 }
 
 /* Media query for screens 800px and larger */
 @media only screen and (min-width: 801px) {
     .mission-image, .our-aim-image {
-        width: 33%; /* Set the width to half of its current size */
+        /*width: 33%; [> Set the width to half of its current size <]*/
+        max-width: 450px;  /* Set a maximum width for very small screens */
     }
 }
 
