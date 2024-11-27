@@ -19,6 +19,7 @@ html, body {
     max-width:300px;
     position:relative;
     float:left;
+    margin-right:20px;
 }
 
 .wooden-frame {
