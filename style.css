@@ -207,19 +207,19 @@ h3 .fas {
 
 @media (max-width: 768px) { /* Mobile Landscape */
     h3 {
-        font-size: .9rem; /* Smaller text for mobile */
+        font-size: 1.3rem; /* Smaller text for mobile */
     }
     h3 .fas {
-        font-size: .8em; /* Adjust icon size */
+        font-size: 1.3em; /* Adjust icon size */
     }
 }
 
 @media (max-width: 480px) { /* Mobile Portrait */
     h3 {
-        font-size: .9rem; /* Compact size for smaller screens */
+        font-size: 1.2rem; /* Compact size for smaller screens */
     }
     h3 .fas {
-        font-size: .7em; /* Adjust icon for small screens */
+        font-size: 1.2em; /* Adjust icon for small screens */
     }
 }
 
