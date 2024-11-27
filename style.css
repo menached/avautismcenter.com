@@ -201,7 +201,7 @@ h3 .fas {
         font-size: 1.6rem; /* Slightly smaller text */
     }
     h3 .fas {
-        font-size: 1.4em; /* Scale down the icon */
+        font-size: 1.3em; /* Scale down the icon */
     }
 }
 
@@ -210,7 +210,7 @@ h3 .fas {
         font-size: 1.3rem; /* Smaller text for mobile */
     }
     h3 .fas {
-        font-size: 1.3em; /* Adjust icon size */
+        font-size: 1em; /* Adjust icon size */
     }
 }
 
@@ -219,7 +219,7 @@ h3 .fas {
         font-size: 1.2rem; /* Compact size for smaller screens */
     }
     h3 .fas {
-        font-size: 1.2em; /* Adjust icon for small screens */
+        font-size: 1em; /* Adjust icon for small screens */
     }
 }
 
