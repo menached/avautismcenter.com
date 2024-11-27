@@ -16,6 +16,23 @@ html, body {
 }
 
 
+.wooden-frame {
+    border: 10px solid #8B4513; /* Dark brown color for the frame */
+    padding: 5px; /* Space between the image and the border */
+    background-color: #DEB887; /* Lighter wood-like color */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5); /* Adds depth with a shadow */
+    border-radius: 5px; /* Smooth edges for realism */
+    display: inline-block; /* Ensure the frame wraps around the image */
+}
+
+.wooden-frame img {
+    max-width: 100%; /* Makes sure the image is responsive */
+    height: auto; /* Maintains the aspect ratio */
+    display: block; /* Removes any extra inline spacing */
+    border-radius: 3px; /* Slight rounding for the image itself */
+}
+
+
 .announcement{
     font-size: 1.2rem;
     line-height: 1.6;
