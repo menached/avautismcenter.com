@@ -64,6 +64,7 @@ h1 .fas {
 
 
 
+/* General Styling for H2s */
 h2 {
     font-family: 'Marvel', sans-serif; /* Use your preferred font */
     font-weight: 700; /* Bold weight */
@@ -74,19 +75,70 @@ h2 {
     align-items: center; /* Vertically align icon and text */
     gap: 15px; /* Space between icon and text */
     text-align: left; /* Align the heading to the left */
+    /*max-width: 80%; [> Restrict width for better layout <]*/
+    /*padding-left: 10px;*/
 }
 
+h2:hover {
+    /*transform: scale(1.05); [> Slight zoom <]*/
+    /*box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); [> Enhance shadow <]*/
+    /*transition: transform 0.3s ease, box-shadow 0.3s ease;*/
+}
+h2.beginner {
+    background: linear-gradient(45deg, #FFDDC1, #FFDAB9);
+}
+h2.intermediate {
+    background: linear-gradient(45deg, #C1E1C1, #A8E4A0);
+}
+h2.advanced {
+    background: linear-gradient(45deg, #D1C1FF, #C5B4E3);
+}
 
+/* Beginner Heading Style */
+h2.beginner {
+    /*background-color: #FFDDC1; [> Pastel peach <]*/
+    color: #FF5733; /* Vibrant coral */
+    /*border: 2px solid #FFCBA4; [> Slightly darker border <]*/
+}
 
+/* Intermediate Heading Style */
+h2.intermediate {
+    /*background-color: #C1E1C1; [> Pastel mint green <]*/
+    color: #28A745; /* Bold green */
+    /*border: 2px solid #A2D5A2; [> Slightly darker border <]*/
+}
+
+/* Advanced Heading Style */
+h2.advanced {
+    /*background-color: #D1C1FF; [> Pastel lavender <]*/
+    color: #6A0DAD; /* Rich purple */
+    /*border: 2px solid #B9A2D5; [> Slightly darker border <]*/
+}
+
+/* Advanced Plus Heading Style */
+h2.advancedplus {
+    /*background-color: #FFD1DC; [> Pastel pink <]*/
+    color: #E91E63; /* Vibrant pink */
+    /*border: 2px solid #F8BBD0; [> Slightly darker border <]*/
+}
+h2.outings {
+    /*background-color: #FFDDC1; [> Pastel peach <]*/
+    color: #FF5733; /* Vibrant coral */
+    /*border: 2px solid #FFCBA4; [> Slightly darker border <]*/
+}
+
+/* Physical Education Heading Style */
+h2.physicaleducation {
+    /*background-color: #C1D1FF; [> Pastel blue <]*/
+    color: #1E88E5; /* Rich blue */
+    /*border: 2px solid #A2B9E5; [> Slightly darker border <]*/
+}
 
 /* Font Awesome Icon Styling */
 h2 .fas {
     font-size: 2.1em; /* Default icon size relative to text */
     color: inherit; /* Ensure it matches the text color */
 }
-
-
-
 
 /* Responsive Adjustments */
 @media (max-width: 1024px) { /* Tablets */
@@ -283,80 +335,6 @@ html, body {
 }
 
 
-/* Outings Section */
-/*h2 {*/
-    /*font-size: 1.8rem;*/
-    /*margin-top: 20px;*/
-    /*color: #2c3e50;*/
-/*}*/
-
-
-
-/* General Styling for H2s */
-h2 {
-    /*text-align: center; [> Center the text for all headings <]*/
-    font-family: 'Marvel', sans-serif; /* Or any font you prefer */
-    font-weight: bold;
-    padding-left: 10px;
-    /*margin: 20px auto;*/
-    /*border-radius: 10px; [> Add rounded corners <]*/
-    /*box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); [> Subtle shadow <]*/
-    max-width: 80%; /* Restrict width for better layout */
-}
-h2:hover {
-    /*transform: scale(1.05); [> Slight zoom <]*/
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Enhance shadow */
-    /*transition: transform 0.3s ease, box-shadow 0.3s ease;*/
-}
-h2.beginner {
-    background: linear-gradient(45deg, #FFDDC1, #FFDAB9);
-}
-h2.intermediate {
-    background: linear-gradient(45deg, #C1E1C1, #A8E4A0);
-}
-h2.advanced {
-    background: linear-gradient(45deg, #D1C1FF, #C5B4E3);
-}
-
-/* Beginner Heading Style */
-h2.beginner {
-    /*background-color: #FFDDC1; [> Pastel peach <]*/
-    color: #FF5733; /* Vibrant coral */
-    /*border: 2px solid #FFCBA4; [> Slightly darker border <]*/
-}
-
-/* Intermediate Heading Style */
-h2.intermediate {
-    /*background-color: #C1E1C1; [> Pastel mint green <]*/
-    color: #28A745; /* Bold green */
-    /*border: 2px solid #A2D5A2; [> Slightly darker border <]*/
-}
-
-/* Advanced Heading Style */
-h2.advanced {
-    /*background-color: #D1C1FF; [> Pastel lavender <]*/
-    color: #6A0DAD; /* Rich purple */
-    /*border: 2px solid #B9A2D5; [> Slightly darker border <]*/
-}
-
-/* Advanced Plus Heading Style */
-h2.advancedplus {
-    /*background-color: #FFD1DC; [> Pastel pink <]*/
-    color: #E91E63; /* Vibrant pink */
-    /*border: 2px solid #F8BBD0; [> Slightly darker border <]*/
-}
-h2.outings {
-    /*background-color: #FFDDC1; [> Pastel peach <]*/
-    color: #FF5733; /* Vibrant coral */
-    /*border: 2px solid #FFCBA4; [> Slightly darker border <]*/
-}
-
-/* Physical Education Heading Style */
-h2.physicaleducation {
-    /*background-color: #C1D1FF; [> Pastel blue <]*/
-    color: #1E88E5; /* Rich blue */
-    /*border: 2px solid #A2B9E5; [> Slightly darker border <]*/
-}
 
 
 
