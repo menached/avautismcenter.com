@@ -41,6 +41,7 @@ html, body {
     display: block; /* Removes inline spacing if it's inside an inline container */
     margin: 0 auto; /* Optional: centers the image */
     border-radius: 8px; /* Optional: smoothens the edges */
+    padding-left:10px;
 }
 
 
