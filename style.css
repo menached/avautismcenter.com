@@ -7,6 +7,15 @@ p {
     margin: 10px 0;
 }
 
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    box-sizing: border-box; /* Include padding in width calculations */
+}
+
+
 .announcement{
     font-size: 1.2rem;
     line-height: 1.6;
@@ -278,25 +287,11 @@ margin-bottom:10px;
     gap: 20px;
 }
 
-/* Styling for the Image Container */
-.image-container {
-    flex: 0 0 80%; /* Default width for the image container */
-    margin: 0 auto; /* Center horizontally */
-    text-align: center;
-image-container}
-
 /* Fix for Mobile and Mobile Landscape Views */
 @media (max-width: 768px) {
     .two-column-layout {
         flex-direction: column; /* Stack content vertically */
         align-items: center; /* Center-align the content */
-    }
-
-    .image-container {
-        flex: none;
-        max-width: 80%; /* Adjust the width on smaller screens */
-        margin: 20px auto; /* Center the image container */
-        text-align: center; /* Center-align the image */
     }
 }
 
@@ -322,14 +317,6 @@ header {
         width: 100%; /* Ensure it spans the full width */
         padding: 10px; /* Add some padding for readability */
     }
-}
-
-html, body {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    overflow-x: hidden; /* Prevent horizontal scrolling */
-    box-sizing: border-box; /* Include padding in width calculations */
 }
 
 
