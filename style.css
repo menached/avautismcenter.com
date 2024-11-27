@@ -280,10 +280,10 @@ margin-bottom:10px;
 
 /* Styling for the Image Container */
 .image-container {
-    flex: 0 0 40%; /* Default width for the image container */
+    flex: 0 0 80%; /* Default width for the image container */
     margin: 0 auto; /* Center horizontally */
     text-align: center;
-}
+image-container}
 
 /* Fix for Mobile and Mobile Landscape Views */
 @media (max-width: 768px) {
