@@ -1,6 +1,10 @@
 /* General Styling */
 .color-red {font-color:FF0000;}
 
+.frame1-size{
+
+}
+
 /* Target only the icon inside the h1 */
 h1 > i {
     color: #FF8C00; /* Replace with your desired color */
@@ -1310,10 +1314,10 @@ h3 i.fa-bullseye {
 }
 
 .our-aim-image {
-    width: 33%;  /* take up 50% of the screen on larger screens */
-    max-width: 33%;
+    /*width: 33%;  [> take up 50% of the screen on larger screens <]*/
+    /*max-width: 33%;*/
     float: right;
-    margin: 0 0 10px 20px;
+    /*margin: 0 0 10px 20px;*/
 }
 .our-aim-image img {
     max-width: 70%;
