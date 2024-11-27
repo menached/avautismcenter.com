@@ -1279,54 +1279,7 @@ h3 i.fa-bullseye {
 .our-aim-image img {
     max-width: 70%;
     height: auto;
-    /*text-align:center;*/
-    /*padding-left:20px;*/
-    /*border-radius: 8px;*/
 }
-
-
-/*.our-aim-image {*/
-    /*width: 33%;  [> Take up 50% of the screen on larger screens <]*/
-    /*max-width: 33%;*/
-    /*float: right;*/
-    /*margin: 0 0 10px 20px;*/
-/*}*/
-
-/*.our-aim-image img {*/
-    /*max-width: 70%;*/
-    /*height: auto;*/
-    /*text-align:center;*/
-    /*padding-left:20px;*/
-    /*border-radius: 8px;*/
-/*}*/
-
-/*.our-aim-image figcaption {*/
-    /*text-align: center;*/
-    /*font-size: 0.9rem;*/
-    /*color: #555;*/
-    /*margin-top: 5px;*/
-/*}*/
-
-/*.our-aim-image img {*/
-    /*width: 100%; [> Ensure image fills the container <]*/
-    /*height: auto;*/
-    /*border-radius: 10px; [> Rounded corners for all sides <]*/
-    /*box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); [> Subtle shadow <]*/
-    /*transition: transform 0.3s ease, box-shadow 0.3s ease; [> Smooth hover transition <]*/
-/*}*/
-
-/*.our-aim-image img:hover {*/
-    /*transform: scale(1.05); [> Slight zoom on hover <]*/
-    /*box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); [> Darker shadow on hover <]*/
-    /*outline: none; [> Prevent outline effect on focus <]*/
-/*}*/
-
-/*.our-aim-image {*/
-    /*overflow: hidden; [> Prevent any overflow showing on hover <]*/
-    /*margin-left: auto; [> Align image to the right <]*/
-    /*float: right; [> Ensure the image floats right <]*/
-/*}*/
-
 
 
 /* Further adjust for very small mobile screens */
@@ -1403,7 +1356,7 @@ img {
 
 img:hover {
     /*transform: scale(1.05); [> Slight zoom-in on hover <]*/
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Add a shadow on hover */
+    /*box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); [> Add a shadow on hover <]*/
 }
 
 
