@@ -38,7 +38,7 @@ h1 .fas {
         font-size: 2.5rem; /* Slightly smaller text */
     }
     h1 .fas {
-        font-size: 0.9em; /* Scale down the icon */
+        font-size: 2.5em; /* Scale down the icon */
     }
 }
 
@@ -47,7 +47,7 @@ h1 .fas {
         font-size: 2rem; /* Smaller text for mobile */
     }
     h1 .fas {
-        font-size: 0.8em; /* Adjust icon size */
+        font-size: 2em; /* Adjust icon size */
     }
 }
 
@@ -56,7 +56,7 @@ h1 .fas {
         font-size: 1.8rem; /* Compact size for smaller screens */
     }
     h1 .fas {
-        font-size: 0.7em; /* Adjust icon for small screens */
+        font-size: 1.8em; /* Adjust icon for small screens */
     }
 }
 
