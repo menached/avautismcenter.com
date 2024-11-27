@@ -1386,16 +1386,6 @@ img:hover {
 }
 
 
-h1:hover, h2:hover, h3:hover {
-    /*background-color: #0044cc;*/
-    /*color: white;*/
-    /*padding: 5px;*/
-    /*border-radius: 5px;*/
-    /*transition: background-color 0.3s ease, color 0.3s ease;*/
-}
-
-
-
 /* General tooltip styling */
 .tooltip {
     position: relative; /* Establish a containing block for the tooltip */
