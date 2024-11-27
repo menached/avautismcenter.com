@@ -15,6 +15,11 @@ html, body {
     box-sizing: border-box; /* Include padding in width calculations */
 }
 
+.jon-and-willie-at-doc {
+    max-width:300px;
+    position:relative;
+    float:left;
+}
 
 .wooden-frame {
     border: 10px solid #8B4513; /* Dark brown color for the frame */
