@@ -165,6 +165,67 @@ h2 .fas {
 }
 
 
+
+
+
+/* General Styling for H2s */
+h3 {
+    font-family: 'Marvel', sans-serif; /* Use your preferred font */
+    font-weight: 700; /* Bold weight */
+    font-size: 1.6rem; /* Default size for desktops */
+    line-height: 1; /* Adjust line spacing */
+    margin: 20px 0; /* Add vertical spacing */
+    display: flex; /* Flexbox for proper alignment */
+    align-items: center; /* Vertically align icon and text */
+    gap: 15px; /* Space between icon and text */
+    text-align: left; /* Align the heading to the left */
+    /*max-width: 80%; [> Restrict width for better layout <]*/
+    /*padding-left: 10px;*/
+}
+
+h3:hover {
+    /*transform: scale(1.05); [> Slight zoom <]*/
+    /*box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); [> Enhance shadow <]*/
+    /*transition: transform 0.3s ease, box-shadow 0.3s ease;*/
+}
+
+/* Font Awesome Icon Styling */
+h3 .fas {
+    font-size: 1.6em; /* Default icon size relative to text */
+    color: inherit; /* Ensure it matches the text color */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) { /* Tablets */
+    h3 {
+        font-size: 1.6rem; /* Slightly smaller text */
+    }
+    h3 .fas {
+        font-size: 1.4em; /* Scale down the icon */
+    }
+}
+
+@media (max-width: 768px) { /* Mobile Landscape */
+    h3 {
+        font-size: .9rem; /* Smaller text for mobile */
+    }
+    h3 .fas {
+        font-size: .8em; /* Adjust icon size */
+    }
+}
+
+@media (max-width: 480px) { /* Mobile Portrait */
+    h3 {
+        font-size: .9rem; /* Compact size for smaller screens */
+    }
+    h3 .fas {
+        font-size: .7em; /* Adjust icon for small screens */
+    }
+}
+
+
+
+
 .linewidth{ width:20%;}
 
 .leftie-content {
