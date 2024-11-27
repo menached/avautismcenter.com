@@ -155,33 +155,34 @@ h2 a:hover {
     /*transform: scale(1.05); [> Slight zoom <]*/
 h2.beginner {
     background: linear-gradient(45deg, #FFDDC1, #FFDAB9);
+    color: #FF5733; /* Vibrant coral */
 }
 h2.intermediate {
     background: linear-gradient(45deg, #C1E1C1, #A8E4A0);
+    color: #28A745; /* Bold green */
 }
 h2.advanced {
     background: linear-gradient(45deg, #D1C1FF, #C5B4E3);
 }
 
+
 /* Beginner Heading Style */
 h2.beginner {
     /*background-color: #FFDDC1; [> Pastel peach <]*/
-    color: #FF5733; /* Vibrant coral */
     /*border: 2px solid #FFCBA4; [> Slightly darker border <]*/
 }
 
 /* Intermediate Heading Style */
 h2.intermediate {
     /*background-color: #C1E1C1; [> Pastel mint green <]*/
-    color: #28A745; /* Bold green */
     /*border: 2px solid #A2D5A2; [> Slightly darker border <]*/
 }
 
 /* Advanced Heading Style */
 h2.advanced {
     /*background-color: #D1C1FF; [> Pastel lavender <]*/
-    color: #6A0DAD; /* Rich purple */
     /*border: 2px solid #B9A2D5; [> Slightly darker border <]*/
+    color: #6A0DAD; /* Rich purple */
 }
 
 /* Advanced Plus Heading Style */
@@ -202,6 +203,7 @@ h2.physicaleducation {
     color: #1E88E5; /* Rich blue */
     /*border: 2px solid #A2B9E5; [> Slightly darker border <]*/
 }
+
 
 /* Font Awesome Icon Styling */
 h2 .fas {
@@ -586,6 +588,7 @@ h1, h2, h3, h4, h5, h6 {
     font-family: 'Marvel', sans-serif;
     font-weight: 700; /* Ensure bold weight */
     /*font-size: 1.5em; [> Increase size <]*/
+    color: #FF5733;
 
 }
 
