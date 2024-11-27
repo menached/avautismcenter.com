@@ -88,10 +88,19 @@ h2 {
 }
 
 h2:hover {
-    /*transform: scale(1.05); [> Slight zoom <]*/
     /*box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); [> Enhance shadow <]*/
     /*transition: transform 0.3s ease, box-shadow 0.3s ease;*/
 }
+
+h2 a {
+    text-decoration: none; /* Removes underline */
+}
+
+h2 a:hover {
+    text-decoration: none; /* Ensures no underline on hover */
+}
+
+    /*transform: scale(1.05); [> Slight zoom <]*/
 h2.beginner {
     background: linear-gradient(45deg, #FFDDC1, #FFDAB9);
 }
