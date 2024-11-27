@@ -281,7 +281,7 @@ margin-bottom:10px;
 /* Styling for the Image Container */
 .image-container {
     flex: 0 0 40%; /* Default width for the image container */
-    margin: 50px auto; /* Center horizontally */
+    margin: 0 auto; /* Center horizontally */
     text-align: center;
 }
 
