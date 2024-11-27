@@ -247,7 +247,7 @@ h2 .fas {
 h3 {
     font-family: 'Marvel', sans-serif; /* Use your preferred font */
     font-weight: 700; /* Bold weight */
-    font-size: 1.5rem; /* Default size for desktops */
+    font-size: 1.6rem; /* Default size for desktops */
     line-height: 1; /* Adjust line spacing */
     margin: 20px 0; /* Add vertical spacing */
     display: flex; /* Flexbox for proper alignment */
