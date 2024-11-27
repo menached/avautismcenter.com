@@ -94,10 +94,12 @@ h2:hover {
 
 h2 a {
     text-decoration: none; /* Removes underline */
+    color:inherit;
 }
 
 h2 a:hover {
     text-decoration: none; /* Ensures no underline on hover */
+    color:inherit;
 }
 
     /*transform: scale(1.05); [> Slight zoom <]*/
