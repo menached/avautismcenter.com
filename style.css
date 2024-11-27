@@ -298,22 +298,12 @@ margin-bottom:10px;
         margin: 20px auto; /* Center the image container */
         text-align: center; /* Center-align the image */
     }
-
-    .wooden-frame img {
-        max-width: 100%; /* Ensure the image fits the container */
-        height: auto;
-    }
 }
 
 /* Extra Small Screens (Mobile Portrait and Landscape) */
 @media (max-width: 480px) {
     .image-container {
         max-width: 100%; /* Full width for very small screens */
-    }
-
-    .wooden-frame img {
-        max-width: 100%; /* Ensure the image scales properly */
-        height: auto;
     }
 }
 
