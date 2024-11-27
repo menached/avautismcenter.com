@@ -1,5 +1,5 @@
 /* General Styling */
-
+.color-red {font-color:FF0000;}
 .share-button::before,
 .share-button::after {
     content: none; /* Removes any added content */
