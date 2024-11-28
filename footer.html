@@ -28,10 +28,15 @@
   #banner-container {
     width: 100%;
     overflow: hidden;
+    background-color: #f8f9fa; /* Light background for better visibility */
+    color: #333; /* Dark text for readability */
+    padding: 10px 0;
+    text-align: center;
   }
   #banner {
+    display: inline-block;
     white-space: nowrap;
-    animation: scroll 10s linear infinite;
+    animation: scroll 20s linear infinite;
   }
   @keyframes scroll {
     0% { transform: translateX(100%); }
@@ -41,9 +46,24 @@
 </head>
 <body>
   <div id="banner-container">
-    <div id="banner">
-      <p>This is a scrolling banner message!</p>
-    </div>
+    <div id="banner"></div>
   </div>
+
+  <script>
+    // Array of inspirational quotes
+    const quotes = [
+        "“Autism is not a disability, it’s a different ability.”",
+        "“Inclusion is the art of seeing people, not just labels.”",
+        "“Celebrate diversity, embrace humanity.”",
+        "“Kindness is free. Sprinkle that stuff everywhere.”",
+        "“The greatest glory in living lies not in never falling, but in rising every time we fall.” - Nelson Mandela",
+        "“Your limitation—it's only your imagination.”"
+    ];
+
+    // Combine quotes into a single scrolling text
+    const banner = document.getElementById("banner");
+    banner.innerHTML = quotes.map(quote => `<span>${quote}</span>`).join(" &nbsp; | &nbsp; ");
+  </script>
 </body>
 </html>
+
