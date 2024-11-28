@@ -21,26 +21,22 @@
 </footer>
 
 <script>
+    // Array of inspirational quotes
     const quotes = [
         '“Autism is not a disability, it’s a different ability.”',
         '“Inclusion is the art of seeing people, not just labels.”',
         '“Celebrate diversity, embrace humanity.”'
     ];
 
-    const footerPlaceholder = document.querySelector('.footer-placeholder');
+    // Select a random quote
+    const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
 
+    // Find the footer placeholder and display the quote
+    const footerPlaceholder = document.getElementById('footer-placeholder');
     if (footerPlaceholder) {
-        let index = 0;
-
-        const updateQuote = () => {
-            footerPlaceholder.innerHTML = `<p>${quotes[index]}</p>`;
-            index = (index + 1) % quotes.length;
-        };
-
-        updateQuote();
-        setInterval(updateQuote, 5000);
+        footerPlaceholder.innerHTML = `<p>${randomQuote}</p>`;
     } else {
-        console.error('Element with class "footer-placeholder" not found.');
+        console.error('Element with ID "footer-placeholder" not found.');
     }
 </script>
 
