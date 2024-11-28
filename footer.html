@@ -1,10 +1,5 @@
 <footer class="site-footer">
-    <div class="footer-container">
-        <div id="banner">
-            <div id="banner-text">
-                Unlocking Verbal Expression in a Safe, Supportive Environment
-            </div>
-        </div>
+    <div class="footer-content">
         <p>&copy; 2024 AV Autism Center. All rights reserved.</p>
         <div class="footer-links">
             <a href="/privacy-policy.html">Privacy Policy</a> | 
@@ -22,22 +17,46 @@
             </a>
         </div>
     </div>
+
+    <div id="banner">
+      <div id="banner-text">
+       Unlocking Verbal Expression in a Safe, Supportive Environment
+      </div>
+    </div>
 </footer>
 
 <style>
-  /* Ensure the footer spans edge-to-edge */
-.site-footer {
-    width: 100vw; /* Ensure it spans the full viewport width */
-    margin: 0; /* Remove any default margin */
-    padding: 0; /* Remove any default padding */
-    background-color: #f8f9fa; /* Gray footer background */
-    position: relative; /* Make sure it stretches properly */
-}
-.footer-container {
-    max-width: 1200px; /* Adjust to your page's maximum width */
-    margin: 0 auto; /* Center content inside the footer */
-    padding: 20px; /* Add padding inside the footer */
-}
+  /* Container styles */
+  #banner {
+    width: 100%; /* Full-width container */
+    height: 50px; /* Adjust height as needed */
+    overflow: hidden; /* Hide overflowing text */
+    position: relative;
+    background-color: #f8f9fa; /* Light background color */
+    color: #333; /* Dark text color */
+    display: flex;
+    align-items: center; /* Center vertically */
+  }
 
+  /* Scrolling text styles */
+  #banner-text {
+    position: absolute;
+    white-space: nowrap;
+    animation: scroll 10s linear infinite; /* Adjust duration for speed */
+  }
+
+  /* Scrolling animation */
+  @keyframes scroll {
+    0% {
+      transform: translateX(100%); /* Start completely off-screen to the right */
+    }
+    100% {
+      transform: translateX(-100%); /* End completely off-screen to the left */
+    }
+  }
 </style>
+
+
+
+
 
