@@ -21,26 +21,6 @@
 </footer>
 
 <script>
-    const quotes = [
-        '“Autism is not a disability, it’s a different ability.”',
-        '“Inclusion is the art of seeing people, not just labels.”',
-        '“Celebrate diversity, embrace humanity.”'
-    ];
-
-    const footerPlaceholder = document.querySelector('.footer-placeholder');
-
-    if (footerPlaceholder) {
-        let index = 0;
-
-        const updateQuote = () => {
-            footerPlaceholder.innerHTML = `<p>${quotes[index]}</p>`;
-            index = (index + 1) % quotes.length;
-        };
-
-        updateQuote();
-        setInterval(updateQuote, 5000);
-    } else {
-        console.error('Element with class "footer-placeholder" not found.');
-    }
+    .site-footer { width: 100%; }
 </script>
 
