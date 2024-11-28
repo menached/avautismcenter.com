@@ -59,50 +59,16 @@
 
 
 
-
-<div class="decorative-box">
-    <p>This box has decorative wavy borders!</p>
+<div class="wavy-section">
+    <p>This section has wavy top and bottom borders!</p>
 </div>
 
 <style>
-  .decorative-box {
-      padding: 20px;
-      background: #e6f7ff;
-      position: relative;
-  }
-
-  .decorative-box::before,
-  .decorative-box::after {
-      content: '';
-      position: absolute;
-      width: 100%;
-      height: 10px;
-      background: repeating-linear-gradient(90deg, #333, #333 10px, #fff 10px, #fff 20px);
-  }
-
-  .decorative-box::before {
-      top: -10px;
-      left: 0;
-  }
-
-  .decorative-box::after {
-      bottom: -10px;
-      left: 0;
-  }
-</style>
-
-
-
-<div class="uneven-box">
-    <p>This section has uneven borders!</p>
-</div>
-
-<style>
-  .uneven-box {
-      padding: 20px;
-      background: #fafad2;
-      border: 10px solid;
-      border-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path d="M0,50 C20,90 40,10 60,50 C80,90 100,10 100,50" stroke="black" stroke-width="10" fill="none"/></svg>') 20 stretch;
+  .wavy-section {
+      background: #ffcccb;
+      color: #333;
+      padding: 40px;
+      clip-path: polygon(0% 10%, 100% 0%, 100% 90%, 0% 100%);
   }
 </style>
 
