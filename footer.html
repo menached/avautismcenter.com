@@ -25,26 +25,51 @@
 </footer>
 
 <style>
+  /* Styling for the banner container */
+  #banner-container {
+      width: 100%;
+      overflow: hidden;
+      background-color: #f8f9fa; /* Light background */
+      color: #333; /* Dark text */
+      padding: 10px 0;
+      text-align: center;
+  }
+
+  /* Styling for the scrolling banner */
   #banner {
-    width: 500px;
-    height: 100px;
-    overflow: hidden;
-    position: relative;
+      display: inline-block;
+      white-space: nowrap;
+      animation: scroll 15s linear infinite; /* Adjust timing */
   }
-  #banner-text {
-    position: absolute;
-    white-space: nowrap;
-    animation: scroll 10s linear infinite;
-  }
+
+  /* Animation for smooth scrolling */
   @keyframes scroll {
-    0% { left: 500px; }
-    100% { left: -100%; }
+      0% {
+          transform: translateX(100%);
+      }
+      100% {
+          transform: translateX(-100%);
+      }
   }
 </style>
 
-<div id="banner">
-  <div id="banner-text">
-   Unlocking Verbal Expression in a Safe, Supportive Environment
-  </div>
-</div>
+<script>
+    // Array of inspirational quotes
+    const quotes = [
+        "“Autism is not a disability, it’s a different ability.”",
+        "“Inclusion is the art of seeing people, not just labels.”",
+        "“Celebrate diversity, embrace humanity.”",
+        "“Kindness is free. Sprinkle that stuff everywhere.”",
+        "“The greatest glory in living lies not in never falling, but in rising every time we fall.” - Nelson Mandela",
+        "“Your limitation—it's only your imagination.”"
+    ];
+
+    // Generate the scrolling content by joining quotes
+    const banner = document.getElementById("banner");
+    if (banner) {
+        banner.innerHTML = quotes.map(quote => `<span>${quote}</span>`).join(" &nbsp; | &nbsp; ");
+    } else {
+        console.error('Element with ID "banner" not found.');
+    }
+</script>
 
