@@ -1,77 +1,50 @@
-<footer class="site-footer">
-    <div class="footer-content">
-        <p>&copy; 2024 AV Autism Center. All rights reserved.</p>
-        <div class="footer-links">
-            <a href="/privacy-policy.html">Privacy Policy</a> | 
-            <a href="/terms.html">Terms of Service</a>
-        </div>
-        <div class="social-media-links">
-            <a href="https://facebook.com" target="_blank" aria-label="Facebook">
-                <i class="fab fa-facebook-f"></i>
-            </a>
-            <a href="https://twitter.com" target="_blank" aria-label="Twitter">
-                <i class="fab fa-twitter"></i>
-            </a>
-            <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn">
-                <i class="fab fa-linkedin-in"></i>
-            </a>
-        </div>
-    </div>
-
-    <!-- Scrolling Banner -->
-    <div id="banner-container">
-        <div id="banner"></div>
-    </div>
-</footer>
-
+<!DOCTYPE html>
+<html>
+<head>
+<title>JavaScript Banner Scroller</title>
 <style>
-  /* Styling for the banner container */
   #banner-container {
-      width: 100%;
-      overflow: hidden;
-      background-color: #f8f9fa; /* Light background */
-      color: #333; /* Dark text */
-      padding: 10px 0;
-      text-align: center;
+    width: 100%;
+    overflow: hidden;
+    background-color: #f8f9fa; /* Light background for readability */
+    color: #333; /* Dark text color */
+    padding: 10px 0; /* Add padding for better spacing */
+    text-align: center;
   }
-
-  /* Styling for the scrolling banner */
   #banner {
-      display: inline-block;
-      white-space: nowrap;
-      animation: scroll 20s linear infinite; /* Adjust timing */
+    white-space: nowrap;
+    animation: scroll 10s linear infinite;
   }
-
-  /* Animation for smooth scrolling */
   @keyframes scroll {
-      0% {
-          transform: translateX(100%);
-      }
-      100% {
-          transform: translateX(-100%);
-      }
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
   }
 </style>
+</head>
+<body>
+  <div id="banner-container">
+    <div id="banner">
+      <!-- Quotes will be dynamically added here -->
+    </div>
+  </div>
 
-<script>
-    document.addEventListener('DOMContentLoaded', () => {
-        // Array of inspirational quotes
-        const quotes = [
-            "“Autism is not a disability, it’s a different ability.”",
-            "“Inclusion is the art of seeing people, not just labels.”",
-            "“Celebrate diversity, embrace humanity.”",
-            "“Kindness is free. Sprinkle that stuff everywhere.”",
-            "“The greatest glory in living lies not in never falling, but in rising every time we fall.” - Nelson Mandela",
-            "“Your limitation—it's only your imagination.”"
-        ];
+  <script>
+    // Array of inspirational quotes
+    const quotes = [
+      "“Autism is not a disability, it’s a different ability.”",
+      "“Inclusion is the art of seeing people, not just labels.”",
+      "“Celebrate diversity, embrace humanity.”",
+      "“Kindness is free. Sprinkle that stuff everywhere.”",
+      "“The greatest glory in living lies not in never falling, but in rising every time we fall.” - Nelson Mandela",
+      "“Your limitation—it's only your imagination.”"
+    ];
 
-        // Generate the scrolling content by joining quotes
-        const banner = document.getElementById("banner");
-        if (banner) {
-            banner.innerHTML = quotes.map(quote => `<span>${quote}</span>`).join(" &nbsp; | &nbsp; ");
-        } else {
-            console.error('Element with ID "banner" not found.');
-        }
-    });
-</script>
+    // Find the banner element
+    const banner = document.getElementById("banner");
+
+    // Add quotes to the banner with separators
+    banner.innerHTML = quotes.map(quote => `<span>${quote}</span>`).join(" &nbsp; | &nbsp; ");
+  </script>
+</body>
+</html>
 
