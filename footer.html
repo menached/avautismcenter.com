@@ -1,6 +1,7 @@
 <footer class="site-footer">
     <div class="footer-content">
         <p>&copy; 2024 AV Autism Center. All rights reserved.</p>
+        <div id="footer-placeholder"></div>
         <div class="footer-links">
             <a href="/privacy-policy.html">Privacy Policy</a> | 
             <a href="/terms.html">Terms of Service</a>
@@ -17,59 +18,29 @@
             </a>
         </div>
     </div>
-
-    <!-- Scrolling Banner -->
-    <div id="banner-container">
-        <div id="banner"></div>
-    </div>
 </footer>
 
-<style>
-  /* Styling for the banner container */
-  #banner-container {
-      width: 100%;
-      overflow: hidden;
-      background-color: #f8f9fa; /* Light background */
-      color: #333; /* Dark text */
-      padding: 10px 0;
-      text-align: center;
-  }
-
-  /* Styling for the scrolling banner */
-  #banner {
-      display: inline-block;
-      white-space: nowrap;
-      animation: scroll 15s linear infinite; /* Adjust timing */
-  }
-
-  /* Animation for smooth scrolling */
-  @keyframes scroll {
-      0% {
-          transform: translateX(100%);
-      }
-      100% {
-          transform: translateX(-100%);
-      }
-  }
-</style>
-
 <script>
-    // Array of inspirational quotes
     const quotes = [
-        "“Autism is not a disability, it’s a different ability.”",
-        "“Inclusion is the art of seeing people, not just labels.”",
-        "“Celebrate diversity, embrace humanity.”",
-        "“Kindness is free. Sprinkle that stuff everywhere.”",
-        "“The greatest glory in living lies not in never falling, but in rising every time we fall.” - Nelson Mandela",
-        "“Your limitation—it's only your imagination.”"
+        '“Autism is not a disability, it’s a different ability.”',
+        '“Inclusion is the art of seeing people, not just labels.”',
+        '“Celebrate diversity, embrace humanity.”'
     ];
 
-    // Generate the scrolling content by joining quotes
-    const banner = document.getElementById("banner");
-    if (banner) {
-        banner.innerHTML = quotes.map(quote => `<span>${quote}</span>`).join(" &nbsp; | &nbsp; ");
+    const footerPlaceholder = document.querySelector('.footer-placeholder');
+
+    if (footerPlaceholder) {
+        let index = 0;
+
+        const updateQuote = () => {
+            footerPlaceholder.innerHTML = `<p>${quotes[index]}</p>`;
+            index = (index + 1) % quotes.length;
+        };
+
+        updateQuote();
+        setInterval(updateQuote, 5000);
     } else {
-        console.error('Element with ID "banner" not found.');
+        console.error('Element with class "footer-placeholder" not found.');
     }
 </script>
 
