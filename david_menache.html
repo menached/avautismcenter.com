@@ -106,59 +106,8 @@
     </div>
     </div>
 
-
-    <!-- Dynamic Header and Footer Script -->
-    <script>
-        // Load the header
-        fetch('header.html')
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error(`Failed to load header: ${response.statusText}`);
-                }
-                return response.text();
-            })
-            .then(data => {
-                document.getElementById('header-placeholder').innerHTML = data;
-            })
-            .catch(error => {
-                console.error('Error loading header:', error);
-            });
-
-        // Load the footer
-        fetch('footer.html')
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error(`Failed to load footer: ${response.statusText}`);
-                }
-                return response.text();
-            })
-            .then(data => {
-                document.getElementById('footer-placeholder').innerHTML = data;
-            })
-            .catch(error => {
-                console.error('Error loading footer:', error);
-            });
-
-        // Team data for display
-        const teamData = [
-            { name: "Jon Fleischer", role: "Founder", email: "jon@inthingslimited.com", bio: "Passionate about making a difference..." },
-            { name: "Larry Banchero", role: "Co-founder", email: "larry@inthingslimited.com", bio: "Entrepreneur and builder with a vast array of experience..." },
-            { name: "Brian Fleischer", role: "Legal Advisor", email: "brianf@inthingslimited.com", bio: "Experienced lawyer contributing to legal aspects of the project..." },
-            { name: "David Menache", role: "IT", email: "dave@inthingslimited.com", bio: "Assisting with website and communications..." }
-        ];
-
-
-        // Function to generate Gravatar URL
-        function getGravatarUrl(email, size = 80) {
-            const emailHash = md5(email.trim().toLowerCase());  // Hash email using MD5
-            return `https://www.gravatar.com/avatar/${emailHash}?s=${size}&d=identicon`;  // Gravatar URL
-        }
-
-
-
-    </script>
-</body>
     <!-- Footer placeholder -->
     <div id="footer-placeholder"></div>
+</body>
 </html>
 
