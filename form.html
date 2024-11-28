@@ -100,7 +100,7 @@
             document.getElementById('footer-placeholder').innerHTML = data;
         });
 
-        function shareOnFacebook() {
+function shareOnFacebook() {
     const url = encodeURIComponent(window.location.href); // Get the current page URL
     const fbShareUrl = `https://www.facebook.com/sharer/sharer.php?u=${url}`;
     window.open(fbShareUrl, '_blank', 'width=600,height=400'); // Open in a new window
