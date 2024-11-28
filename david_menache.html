@@ -65,7 +65,7 @@
 
     <!-- Begin Page Content -->
 
-        <h2>
+    <h2>
         <img id="gravatar" alt="David Menache" class="gravatar-icon"> 
         David Menache 
         <span style="font-size:.7em;"> - IT</span>
@@ -73,10 +73,17 @@
 
     </h2>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
-    <script>
-        // Set the Gravatar URL dynamically
-        document.getElementById('gravatar').src = getGravatarUrl('dave@inthingslimited.com');
-    </script>
+<script>
+    // Function to generate Gravatar URL
+    function getGravatarUrl(email, size = 80) {
+        const emailHash = CryptoJS.MD5(email.trim().toLowerCase()).toString();
+        return `https://www.gravatar.com/avatar/${emailHash}?s=${size}&d=identicon`;
+    }
+
+    // Set the Gravatar URL dynamically
+    const gravatarEmail = 'dave@inthingslimited.com';
+    document.getElementById('gravatar').src = getGravatarUrl(gravatarEmail, 80);
+</script>
 
     <p>David Menache is a a full stack developer and certified AWS Solutions Architect. His professional background includes:</p>
     <ul class="custom-list2">
