@@ -41,7 +41,6 @@
   #banner-text {
     position: absolute;
     white-space: nowrap; /* Prevent wrapping of the text */
-    transform: translateX(100%); /* Start off-screen to the right */
     animation: scroll 10s linear infinite; /* Scroll animation */
   }
 
@@ -51,7 +50,7 @@
       transform: translateX(100%); /* Start completely off-screen to the right */
     }
     100% {
-      transform: translateX(-100%); /* End completely off-screen to the left */
+      transform: translateX(calc(-100% - 20px)); /* End completely off-screen to the left */
     }
   }
 </style>
