@@ -15,6 +15,23 @@
         margin-right: 10px; /* Space between icon and text */
         color: #007bff; /* Custom icon color */
     }
+    .icon-list {
+        list-style: none; /* Removes default bullets */
+        padding: 0; /* Removes extra padding from the list */
+        margin: 0; /* Removes extra margin from the list */
+    }
+
+    .icon-list li {
+        margin-bottom: 10px; /* Adds spacing between items */
+        display: flex;
+        align-items: center; /* Align icons and text */
+    }
+
+    .icon-list li i {
+        margin-right: 10px; /* Space between icon and text */
+        color: #007bff; /* Customize icon color */
+    }
+
 </style>
 </head>
 <body>
@@ -71,13 +88,13 @@
                 </ul>
 
             <h2 class="advanced">Advanced Life Skills</h2>
-            <ul>
-                <li>Eating in restaurants</li>
-                <li>Handling money</li>
-                <li>Using mass transit</li>
-                <li>Community safety</li>
-                <li>Socializing, making friends, and building relationships</li>
-            </ul>
+                <ul class="icon-list">
+                    <li><i class="fas fa-utensils"></i> Eating in restaurants</li>
+                    <li><i class="fas fa-money-bill-wave"></i> Handling money</li>
+                    <li><i class="fas fa-bus"></i> Using mass transit</li>
+                    <li><i class="fas fa-shield-alt"></i> Community safety</li>
+                    <li><i class="fas fa-users"></i> Socializing, making friends, and building relationships</li>
+                </ul>
         </div>
 
         <div class="image-container alignright">
