@@ -1,51 +1,63 @@
 <footer class="site-footer">
-    <div class="footer-content">
+    <div class="footer-container">
         <div id="banner">
             <div id="banner-text">
                 Unlocking Verbal Expression in a Safe, Supportive Environment
             </div>
         </div>
-        <p>&copy; 2024 AV Autism Center. All rights reserved.</p>
-        <div class="footer-links">
-            <a href="/privacy-policy.html">Privacy Policy</a> | 
-            <a href="/terms.html">Terms of Service</a>
-        </div>
-        <div class="social-media-links">
-            <a href="https://facebook.com" target="_blank" aria-label="Facebook">
-                <i class="fab fa-facebook-f"></i>
-            </a>
-            <a href="https://twitter.com" target="_blank" aria-label="Twitter">
-                <i class="fab fa-twitter"></i>
-            </a>
-            <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn">
-                <i class="fab fa-linkedin-in"></i>
-            </a>
+        <div class="footer-content">
+            <p>&copy; 2024 AV Autism Center. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="/privacy-policy.html">Privacy Policy</a> | 
+                <a href="/terms.html">Terms of Service</a>
+            </div>
+            <div class="social-media-links">
+                <a href="https://facebook.com" target="_blank" aria-label="Facebook">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://twitter.com" target="_blank" aria-label="Twitter">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+            </div>
         </div>
     </div>
 </footer>
 
 <style>
-  /* Container styles */
-  #banner {
-    width: 100%; /* Full-width container */
-    height: 50px; /* Adjust height as needed */
-    overflow: hidden; /* Hide overflowing text */
-    position: relative;
-    background-color: #f8f9fa; /* Light background color */
-    color: #333; /* Dark text color */
-    display: flex;
-    align-items: center; /* Center vertically */
+  /* Footer spans edge-to-edge */
+  .site-footer {
+    width: 100%;
+    background-color: #f8f9fa; /* Light background */
+    padding: 0; /* Remove default padding */
   }
 
-  /* Scrolling text styles */
+  /* Footer content container matches page width */
+  .footer-container {
+    max-width: 1200px; /* Adjust to your page's max width */
+    margin: 0 auto; /* Center container */
+  }
+
+  /* Scrolling banner styles */
+  #banner {
+    width: 100%; /* Full-width of the content container */
+    height: 50px;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center; /* Vertically align text */
+    background-color: #fff; /* Optional: Add contrast background */
+  }
+
   #banner-text {
     position: absolute;
-    white-space: nowrap; /* Prevent wrapping of the text */
+    white-space: nowrap;
     transform: translateX(100%); /* Start off-screen */
     animation: scroll 10s linear infinite; /* Scroll animation */
   }
 
-  /* Scrolling animation */
   @keyframes scroll {
     0% {
       transform: translateX(100%); /* Start completely off-screen to the right */
@@ -54,19 +66,31 @@
       transform: translateX(-100%); /* End completely off-screen to the left */
     }
   }
+
+  /* Footer content styles */
+  .footer-content {
+    padding: 20px;
+    text-align: center;
+  }
+
+  .footer-links a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #007bff;
+  }
+
+  .footer-links a:hover {
+    text-decoration: underline;
+  }
+
+  .social-media-links i {
+    margin: 0 10px;
+    color: #333;
+    font-size: 1.5em;
+  }
+
+  .social-media-links i:hover {
+    color: #007bff;
+  }
 </style>
-
-<script>
-  // Ensure the animation starts only after the text is positioned off-screen
-  document.addEventListener('DOMContentLoaded', () => {
-    const bannerText = document.getElementById('banner-text');
-
-    // Reset the animation to ensure proper positioning
-    if (bannerText) {
-      bannerText.style.animation = 'none'; // Stop any running animation
-      bannerText.offsetHeight; // Trigger a reflow to apply changes
-      bannerText.style.animation = ''; // Restart animation
-    }
-  });
-</script>
 
