@@ -2,7 +2,7 @@
     <div class="footer-content">
         <div id="banner">
           <div id="banner-text">
-           Unlocking Verbal Expression in a Safe, Supportive Environment
+            Unlocking Verbal Expression in a Safe, Supportive Environment
           </div>
         </div>
         <p>&copy; 2024 AV Autism Center. All rights reserved.</p>
@@ -40,8 +40,9 @@
   /* Scrolling text styles */
   #banner-text {
     position: absolute;
-    white-space: nowrap;
-    animation: scroll 10s linear infinite; /* Adjust duration for speed */
+    white-space: nowrap; /* Prevent wrapping of the text */
+    transform: translateX(100%); /* Start off-screen to the right */
+    animation: scroll 10s linear infinite; /* Scroll animation */
   }
 
   /* Scrolling animation */
