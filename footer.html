@@ -1,27 +1,27 @@
 <footer class="site-footer">
-    <div class="footer-container">
+    <div id="banner-container">
         <div id="banner">
             <div id="banner-text">
                 Unlocking Verbal Expression in a Safe, Supportive Environment
             </div>
         </div>
-        <div class="footer-content">
-            <p>&copy; 2024 AV Autism Center. All rights reserved.</p>
-            <div class="footer-links">
-                <a href="/privacy-policy.html">Privacy Policy</a> | 
-                <a href="/terms.html">Terms of Service</a>
-            </div>
-            <div class="social-media-links">
-                <a href="https://facebook.com" target="_blank" aria-label="Facebook">
-                    <i class="fab fa-facebook-f"></i>
-                </a>
-                <a href="https://twitter.com" target="_blank" aria-label="Twitter">
-                    <i class="fab fa-twitter"></i>
-                </a>
-                <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn">
-                    <i class="fab fa-linkedin-in"></i>
-                </a>
-            </div>
+    </div>
+    <div class="footer-content">
+        <p>&copy; 2024 AV Autism Center. All rights reserved.</p>
+        <div class="footer-links">
+            <a href="/privacy-policy.html">Privacy Policy</a> | 
+            <a href="/terms.html">Terms of Service</a>
+        </div>
+        <div class="social-media-links">
+            <a href="https://facebook.com" target="_blank" aria-label="Facebook">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://twitter.com" target="_blank" aria-label="Twitter">
+                <i class="fab fa-twitter"></i>
+            </a>
+            <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn">
+                <i class="fab fa-linkedin-in"></i>
+            </a>
         </div>
     </div>
 </footer>
@@ -30,30 +30,29 @@
   /* Footer spans edge-to-edge */
   .site-footer {
     width: 100%;
-    background-color: #f8f9fa; /* Light background */
-    padding: 0; /* Remove default padding */
+    background-color: #f8f9fa; /* Light gray background */
+    padding: 0; /* Remove padding */
   }
 
-  /* Footer content container matches page width */
-  .footer-container {
-    max-width: 1200px; /* Adjust to your page's max width */
-    margin: 0 auto; /* Center container */
+  /* Constrain the banner to the page width */
+  #banner-container {
+    max-width: 1200px; /* Match your page width */
+    margin: 0 auto; /* Center the banner */
+    background-color: #ffffff; /* Optional: Add contrast background */
   }
 
-  /* Scrolling banner styles */
   #banner {
-    width: 100%; /* Full-width of the content container */
+    width: 100%; /* Full width of the content container */
     height: 50px;
-    overflow: hidden;
+    overflow: hidden; /* Hide overflowing text */
     position: relative;
     display: flex;
-    align-items: center; /* Vertically align text */
-    background-color: #fff; /* Optional: Add contrast background */
+    align-items: center; /* Center text vertically */
   }
 
   #banner-text {
     position: absolute;
-    white-space: nowrap;
+    white-space: nowrap; /* Prevent wrapping of the text */
     transform: translateX(100%); /* Start off-screen */
     animation: scroll 10s linear infinite; /* Scroll animation */
   }
@@ -67,8 +66,10 @@
     }
   }
 
-  /* Footer content styles */
+  /* Footer content */
   .footer-content {
+    max-width: 1200px; /* Match the page width */
+    margin: 0 auto; /* Center footer content */
     padding: 20px;
     text-align: center;
   }
