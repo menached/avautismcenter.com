@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Marvel:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://www.avautismcenter.com/style.css">
-    <link rel="script" href="https://www.avautismcenter.com/script.js">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:url" content="https://www.avautismcenter.com/david_menache.html" />
@@ -34,7 +33,37 @@
     <!-- LinkedIn (Optional) -->
     <meta property="og:image:secure_url" content="https://www.avautismcenter.com/public/david_menache.png?v=2" />
     <meta property="og:logo" content="https://www.avautismcenter.com/public/verbal-pathways2.png?v=1">
+<script>
+    // Load the header
+fetch('header.html')
+    .then(response => {
+        if (!response.ok) {
+            throw new Error(`Failed to load header: ${response.statusText}`);
+        }
+        return response.text();
+    })
+    .then(data => {
+        document.getElementById('header-placeholder').innerHTML = data;
+    })
+    .catch(error => {
+        console.error('Error loading header:', error);
+    });
 
+// Load the footer
+fetch('footer.html')
+    .then(response => {
+        if (!response.ok) {
+            throw new Error(`Failed to load footer: ${response.statusText}`);
+        }
+        return response.text();
+    })
+    .then(data => {
+        document.getElementById('footer-placeholder').innerHTML = data;
+    })
+    .catch(error => {
+        console.error('Error loading footer:', error);
+    });
+</script>
 
     <title>David Menache: IT | AV Autism Center</title>
     
