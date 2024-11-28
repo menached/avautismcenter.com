@@ -20,23 +20,30 @@
     </div>
 </footer>
 
-<script>
-    // Array of inspirational quotes
-    const quotes = [
-        '“Autism is not a disability, it’s a different ability.”',
-        '“Inclusion is the art of seeing people, not just labels.”',
-        '“Celebrate diversity, embrace humanity.”'
-    ];
-
-    // Select a random quote
-    const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
-
-    // Find the footer placeholder and display the quote
-    const footerPlaceholder = document.getElementById('footer-placeholder');
-    if (footerPlaceholder) {
-        footerPlaceholder.innerHTML = `<p>${randomQuote}</p>`;
-    } else {
-        console.error('Element with ID "footer-placeholder" not found.');
-    }
-</script>
-
+<!DOCTYPE html>
+<html>
+<head>
+<title>JavaScript Banner Scroller</title>
+<style>
+  #banner-container {
+    width: 100%;
+    overflow: hidden;
+  }
+  #banner {
+    white-space: nowrap;
+    animation: scroll 10s linear infinite;
+  }
+  @keyframes scroll {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+  }
+</style>
+</head>
+<body>
+  <div id="banner-container">
+    <div id="banner">
+      <p>This is a scrolling banner message!</p>
+    </div>
+  </div>
+</body>
+</html>
