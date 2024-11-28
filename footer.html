@@ -28,13 +28,13 @@
 <style>
   /* Container styles */
   #banner {
-    width: 100%; /* Full-width container */
+    width: 100%; /* Span the entire width */
     height: 50px; /* Adjust height as needed */
-    overflow: hidden; /* Hide overflowing text */
+    overflow: hidden;
     position: relative;
     background-color: #f8f9fa; /* Light background color */
     color: #333; /* Dark text color */
-    display: flex;
+    display: flex; /* Align text vertically */
     align-items: center; /* Center vertically */
   }
 
@@ -42,22 +42,13 @@
   #banner-text {
     position: absolute;
     white-space: nowrap;
-    animation: scroll 10s linear infinite; /* Adjust duration for speed */
+    animation: scroll 10s linear infinite;
   }
 
   /* Scrolling animation */
   @keyframes scroll {
-    0% {
-      transform: translateX(100%); /* Start completely off-screen to the right */
-    }
-    100% {
-      transform: translateX(-100%); /* End completely off-screen to the left */
-    }
+    0% { transform: translateX(100%); } /* Start off-screen to the right */
+    100% { transform: translateX(-100%); } /* End off-screen to the left */
   }
 </style>
-
-
-
-
-
 
