@@ -20,8 +20,7 @@
     </div>
 </footer>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
+<script>
     const quotes = [
         '“Autism is not a disability, it’s a different ability.”',
         '“Inclusion is the art of seeing people, not just labels.”',
@@ -33,21 +32,15 @@
     if (footerPlaceholder) {
         let index = 0;
 
-        // Function to update the quote
         const updateQuote = () => {
             footerPlaceholder.innerHTML = `<p>${quotes[index]}</p>`;
-            index = (index + 1) % quotes.length; // Cycle through the quotes
+            index = (index + 1) % quotes.length;
         };
 
-        // Set initial quote
         updateQuote();
-
-        // Cycle quotes every 5 seconds
         setInterval(updateQuote, 5000);
     } else {
         console.error('Element with class "footer-placeholder" not found.');
     }
-});
-
-    </script>
+</script>
 
