@@ -149,21 +149,42 @@
 
     <script src="https://www.avautismcenter.com/script.js" defer></script>
 <!-- Load the header and footer -->
-  <script>
-    // Load the header
-    fetch('header.html')
-      .then(response => response.text())
-      .then(data => {
+<script>
+// Load the header
+fetch('header.html')
+    .then(response => {
+        if (!response.ok) {
+            throw new Error(`Failed to load header: ${response.statusText}`);
+        }
+        return response.text();
+    })
+    .then(data => {
         document.getElementById('header-placeholder').innerHTML = data;
-      });
+    })
+    .catch(error => {
+        console.error('Error loading header:', error);
+    });
 
-    // Load the footer
-    fetch('footer.html')
-      .then(response => response.text())
-      .then(data => {
+// Load the footer
+fetch('footer.html')
+    .then(response => {
+        if (!response.ok) {
+            throw new Error(`Failed to load footer: ${response.statusText}`);
+        }
+        return response.text();
+    })
+    .then(data => {
         document.getElementById('footer-placeholder').innerHTML = data;
-      });
-  </script>
+    })
+    .catch(error => {
+        console.error('Error loading footer:', error);
+    });
+// Gravatar URL generator
+function getGravatarUrl(email) {
+    const hash = CryptoJS.MD5(email.trim().toLowerCase()); // Requires CryptoJS
+    return `https://www.gravatar.com/avatar/${hash}`;
+}
+</script>
 
 </body>
 </html>
