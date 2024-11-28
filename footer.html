@@ -18,37 +18,29 @@
         </div>
     </div>
 
-    <div id="banner">
-      <div id="banner-text">
-       Unlocking Verbal Expression in a Safe, Supportive Environment
-      </div>
-    </div>
+<div id="banner">
+  <div id="banner-text">
+   Unlocking Verbal Expression in a Safe, Supportive Environment
+  </div>
+</div>
 </footer>
 
 <style>
-  /* Container styles */
   #banner {
-    width: 100%; /* Span the entire width */
-    height: 50px; /* Adjust height as needed */
+    width: 500px;
+    height: 100px;
     overflow: hidden;
     position: relative;
-    background-color: #f8f9fa; /* Light background color */
-    color: #333; /* Dark text color */
-    display: flex; /* Align text vertically */
-    align-items: center; /* Center vertically */
   }
-
-  /* Scrolling text styles */
   #banner-text {
     position: absolute;
     white-space: nowrap;
     animation: scroll 10s linear infinite;
   }
-
-  /* Scrolling animation */
   @keyframes scroll {
-    0% { transform: translateX(100%); } /* Start off-screen to the right */
-    100% { transform: translateX(-100%); } /* End off-screen to the left */
+    0% { left: 500px; }
+    100% { left: -100%; }
   }
 </style>
+
 
