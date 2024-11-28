@@ -1,12 +1,10 @@
 <footer class="site-footer">
-    <div id="banner-container">
+    <div class="footer-container">
         <div id="banner">
             <div id="banner-text">
                 Unlocking Verbal Expression in a Safe, Supportive Environment
             </div>
         </div>
-    </div>
-    <div class="footer-content">
         <p>&copy; 2024 AV Autism Center. All rights reserved.</p>
         <div class="footer-links">
             <a href="/privacy-policy.html">Privacy Policy</a> | 
@@ -28,14 +26,18 @@
 
 <style>
   /* Ensure the footer spans edge-to-edge */
-  .site-footer {
-    width: 100vw; /* Full viewport width */
-    background-color: #f8f9fa; /* Light gray background */
-    margin: 0; /* Remove margins */
-    padding: 0; /* Remove padding */
-    position: relative; /* Ensure it spans properly */
-    left: 0; /* Reset alignment for the left side */
-  }
+.site-footer {
+    width: 100vw; /* Ensure it spans the full viewport width */
+    margin: 0; /* Remove any default margin */
+    padding: 0; /* Remove any default padding */
+    background-color: #f8f9fa; /* Gray footer background */
+    position: relative; /* Make sure it stretches properly */
+}
+.footer-container {
+    max-width: 1200px; /* Adjust to your page's maximum width */
+    margin: 0 auto; /* Center content inside the footer */
+    padding: 20px; /* Add padding inside the footer */
+}
 
   /* Constrain the banner to the page width */
   #banner-container {
