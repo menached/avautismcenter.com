@@ -187,40 +187,37 @@
             .then(data => document.getElementById('footer-placeholder').innerHTML = data)
             .catch(console.error);
 
-        document.getElementById('creditCardForm').addEventListener('submit', function (event) {
-            event.preventDefault(); // Prevent default form submission
+document.getElementById('creditCardForm').addEventListener('submit', function (event) {
+    event.preventDefault();
 
-            const name = document.getElementById('cc-name').value;
-            const cardNumber = document.getElementById('cc-number').value;
-            const expiryDate = document.getElementById('cc-expiry').value;
-            const cvc = document.getElementById('cc-cvc').value;
+    const name = document.getElementById('cc-name').value;
+    const cardNumber = document.getElementById('cc-number').value;
+    const expiryDate = document.getElementById('cc-expiry').value;
+    const cvc = document.getElementById('cc-cvc').value;
 
-            // Make the API call to the Lambda function
-            fetch('https://your-lambda-function-url.amazonaws.com/production', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({
-                    name: name,
-                    cardNumber: cardNumber,
-                    expiryDate: expiryDate,
-                    cvc: cvc,
-                }),
-            })
-                .then(response => response.json())
-                .then(data => {
-                    if (data.success) {
-                        document.getElementById('responseMessage').innerText = 'Donation successfully recorded!';
-                    } else {
-                        document.getElementById('responseMessage').innerText = 'Failed to process your donation.';
-                        document.getElementById('responseMessage').style.color = 'red';
-                    }
-                })
-                .catch(error => {
-                    console.error('Error:', error);
-                    document.getElementById('responseMessage').innerText = 'An error occurred.';
-                    document.getElementById('responseMessage').style.color = 'red';
-                });
+    fetch('https://2wurm2yjrb.execute-api.us-west-2.amazonaws.com/Prod/process-donation', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+            name: name,
+            cardNumber: cardNumber,
+            expiryDate: expiryDate,
+            cvc: cvc,
+        }),
+    })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                alert('Donation processed successfully!');
+            } else {
+                alert('Error: ' + data.message);
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            alert('An error occurred.');
         });
+});
 
     </script>
 </body>
