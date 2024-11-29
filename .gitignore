@@ -2,6 +2,7 @@
 !readme.html                        # Allow readme.html
 !sitemap.xml                        # Allow sitemap.xml
 !sitemap.html                       # Allow sitemap.html
+!donate.html                       # Allow sitemap.html
 !public/teaching-banner.png         # Allow sitemap.html
 !404.html                           # Allow 404.html
 !battling-anxiety.html              # Allow battling-anxiety.html
