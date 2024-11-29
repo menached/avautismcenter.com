@@ -133,7 +133,7 @@
                 </div>
                 <div id="credit-card" class="tab-content">
                     <h2>Credit Card Donations</h2>
-                    <form method="POST" action="/process-donation">
+                    <form id="creditCardForm">
                         <label for="cc-name">Name</label>
                         <input type="text" id="cc-name" name="cc-name" required><br><br>
                         <label for="cc-number">Card Number</label>
@@ -144,6 +144,8 @@
                         <input type="text" id="cc-cvc" name="cc-cvc" required><br><br>
                         <button type="submit">Donate</button>
                     </form>
+                    <p id="responseMessage" style="color: green;"></p>
+                </div>
                 </div>
                 <div id="bank-transfer" class="tab-content">
                     <h2>Bank Transfer</h2>
@@ -184,6 +186,42 @@
             .then(response => response.text())
             .then(data => document.getElementById('footer-placeholder').innerHTML = data)
             .catch(console.error);
+
+        document.getElementById('creditCardForm').addEventListener('submit', function (event) {
+            event.preventDefault(); // Prevent default form submission
+
+            const name = document.getElementById('cc-name').value;
+            const cardNumber = document.getElementById('cc-number').value;
+            const expiryDate = document.getElementById('cc-expiry').value;
+            const cvc = document.getElementById('cc-cvc').value;
+
+            // Make the API call to the Lambda function
+            fetch('https://your-lambda-function-url.amazonaws.com/production', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    name: name,
+                    cardNumber: cardNumber,
+                    expiryDate: expiryDate,
+                    cvc: cvc,
+                }),
+            })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success) {
+                        document.getElementById('responseMessage').innerText = 'Donation successfully recorded!';
+                    } else {
+                        document.getElementById('responseMessage').innerText = 'Failed to process your donation.';
+                        document.getElementById('responseMessage').style.color = 'red';
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    document.getElementById('responseMessage').innerText = 'An error occurred.';
+                    document.getElementById('responseMessage').style.color = 'red';
+                });
+        });
+
     </script>
 </body>
 </html>
