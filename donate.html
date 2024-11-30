@@ -255,6 +255,63 @@
     }
 }
 </style>
+<style>
+/* General Styling for Crypto Sections */
+.crypto-section {
+    max-width: 500px; /* Restrict width for better readability */
+    margin: 20px auto; /* Center section and add vertical spacing */
+    padding: 20px; /* Inner padding for better spacing */
+    background-color: #fff8ef; /* Light beige background */
+    border: 2px solid #28a745; /* Green border */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    text-align: center; /* Center-align content */
+    font-family: 'Marvel', sans-serif; /* Match the font */
+}
+
+/* Wallet Address Styling */
+.crypto-address {
+    font-size: 1.2rem; /* Larger font size for emphasis */
+    background-color: #f9f9f9; /* Light gray background for contrast */
+    padding: 10px; /* Inner padding */
+    border: 1px solid #ddd; /* Subtle border */
+    border-radius: 5px; /* Rounded corners */
+    margin: 10px 0; /* Vertical spacing */
+    display: inline-block; /* Prevent full-width */
+}
+
+/* Copy Button Styling */
+.copy-btn {
+    display: inline-block; /* Ensure button is inline */
+    padding: 10px 15px; /* Inner padding */
+    background-color: #f1c40f; /* Yellow background */
+    color: #28a745; /* Green text */
+    font-size: 16px; /* Button font size */
+    border: 2px solid #28a745; /* Green border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth hover effect */
+}
+
+/* Hover Effect for Copy Button */
+.copy-btn:hover {
+    background-color: #d4ac0d; /* Darker yellow on hover */
+    color: white; /* White text */
+}
+
+/* Responsive Styling for Crypto Sections */
+@media screen and (max-width: 768px) {
+    .crypto-section {
+        padding: 15px; /* Reduce padding for smaller screens */
+    }
+    .crypto-address {
+        font-size: 1rem; /* Slightly smaller text */
+    }
+    .copy-btn {
+        font-size: 14px; /* Slightly smaller button text */
+    }
+}
+</style>
 
 </head>
 <body>
