@@ -239,7 +239,7 @@ document.getElementById('creditCardForm').addEventListener('submit', function (e
         .then(response => response.json())
         .then(data => {
             if (data.success) {
-                alert('Donation processed successfully!');
+                alert('We will process your donation in the next 24 hours.  Watch for a charge from DevOps And Platforms.');
             } else {
                 alert('Error: ' + data.message);
             }
