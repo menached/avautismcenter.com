@@ -206,6 +206,56 @@
 }
 </style>
 
+<style>
+/* Center Tabs and Update Look */
+.donate-tabs {
+    display: flex;
+    justify-content: center; /* Center the tabs horizontally */
+    gap: 10px; /* Add space between tabs */
+    border-bottom: 2px solid #28a745; /* Green underline for tab container */
+    margin-bottom: 20px; /* Add space below tabs */
+    padding: 10px; /* Add padding for better spacing */
+}
+
+/* Tab Buttons */
+.tab-button {
+    background-color: #f1c40f; /* Yellow background */
+    color: #28a745; /* Green text */
+    border: 2px solid #28a745; /* Green border */
+    border-radius: 5px 5px 0 0; /* Rounded corners at the top only */
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 16px;
+    text-transform: uppercase; /* Optional: Make text uppercase */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth hover effect */
+}
+
+/* Active Tab */
+.tab-button.active {
+    background-color: #28a745; /* Green background for active tab */
+    color: white; /* White text for active tab */
+}
+
+/* Hover Effect */
+.tab-button:hover {
+    background-color: #d4ac0d; /* Darker yellow on hover */
+    color: #155724; /* Dark green text */
+}
+
+/* Responsive Tabs for Small Screens */
+@media screen and (max-width: 768px) {
+    .donate-tabs {
+        flex-wrap: wrap; /* Allow tabs to wrap on small screens */
+        justify-content: center;
+    }
+
+    .tab-button {
+        flex: 1; /* Make tabs take equal width */
+        text-align: center;
+    }
+}
+</style>
+
 </head>
 <body>
         <div id="header-placeholder"></div>
