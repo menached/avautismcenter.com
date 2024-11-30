@@ -374,33 +374,40 @@
 document.getElementById('creditCardForm').addEventListener('submit', function (event) {
     event.preventDefault();
 
-    const name = document.getElementById('cc-name').value;
-    const email = document.getElementById('cc-email').value;
-    const phone = document.getElementById('cc-phone').value;
-    const amount = document.getElementById('cc-amount').value;
-    const cardNumber = document.getElementById('cc-number').value;
-    const expiryDate = document.getElementById('cc-expiry').value;
-    const cvc = document.getElementById('cc-cvc').value;
-    const zipcode = document.getElementById('cc-zipcode').value;
+    const name = document.getElementById('cc-name').value; // Optional
+    const email = document.getElementById('cc-email').value; // Optional
+    const phone = document.getElementById('cc-phone').value; // Optional
+    const zipcode = document.getElementById('cc-zipcode').value; // Optional
+    const amount = document.getElementById('cc-amount').value; // Required
+    const cardNumber = document.getElementById('cc-number').value; // Required
+    const expiryDate = document.getElementById('cc-expiry').value; // Required
+    const cvc = document.getElementById('cc-cvc').value; // Required
 
+    // Check required fields
+    if (!amount || !cardNumber || !expiryDate || !cvc) {
+        alert('Please fill in all required fields.');
+        return;
+    }
+
+    // Submit data
     fetch('https://8oepuj94w4.execute-api.us-west-2.amazonaws.com/Prod/process-donation', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-            name: name,
-            email: email,
-            phone: phone,
+            name: name || '', // Pass empty string if optional fields are missing
+            email: email || '',
+            phone: phone || '',
+            zipcode: zipcode || '',
             amount: amount,
             cardNumber: cardNumber,
             expiryDate: expiryDate,
             cvc: cvc,
-            zipcode: zipcode,
         }),
     })
         .then(response => response.json())
         .then(data => {
             if (data.success) {
-                alert('Donation processed successfully! Watch for a charge on your statement in the next 24 hours. The charge will be from DOAP (DevOps And Platforms)');
+                alert('Donation processed successfully!');
             } else {
                 alert('Error: ' + data.message);
             }
