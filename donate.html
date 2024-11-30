@@ -133,20 +133,38 @@
                 </div>
                 <div id="credit-card" class="tab-content">
                     <h2>Credit Card Donations</h2>
-                    <form id="creditCardForm">
-                        <label for="cc-name">Name</label>
-                        <input type="text" id="cc-name" name="cc-name" required><br><br>
-                        <label for="cc-number">Card Number</label>
-                        <input type="text" id="cc-number" name="cc-number" required><br><br>
-                        <label for="cc-expiry">Expiry Date</label>
-                        <input type="text" id="cc-expiry" name="cc-expiry" placeholder="MM/YY" required><br><br>
-                        <label for="cc-cvc">CVC</label>
-                        <input type="text" id="cc-cvc" name="cc-cvc" required><br><br>
-                        <label for="cc-zipcode">Zip Code</label>
-                        <input type="text" id="cc-zipcode" name="cc-zipcode" required><br><br>
-                        <button type="submit">Donate</button>
-                    </form>
-                    <p id="responseMessage" style="color: green;"></p>
+                <form id="creditCardForm">
+                    <label for="cc-name">
+                        <i class="fas fa-lock" title="Encrypted and Secure"></i> Name
+                    </label>
+                    <input type="text" id="cc-name" name="cc-name" required><br><br>
+
+                    <label for="cc-number">
+                        <i class="fas fa-lock" title="Encrypted and Secure"></i> Card Number
+                    </label>
+                    <input type="text" id="cc-number" name="cc-number" required><br><br>
+
+                    <label for="cc-expiry">
+                        <i class="fas fa-shield-alt" title="Encrypted and Secure"></i> Expiry Date
+                    </label>
+                    <input type="text" id="cc-expiry" name="cc-expiry" placeholder="MM/YY" required><br><br>
+
+                    <label for="cc-cvc">
+                        <i class="fas fa-shield-alt" title="Encrypted and Secure"></i> CVC
+                    </label>
+                    <input type="text" id="cc-cvc" name="cc-cvc" required><br><br>
+
+                    <label for="cc-zipcode">
+                        <i class="fas fa-lock" title="Encrypted and Secure"></i> Zip Code
+                    </label>
+                    <input type="text" id="cc-zipcode" name="cc-zipcode" required><br><br>
+
+                    <button type="submit">
+                        <i class="fas fa-shield-alt"></i> Donate
+                    </button>
+                </form>
+
+                <p id="responseMessage" style="color: green;"></p>
                 </div>
                 </div>
                 <div id="bank-transfer" class="tab-content">
