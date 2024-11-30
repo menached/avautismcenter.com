@@ -86,6 +86,38 @@
             width: 100%;
         }
     </style>
+<style>
+    .impact-list {
+        display: grid; /* Use grid for easy column layout */
+        grid-template-columns: repeat(2, 1fr); /* Two equal columns */
+        gap: 20px; /* Space between items */
+        list-style: none; /* Remove bullets */
+        padding: 0; /* Remove padding */
+        margin: 0 auto; /* Center horizontally if needed */
+        max-width: 600px; /* Optional: Restrict max width */
+    }
+
+    .impact-list li {
+        text-align: center;
+        display: flex; /* For aligning icon and text vertically */
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .impact-list i {
+        font-size: 2rem; /* Adjust icon size */
+        color: #28a745; /* Icon color */
+        margin-bottom: 10px; /* Space between icon and text */
+    }
+
+    /* Single-column layout for mobile portrait */
+    @media screen and (max-width: 768px) {
+        .impact-list {
+            grid-template-columns: 1fr; /* Single column */
+        }
+    }
+</style>
+
 </head>
 <body>
         <div id="header-placeholder"></div>
@@ -98,12 +130,21 @@
                 <span class="highlight">resources, hope, and a brighter future</span> for those affected by autism. 
                 Every contribution, big or small, spreads joy and empowers a community in need.
             </p>
-            <ul class="impact-list">
-                <li><p><i class="fas fa-graduation-cap"></i> Life Skills Training</p></li>
-                <li><p><i class="fas fa-chalkboard-teacher"></i> Mentorship Programs</p></li>
-                <li><p><i class="fas fa-bus"></i> Community Outings</p></li>
-                <li><p><i class="fas fa-heart"></i> Family Support Services</p></li>
-            </ul>
+<ul class="impact-list">
+    <li>
+        <p><i class="fas fa-graduation-cap"></i> Life Skills Training</p>
+    </li>
+    <li>
+        <p><i class="fas fa-chalkboard-teacher"></i> Mentorship Programs</p>
+    </li>
+    <li>
+        <p><i class="fas fa-bus"></i> Community Outings</p>
+    </li>
+    <li>
+        <p><i class="fas fa-heart"></i> Family Support Services</p>
+    </li>
+</ul>
+
         </section>
 
         <section>
