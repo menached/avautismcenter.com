@@ -290,19 +290,33 @@ button i {
 </div>
 
 
-<!-- Bitcoin Tab -->
+<!-- Crypto Tabs -->
 <div id="bitcoin" class="tab-content">
-    <h2>Bitcoin Donations</h2>
-    <p>Use the following wallet address to donate via Bitcoin:</p>
-    <pre>bc1qxqhcul587fazz9ptg9ecfew0pemxx4tuj8cep3</pre>
+    <div class="crypto-section">
+        <h2>Bitcoin Donations</h2>
+        <p>Wallet Address:</p>
+        <div class="crypto-address">bc1qxqhcul587fazz9ptg9ecfew0pemxx4tuj8cep3</div>
+        <button class="copy-btn" onclick="copyText('bc1qxqhcul587fazz9ptg9ecfew0pemxx4tuj8cep3')">Copy</button>
+    </div>
+</div>
+<div id="ethereum" class="tab-content">
+    <div class="crypto-section">
+        <h2>Ethereum Donations</h2>
+        <p>Wallet Address:</p>
+        <div class="crypto-address">0xAbCdEfGhIjKLmNoPQRsTUvWxYZ1234567890</div>
+        <button class="copy-btn" onclick="copyText('0xAbCdEfGhIjKLmNoPQRsTUvWxYZ1234567890')">Copy</button>
+    </div>
 </div>
 
-<!-- Ethereum Tab -->
-<div id="ethereum" class="tab-content">
-    <h2>Ethereum Donations</h2>
-    <p>Use the following wallet address to donate via Ethereum:</p>
-    <pre>0xAbCdEfGhIjKLmNoPQRsTUvWxYZ1234567890</pre>
+<!-- GoFundMe -->
+<div id="gofundme" class="tab-content">
+    <div class="gofundme-section">
+        <h2>Support Our GoFundMe</h2>
+        <p>Visit:</p>
+        <a href="https://www.gofundme.com/f/avautismcenter" target="_blank">GoFundMe</a>
+    </div>
 </div>
+
 
 <!-- Dogecoin Tab -->
 <div id="dogecoin" class="tab-content">
