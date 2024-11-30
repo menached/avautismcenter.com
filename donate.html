@@ -34,345 +34,68 @@
     <title>Donate | Antelope Valley Autism Center</title>
 
     <style>
+        /* Ensure header and footer span full width */
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+        }
 
-#header-placeholder, #footer-placeholder {
-    width: 100%; /* Ensure they span the full width */
-    margin: 0; /* Remove any margin */
-    padding: 0; /* Remove any padding */
-}
+        #header-placeholder, #footer-placeholder {
+            width: 100%;
+            margin: 0;
+            padding: 0;
+        }
 
+        header, footer {
+            width: 100%;
+            margin: 0;
+            padding: 0;
+        }
 
-/* Style for fa-lock icons within the credit card form */
-.form-row i {
-    color: #28a745; /* Green color */
-    margin-right: 5px; /* Space between icon and label */
-}
+        #content {
+            margin: 0 auto;
+            width: 100%;
+            max-width: 100%;
+        }
 
-/* General container styling */
-.crypto-section, .bank-transfer-section, .gofundme-section, .form-container {
-    max-width: 500px;
-    margin: 0 auto;
-    text-align: center;
-    padding: 20px;
-    background-color: #fff8ef;
-    border-radius: 10px;
-    border: 1px solid #ccc;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-/* Crypto address styling */
-.crypto-address {
-    font-size: 1.2em;
-    background-color: #f9f9f9;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    margin-bottom: 10px;
-    display: inline-block;
-}
-
-.copy-btn {
-    margin-top: 5px;
-    padding: 5px 10px;
-    background-color: #e67e22;
-    color: white;
-    font-size: 14px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.copy-btn:hover {
-    background-color: #d35400;
-}
-
-/* Form styling */
-.form-row {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 15px;
-}
-
-.form-row label {
-    font-weight: bold;
-    margin-bottom: 5px;
-}
-
-.form-row input {
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    font-size: 16px;
-    transition: box-shadow 0.3s ease, border-color 0.3s ease;
-}
-
-/* Focus effects for inputs */
-.form-row input:focus {
-    border-color: #e67e22;
-    box-shadow: 0 0 5px rgba(230, 126, 34, 0.5);
-    outline: none;
-}
-
-/* Specific focus styling for credit card inputs */
-#cc-number:focus, #cc-cvc:focus, #cc-expiry:focus {
-    border-color: #28a745;
-    box-shadow: 0 0 5px rgba(40, 167, 69, 0.5);
-}
-
-/* Button styling */
-.form-row button, .donate-tabs button {
-    padding: 10px 15px;
-    background-color: #e67e22;
-    color: white;
-    font-size: 16px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.form-row button:hover, .donate-tabs button:hover, .copy-btn:hover {
-    background-color: #d35400;
-}
-
-/* General tab styling */
-.donate-tabs {
-    display: flex;
-    justify-content: center;
-    border-bottom: 2px solid #f39c12;
-    flex-wrap: wrap; /* Allow wrapping */
-    gap: 10px; /* Add spacing between buttons */
-}
-
-.donate-tabs button {
-    background-color: transparent;
-    color: #e67e22;
-    border: none;
-    padding: 10px 15px;
-    font-size: 16px;
-    border-bottom: 2px solid transparent;
-    cursor: pointer;
-    transition: color 0.3s ease, border-bottom 0.3s ease;
-}
-
-/* Active tab styling */
-.donate-tabs button.active {
-    color: #000;
-    border-bottom: 2px solid #d35400;
-}
-
-/* Hover effect */
-.donate-tabs button:hover {
-    color: #555;
-}
-
-/* Responsive styling for mobile view */
-@media screen and (max-width: 768px) {
-    .donate-tabs {
-        flex-direction: column; /* Stack tabs vertically */
-        align-items: center; /* Center align buttons */
-    }
-
-    .donate-tabs button {
-        width: 100%; /* Make buttons take full width */
-        text-align: center; /* Center align text */
-    }
-}
-
-
-/* Tab content */
-.tab-content {
-    display: none;
-    padding: 20px;
-}
-
-.tab-content.active {
-    display: block;
-}
-
-/* General section styling */
-.donate-section {
-    background-color: rgba(255, 245, 230, 0.8);
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center;
-    margin: 20px auto;
-    max-width: 800px;
-}
-
-.donate-section h1 {
-    color: #ff7f50;
-}
-
-/* Impact list styling */
-.impact-list {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    gap: 20px;
-    list-style: none;
-    padding: 0;
-}
-
-.impact-list li {
-    text-align: center;
-    max-width: 200px;
-}
-
-.impact-list li i {
-    font-size: 2em;
-    color: #28a745;
-    margin-bottom: 10px;
-}
+        section {
+            width: 100%;
+        }
     </style>
-
 </head>
 <body>
-    <!-- Main Content -->
     <div id="content" class="content-container">
         <div id="header-placeholder"></div>
 
-        <section class="impact-section">
-            <h2>How Your Donation Helps</h2>
-            <p>
-                Your donation makes a profound difference in the lives of children and families. Together, we can provide 
-                <span class="highlight">resources, hope, and a brighter future</span> for those affected by autism. 
-                Every contribution, big or small, spreads joy and empowers a community in need.
-            </p>
-            <ul class="impact-list">
-                <li><i class="fas fa-graduation-cap"></i><p>Life Skills Training</p></li>
-                <li><i class="fas fa-chalkboard-teacher"></i><p>Mentorship Programs</p></li>
-                <li><i class="fas fa-bus"></i><p>Community Outings</p></li>
-                <li><i class="fas fa-heart"></i><p>Family Support Services</p></li>
-            </ul>
-        </section>
-
+        <!-- Page-specific content -->
         <section>
-<div class="donation-container">
-    <div class="donate-tabs">
-        <button class="tab-button" data-tab="credit-card">Credit Card</button>
-        <button class="tab-button" data-tab="bitcoin">Bitcoin</button>
-        <button class="tab-button" data-tab="ethereum">Ethereum</button>
-        <button class="tab-button" data-tab="dogecoin">Dogecoin</button>
-        <button class="tab-button" data-tab="litecoin">Litecoin</button>
-        <button class="tab-button" data-tab="bank-transfer">EFTs</button>
-        <button class="tab-button" data-tab="gofundme">GoFundMe</button>
-    </div>
-</div>
-
-<!-- Credit Card Tab -->
-<div id="credit-card" class="tab-content">
-    <h2>Credit Card Donations</h2>
-    <div class="form-container">
-        <form id="creditCardForm">
-            <div class="form-row">
-                <label for="cc-name">Name</label>
-                <input type="text" id="cc-name" name="cc-name">
-            </div>
-
-            <div class="form-row">
-                <label for="cc-email">Email</label>
-                <input type="email" id="cc-email" name="cc-email">
-            </div>
-
-            <div class="form-row">
-                <label for="cc-phone">Phone</label>
-                <input type="tel" id="cc-phone" name="cc-phone">
-            </div>
-
-            <div class="form-row">
-                <label for="cc-amount">Donation Amount</label>
-                <input type="number" id="cc-amount" name="cc-amount" required>
-            </div>
-
-            <div class="form-row">
-                <label for="cc-number"><i class="fas fa-lock"></i> Card Number</label>
-                <input type="text" id="cc-number" name="cc-number" required>
-            </div>
-
-            <div class="form-row">
-                <label for="cc-cvc"><i class="fas fa-lock"></i> CVC</label>
-                <input type="text" id="cc-cvc" name="cc-cvc" required>
-            </div>
-
-            <div class="form-row">
-                <label for="cc-expiry"><i class="fas fa-lock"></i> Expiry Date</label>
-                <input type="text" id="cc-expiry" name="cc-expiry" placeholder="MM/YY" required>
-            </div>
-
-            <div class="form-row">
-                <label for="cc-zipcode">Zip Code</label>
-                <input type="text" id="cc-zipcode" name="cc-zipcode">
-            </div>
-
-            <div class="form-row">
-                <button type="submit"><i class="fas fa-shield-alt"></i> Donate</button>
-            </div>
-        </form>
-        <p id="responseMessage" style="color: green;"></p>
-    </div>
-</div>
-
-
-<div id="bitcoin" class="tab-content">
-    <div class="crypto-section">
-        <h2>Bitcoin Donations</h2>
-        <p>Wallet Address:</p>
-        <div class="crypto-address">bc1qxqhcul587fazz9ptg9ecfew0pemxx4tuj8cep3</div>
-        <button class="copy-btn" onclick="copyText('bc1qxqhcul587fazz9ptg9ecfew0pemxx4tuj8cep3')">Copy</button>
-    </div>
-</div>
-
-<div id="ethereum" class="tab-content">
-    <div class="crypto-section">
-        <h2>Ethereum Donations</h2>
-        <p>Wallet Address:</p>
-        <div class="crypto-address">0xAbCdEfGhIjKLmNoPQRsTUvWxYZ1234567890</div>
-        <button class="copy-btn" onclick="copyText('0xAbCdEfGhIjKLmNoPQRsTUvWxYZ1234567890')">Copy</button>
-    </div>
-</div>
-
-<div id="dogecoin" class="tab-content">
-    <div class="crypto-section">
-        <h2>Dogecoin Donations</h2>
-        <p>Wallet Address:</p>
-        <div class="crypto-address">DQG8z3Cv9wVW3F1jW6B7PnLR3tT9DQLFgX</div>
-        <button class="copy-btn" onclick="copyText('DQG8z3Cv9wVW3F1jW6B7PnLR3tT9DQLFgX')">Copy</button>
-    </div>
-</div>
-
-<div id="litecoin" class="tab-content">
-    <div class="crypto-section">
-        <h2>Litecoin Donations</h2>
-        <p>Wallet Address:</p>
-        <div class="crypto-address">LZxqwWE7s9ABvMdLJ9o4mPBxnFYkRfwfDR</div>
-        <button class="copy-btn" onclick="copyText('LZxqwWE7s9ABvMdLJ9o4mPBxnFYkRfwfDR')">Copy</button>
-    </div>
-</div>
-
-<div id="gofundme" class="tab-content">
-    <div class="gofundme-section">
-        <h2>Support Our GoFundMe</h2>
-        <p>Visit:</p>
-        <a href="https://www.gofundme.com/f/avautismcenter" target="_blank" class="copy-btn">Go to GoFundMe</a>
-    </div>
-</div>
-
-<div id="bank-transfer" class="tab-content">
-    <div class="bank-transfer-section">
-        <h2>Bank Transfer</h2>
-        <p>Transfer donations directly to our bank account:</p>
-        <pre>Account Name: Ava Autism Center<br>Account Number: 123456789<br>Bank: Example Bank</pre>
-    </div>
-</div>
+            <h1>How Your Donation Helps</h1>
+            <p>Your donation makes a profound difference in the lives of children and families.</p>
         </section>
+
+        <div class="donate-tabs">
+            <button class="tab-button active" data-tab="credit-card">Credit Card</button>
+            <button class="tab-button" data-tab="bitcoin">Bitcoin</button>
+            <button class="tab-button" data-tab="ethereum">Ethereum</button>
+        </div>
 
         <div id="footer-placeholder"></div>
     </div>
 
     <!-- Dynamic Header and Footer Script -->
     <script>
+        // Load header and footer dynamically
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('header-placeholder').innerHTML = data)
+            .catch(console.error);
+
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('footer-placeholder').innerHTML = data)
+            .catch(console.error);
+
         // Tab functionality
         const tabs = document.querySelectorAll('.tab-button');
         const contents = document.querySelectorAll('.tab-content');
@@ -382,82 +105,62 @@
                 tabs.forEach(t => t.classList.remove('active'));
                 contents.forEach(c => c.classList.remove('active'));
                 tab.classList.add('active');
-                document.getElementById(tab.dataset.tab).classList.add('active');
+                const target = tab.dataset.tab;
+                document.getElementById(target).classList.add('active');
             });
         });
 
         // Set default active tab
         tabs[0].classList.add('active');
-        contents[0].classList.add('active');
+        if (contents.length) {
+            contents[0].classList.add('active');
+        }
 
-        // Load header and footer
-        fetch('header.html')
-            .then(response => response.text())
-            .then(data => document.getElementById('header-placeholder').innerHTML = data)
-            .catch(console.error);
-        fetch('footer.html')
-            .then(response => response.text())
-            .then(data => document.getElementById('footer-placeholder').innerHTML = data)
-            .catch(console.error);
+        // Function to copy text to clipboard
+        function copyText(text) {
+            navigator.clipboard.writeText(text)
+                .then(() => alert("Copied to clipboard: " + text))
+                .catch(err => {
+                    console.error("Failed to copy text: ", err);
+                    alert("Failed to copy. Please try again.");
+                });
+        }
 
-document.getElementById('creditCardForm').addEventListener('submit', function (event) {
-    event.preventDefault();
+        // Credit card form submission handling
+        document.getElementById('creditCardForm')?.addEventListener('submit', (event) => {
+            event.preventDefault();
+            const name = document.getElementById('cc-name').value || '';
+            const email = document.getElementById('cc-email').value || '';
+            const phone = document.getElementById('cc-phone').value || '';
+            const amount = document.getElementById('cc-amount').value;
+            const cardNumber = document.getElementById('cc-number').value;
+            const expiryDate = document.getElementById('cc-expiry').value;
+            const cvc = document.getElementById('cc-cvc').value;
+            const zipcode = document.getElementById('cc-zipcode').value || '';
 
-    const name = document.getElementById('cc-name').value; // Optional
-    const email = document.getElementById('cc-email').value; // Optional
-    const phone = document.getElementById('cc-phone').value; // Optional
-    const zipcode = document.getElementById('cc-zipcode').value; // Optional
-    const amount = document.getElementById('cc-amount').value; // Required
-    const cardNumber = document.getElementById('cc-number').value; // Required
-    const expiryDate = document.getElementById('cc-expiry').value; // Required
-    const cvc = document.getElementById('cc-cvc').value; // Required
-
-    // Check required fields
-    if (!amount || !cardNumber || !expiryDate || !cvc) {
-        alert('Please fill in all required fields.');
-        return;
-    }
-
-    // Submit data
-    fetch('https://8oepuj94w4.execute-api.us-west-2.amazonaws.com/Prod/process-donation', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-            name: name || '', // Pass empty string if optional fields are missing
-            email: email || '',
-            phone: phone || '',
-            zipcode: zipcode || '',
-            amount: amount,
-            cardNumber: cardNumber,
-            expiryDate: expiryDate,
-            cvc: cvc,
-        }),
-    })
-        .then(response => response.json())
-        .then(data => {
-            if (data.success) {
-                alert('Donation processed successfully!');
-            } else {
-                alert('Error: ' + data.message);
+            if (!amount || !cardNumber || !expiryDate || !cvc) {
+                alert("Please fill in all required fields.");
+                return;
             }
-        })
-        .catch(error => {
-            console.error('Error:', error);
-            alert('An error occurred.');
+
+            fetch('https://8oepuj94w4.execute-api.us-west-2.amazonaws.com/Prod/process-donation', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ name, email, phone, amount, cardNumber, expiryDate, cvc, zipcode }),
+            })
+                .then((response) => response.json())
+                .then((data) => {
+                    if (data.success) {
+                        alert("Donation processed successfully!");
+                    } else {
+                        alert("Error: " + data.message);
+                    }
+                })
+                .catch((error) => {
+                    console.error("Error:", error);
+                    alert("An error occurred.");
+                });
         });
-});
-
-// Function to copy text to clipboard
-function copyText(text) {
-    navigator.clipboard.writeText(text).then(() => {
-        alert("Copied to clipboard: " + text);
-    }).catch(err => {
-        console.error("Failed to copy text: ", err);
-        alert("Failed to copy. Please try again.");
-    });
-}
-
-
     </script>
 </body>
 </html>
