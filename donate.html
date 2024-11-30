@@ -79,8 +79,8 @@
     </style>
 </head>
 <body>
-    <div id="content" class="content-container">
         <div id="header-placeholder"></div>
+    <div id="content" class="content-container">
 
         <section class="impact-section">
             <h2>How Your Donation Helps</h2>
@@ -217,8 +217,8 @@
 </div>
         </section>
 
-        <div id="footer-placeholder"></div>
     </div>
+        <div id="footer-placeholder"></div>
 
     <!-- Dynamic Header and Footer Script -->
     <script>
@@ -233,27 +233,27 @@
             .then(data => document.getElementById('footer-placeholder').innerHTML = data)
             .catch(console.error);
 
-// Tab functionality
-const tabs = document.querySelectorAll('.tab-button');
-const contents = document.querySelectorAll('.tab-content');
+        // Tab functionality
+        const tabs = document.querySelectorAll('.tab-button');
+        const contents = document.querySelectorAll('.tab-content');
 
-tabs.forEach(tab => {
-    tab.addEventListener('click', () => {
-        // Remove 'active' class from all tabs and contents
-        tabs.forEach(t => t.classList.remove('active'));
-        contents.forEach(c => c.classList.remove('active'));
+        tabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                // Remove 'active' class from all tabs and contents
+                tabs.forEach(t => t.classList.remove('active'));
+                contents.forEach(c => c.classList.remove('active'));
 
-        // Add 'active' class to clicked tab and its corresponding content
-        tab.classList.add('active');
-        const targetId = tab.dataset.tab;
-        const targetContent = document.getElementById(targetId);
-        if (targetContent) targetContent.classList.add('active');
-    });
-});
+                // Add 'active' class to clicked tab and its corresponding content
+                tab.classList.add('active');
+                const targetId = tab.dataset.tab;
+                const targetContent = document.getElementById(targetId);
+                if (targetContent) targetContent.classList.add('active');
+            });
+        });
 
-// Set the default active tab and content
-tabs[0].classList.add('active');
-contents[0].classList.add('active');
+        // Set the default active tab and content
+        tabs[0].classList.add('active');
+        contents[0].classList.add('active');
 
 
         // Function to copy text to clipboard
