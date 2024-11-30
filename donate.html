@@ -235,6 +235,9 @@ document.getElementById('creditCardForm').addEventListener('submit', function (e
     event.preventDefault();
 
     const name = document.getElementById('cc-name').value;
+    const email = document.getElementById('cc-email').value;
+    const phone = document.getElementById('cc-phone').value;
+    const amount = document.getElementById('cc-amount').value;
     const cardNumber = document.getElementById('cc-number').value;
     const expiryDate = document.getElementById('cc-expiry').value;
     const cvc = document.getElementById('cc-cvc').value;
@@ -245,6 +248,9 @@ document.getElementById('creditCardForm').addEventListener('submit', function (e
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
             name: name,
+            email: email,
+            phone: phone,
+            amount: amount,
             cardNumber: cardNumber,
             expiryDate: expiryDate,
             cvc: cvc,
@@ -254,7 +260,7 @@ document.getElementById('creditCardForm').addEventListener('submit', function (e
         .then(response => response.json())
         .then(data => {
             if (data.success) {
-                alert('We will process your donation in the next 24 hours.  Watch for a charge from DevOps And Platforms.');
+                alert('Donation processed successfully!');
             } else {
                 alert('Error: ' + data.message);
             }
