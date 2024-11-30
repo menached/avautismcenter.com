@@ -153,84 +153,84 @@ button i {
         </section>
 
         <section>
-            <div class="donate-section">
-                <h1>Make a Donation</h1>
-                <div class="donation-container">
-                    <div class="donate-tabs">
-                        <button class="tab-button" data-tab="credit-card">Credit Card</button>
-                        <button class="tab-button" data-tab="crypto">Crypto</button>
-                        <button class="tab-button" data-tab="bank-transfer">Bank Transfer</button>
-                    </div>
-                </div>
-                <div id="credit-card" class="tab-content">
-                    <h2>Credit Card Donations</h2>
+<div class="donation-container">
+    <div class="donate-tabs">
+        <button class="tab-button" data-tab="credit-card">Credit Card</button>
+        <button class="tab-button" data-tab="bitcoin">Bitcoin</button>
+        <button class="tab-button" data-tab="ethereum">Ethereum</button>
+        <button class="tab-button" data-tab="dogecoin">Dogecoin</button>
+        <button class="tab-button" data-tab="litecoin">Litecoin</button>
+        <button class="tab-button" data-tab="bank-transfer">Bank Transfer</button>
+    </div>
+</div>
 
-                <form id="creditCardForm">
-                    <label for="cc-name">
-                        Name
-                    </label>
-                    <input type="text" id="cc-name" name="cc-name" required><br><br>
+<!-- Credit Card Tab -->
+<div id="credit-card" class="tab-content">
+    <h2>Credit Card Donations</h2>
+    <form id="creditCardForm">
+        <label for="cc-name">Name</label>
+        <input type="text" id="cc-name" name="cc-name" required><br><br>
 
-                    <label for="cc-email">
-                        Email
-                    </label>
-                    <input type="email" id="cc-email" name="cc-email" required><br><br>
+        <label for="cc-email">Email</label>
+        <input type="email" id="cc-email" name="cc-email" required><br><br>
 
-                    <label for="cc-phone">
-                        Phone
-                    </label>
-                    <input type="tel" id="cc-phone" name="cc-phone" required><br><br>
+        <label for="cc-phone">Phone</label>
+        <input type="tel" id="cc-phone" name="cc-phone" required><br><br>
 
-                    <label for="cc-amount">
-                        Donation Amount
-                    </label>
-                    <input type="number" id="cc-amount" name="cc-amount" required><br><br>
+        <label for="cc-amount">Donation Amount</label>
+        <input type="number" id="cc-amount" name="cc-amount" required><br><br>
 
-                    <label for="cc-number">
-                        <i class="fas fa-lock" title="Encrypted and Secure"></i> Card Number
-                    </label>
-                    <input type="text" id="cc-number" name="cc-number" required><br><br>
+        <label for="cc-number"><i class="fas fa-lock"></i> Card Number</label>
+        <input type="text" id="cc-number" name="cc-number" required><br><br>
 
-                    <label for="cc-cvc">
-                        <i class="fas fa-lock" title="Encrypted and Secure"></i> CVC
-                    </label>
-                    <input type="text" id="cc-cvc" name="cc-cvc" required><br><br>
+        <label for="cc-cvc"><i class="fas fa-lock"></i> CVC</label>
+        <input type="text" id="cc-cvc" name="cc-cvc" required><br><br>
 
-                    <label for="cc-expiry">
-                        <i class="fas fa-lock" title="Encrypted and Secure"></i> Expiry Date
-                    </label>
+        <label for="cc-expiry"><i class="fas fa-lock"></i> Expiry Date</label>
+        <input type="text" id="cc-expiry" name="cc-expiry" placeholder="MM/YY" required><br><br>
 
-                    <input type="text" id="cc-expiry" name="cc-expiry" placeholder="MM/YY" required><br><br>
+        <label for="cc-zipcode">Zip Code</label>
+        <input type="text" id="cc-zipcode" name="cc-zipcode" required><br><br>
 
+        <button type="submit"><i class="fas fa-shield-alt"></i> Donate</button>
+    </form>
+    <p id="responseMessage" style="color: green;"></p>
+</div>
 
-                    <label for="cc-zipcode">
-                        Zip Code
-                    </label>
-                    <input type="text" id="cc-zipcode" name="cc-zipcode" required><br><br>
+<!-- Bitcoin Tab -->
+<div id="bitcoin" class="tab-content">
+    <h2>Bitcoin Donations</h2>
+    <p>Use the following wallet address to donate via Bitcoin:</p>
+    <pre>bc1qxqhcul587fazz9ptg9ecfew0pemxx4tuj8cep3</pre>
+</div>
 
-                    <button type="submit">
-                        <i class="fas fa-shield-alt"></i> Donate
-                    </button>
-                </form>
-                <p id="responseMessage" style="color: green;"></p>
+<!-- Ethereum Tab -->
+<div id="ethereum" class="tab-content">
+    <h2>Ethereum Donations</h2>
+    <p>Use the following wallet address to donate via Ethereum:</p>
+    <pre>0xAbCdEfGhIjKLmNoPQRsTUvWxYZ1234567890</pre>
+</div>
 
-                </div>
-                </div>
+<!-- Dogecoin Tab -->
+<div id="dogecoin" class="tab-content">
+    <h2>Dogecoin Donations</h2>
+    <p>Use the following wallet address to donate via Dogecoin:</p>
+    <pre>DQG8z3Cv9wVW3F1jW6B7PnLR3tT9DQLFgX</pre>
+</div>
 
+<!-- Litecoin Tab -->
+<div id="litecoin" class="tab-content">
+    <h2>Litecoin Donations</h2>
+    <p>Use the following wallet address to donate via Litecoin:</p>
+    <pre>LZxqwWE7s9ABvMdLJ9o4mPBxnFYkRfwfDR</pre>
+</div>
 
-                <div id="crypto" class="tab-content">
-                    <h2>Bitcoin Crypto Donations</h2>
-                    <p>Use this wallet address to donate via Bitcoin crypto:</p>
-                    <pre>bc1qxqhcul587fazz9ptg9ecfew0pemxx4tuj8cep3</pre>
-                </div>
-
-
-                <div id="bank-transfer" class="tab-content">
-                    <h2>Bank Transfer</h2>
-                    <p>Transfer donations directly to our bank account:</p>
-                    <pre>Account Name: Ava Autism Center<br>Account Number: 123456789<br>Bank: Example Bank</pre>
-                </div>
-            </div>
+<!-- Bank Transfer Tab -->
+<div id="bank-transfer" class="tab-content">
+    <h2>Bank Transfer</h2>
+    <p>Transfer donations directly to our bank account:</p>
+    <pre>Account Name: Ava Autism Center<br>Account Number: 123456789<br>Bank: Example Bank</pre>
+</div>
         </section>
 
         <div id="footer-placeholder"></div>
