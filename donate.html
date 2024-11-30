@@ -117,6 +117,94 @@
         }
     }
 </style>
+<style>
+/* Credit Card Form Container */
+.form-container {
+    max-width: 500px;
+    margin: 0 auto;
+    background-color: #fff8ef; /* Light background */
+    padding: 20px;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    border: 1px solid #ddd;
+}
+
+/* Form Rows */
+.form-row {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Labels */
+.form-row label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333; /* Dark text for readability */
+}
+
+/* Inputs */
+.form-row input {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+/* Focus State */
+.form-row input:focus {
+    border-color: #e67e22; /* Orange border on focus */
+    box-shadow: 0 0 5px rgba(230, 126, 34, 0.5); /* Soft orange glow */
+    outline: none;
+}
+
+/* Specific Focus Styling for Card Inputs */
+#cc-number:focus, #cc-cvc:focus, #cc-expiry:focus {
+    border-color: #28a745; /* Green for security inputs */
+    box-shadow: 0 0 5px rgba(40, 167, 69, 0.5); /* Soft green glow */
+}
+
+/* Submit Button */
+.form-row button {
+    background-color: #e67e22; /* Orange button */
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Submit Button Hover */
+.form-row button:hover {
+    background-color: #d35400; /* Darker orange on hover */
+}
+
+/* Lock Icon Styling */
+.form-row i {
+    color: #28a745; /* Green lock icon */
+    margin-right: 5px;
+}
+
+/* Error Message Styling */
+#error-message {
+    color: red;
+    margin-top: 10px;
+    font-size: 14px;
+    text-align: center;
+}
+
+/* Success Message Styling */
+#responseMessage {
+    color: green;
+    margin-top: 10px;
+    font-size: 14px;
+    text-align: center;
+}
+</style>
 
 </head>
 <body>
@@ -167,32 +255,32 @@
         <form id="creditCardForm">
             <div class="form-row">
                 <label for="cc-name">Name</label>
-                <input type="text" id="cc-name" name="cc-name">
+                <input type="text" id="cc-name" name="cc-name" placeholder="Enter your full name">
             </div>
 
             <div class="form-row">
                 <label for="cc-email">Email</label>
-                <input type="email" id="cc-email" name="cc-email">
+                <input type="email" id="cc-email" name="cc-email" placeholder="Enter your email">
             </div>
 
             <div class="form-row">
                 <label for="cc-phone">Phone</label>
-                <input type="tel" id="cc-phone" name="cc-phone">
+                <input type="tel" id="cc-phone" name="cc-phone" placeholder="Enter your phone number">
             </div>
 
             <div class="form-row">
                 <label for="cc-amount">Donation Amount</label>
-                <input type="number" id="cc-amount" name="cc-amount" required>
+                <input type="number" id="cc-amount" name="cc-amount" placeholder="Enter donation amount" required>
             </div>
 
             <div class="form-row">
                 <label for="cc-number"><i class="fas fa-lock"></i> Card Number</label>
-                <input type="text" id="cc-number" name="cc-number" required>
+                <input type="text" id="cc-number" name="cc-number" placeholder="XXXX XXXX XXXX XXXX" required>
             </div>
 
             <div class="form-row">
                 <label for="cc-cvc"><i class="fas fa-lock"></i> CVC</label>
-                <input type="text" id="cc-cvc" name="cc-cvc" required>
+                <input type="text" id="cc-cvc" name="cc-cvc" placeholder="XXX" required>
             </div>
 
             <div class="form-row">
@@ -202,14 +290,16 @@
 
             <div class="form-row">
                 <label for="cc-zipcode">Zip Code</label>
-                <input type="text" id="cc-zipcode" name="cc-zipcode">
+                <input type="text" id="cc-zipcode" name="cc-zipcode" placeholder="Enter your zip code">
             </div>
 
             <div class="form-row">
                 <button type="submit"><i class="fas fa-shield-alt"></i> Donate</button>
             </div>
+
+            <p id="error-message"></p>
+            <p id="responseMessage"></p>
         </form>
-        <p id="responseMessage" style="color: green;"></p>
     </div>
 </div>
 
