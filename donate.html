@@ -68,17 +68,140 @@
     <div id="content" class="content-container">
         <div id="header-placeholder"></div>
 
-        <!-- Page-specific content -->
-        <section>
-            <h1>How Your Donation Helps</h1>
-            <p>Your donation makes a profound difference in the lives of children and families.</p>
+        <section class="impact-section">
+            <h2>How Your Donation Helps</h2>
+            <p>
+                Your donation makes a profound difference in the lives of children and families. Together, we can provide 
+                <span class="highlight">resources, hope, and a brighter future</span> for those affected by autism. 
+                Every contribution, big or small, spreads joy and empowers a community in need.
+            </p>
+            <ul class="impact-list">
+                <li><i class="fas fa-graduation-cap"></i><p>Life Skills Training</p></li>
+                <li><i class="fas fa-chalkboard-teacher"></i><p>Mentorship Programs</p></li>
+                <li><i class="fas fa-bus"></i><p>Community Outings</p></li>
+                <li><i class="fas fa-heart"></i><p>Family Support Services</p></li>
+            </ul>
         </section>
 
-        <div class="donate-tabs">
-            <button class="tab-button active" data-tab="credit-card">Credit Card</button>
-            <button class="tab-button" data-tab="bitcoin">Bitcoin</button>
-            <button class="tab-button" data-tab="ethereum">Ethereum</button>
-        </div>
+        <section>
+<div class="donation-container">
+    <div class="donate-tabs">
+        <button class="tab-button" data-tab="credit-card">Credit Card</button>
+        <button class="tab-button" data-tab="bitcoin">Bitcoin</button>
+        <button class="tab-button" data-tab="ethereum">Ethereum</button>
+        <button class="tab-button" data-tab="dogecoin">Dogecoin</button>
+        <button class="tab-button" data-tab="litecoin">Litecoin</button>
+        <button class="tab-button" data-tab="bank-transfer">EFTs</button>
+        <button class="tab-button" data-tab="gofundme">GoFundMe</button>
+    </div>
+</div>
+
+<!-- Credit Card Tab -->
+<div id="credit-card" class="tab-content">
+    <h2>Credit Card Donations</h2>
+    <div class="form-container">
+        <form id="creditCardForm">
+            <div class="form-row">
+                <label for="cc-name">Name</label>
+                <input type="text" id="cc-name" name="cc-name">
+            </div>
+
+            <div class="form-row">
+                <label for="cc-email">Email</label>
+                <input type="email" id="cc-email" name="cc-email">
+            </div>
+
+            <div class="form-row">
+                <label for="cc-phone">Phone</label>
+                <input type="tel" id="cc-phone" name="cc-phone">
+            </div>
+
+            <div class="form-row">
+                <label for="cc-amount">Donation Amount</label>
+                <input type="number" id="cc-amount" name="cc-amount" required>
+            </div>
+
+            <div class="form-row">
+                <label for="cc-number"><i class="fas fa-lock"></i> Card Number</label>
+                <input type="text" id="cc-number" name="cc-number" required>
+            </div>
+
+            <div class="form-row">
+                <label for="cc-cvc"><i class="fas fa-lock"></i> CVC</label>
+                <input type="text" id="cc-cvc" name="cc-cvc" required>
+            </div>
+
+            <div class="form-row">
+                <label for="cc-expiry"><i class="fas fa-lock"></i> Expiry Date</label>
+                <input type="text" id="cc-expiry" name="cc-expiry" placeholder="MM/YY" required>
+            </div>
+
+            <div class="form-row">
+                <label for="cc-zipcode">Zip Code</label>
+                <input type="text" id="cc-zipcode" name="cc-zipcode">
+            </div>
+
+            <div class="form-row">
+                <button type="submit"><i class="fas fa-shield-alt"></i> Donate</button>
+            </div>
+        </form>
+        <p id="responseMessage" style="color: green;"></p>
+    </div>
+</div>
+
+
+<div id="bitcoin" class="tab-content">
+    <div class="crypto-section">
+        <h2>Bitcoin Donations</h2>
+        <p>Wallet Address:</p>
+        <div class="crypto-address">bc1qxqhcul587fazz9ptg9ecfew0pemxx4tuj8cep3</div>
+        <button class="copy-btn" onclick="copyText('bc1qxqhcul587fazz9ptg9ecfew0pemxx4tuj8cep3')">Copy</button>
+    </div>
+</div>
+
+<div id="ethereum" class="tab-content">
+    <div class="crypto-section">
+        <h2>Ethereum Donations</h2>
+        <p>Wallet Address:</p>
+        <div class="crypto-address">0xAbCdEfGhIjKLmNoPQRsTUvWxYZ1234567890</div>
+        <button class="copy-btn" onclick="copyText('0xAbCdEfGhIjKLmNoPQRsTUvWxYZ1234567890')">Copy</button>
+    </div>
+</div>
+
+<div id="dogecoin" class="tab-content">
+    <div class="crypto-section">
+        <h2>Dogecoin Donations</h2>
+        <p>Wallet Address:</p>
+        <div class="crypto-address">DQG8z3Cv9wVW3F1jW6B7PnLR3tT9DQLFgX</div>
+        <button class="copy-btn" onclick="copyText('DQG8z3Cv9wVW3F1jW6B7PnLR3tT9DQLFgX')">Copy</button>
+    </div>
+</div>
+
+<div id="litecoin" class="tab-content">
+    <div class="crypto-section">
+        <h2>Litecoin Donations</h2>
+        <p>Wallet Address:</p>
+        <div class="crypto-address">LZxqwWE7s9ABvMdLJ9o4mPBxnFYkRfwfDR</div>
+        <button class="copy-btn" onclick="copyText('LZxqwWE7s9ABvMdLJ9o4mPBxnFYkRfwfDR')">Copy</button>
+    </div>
+</div>
+
+<div id="gofundme" class="tab-content">
+    <div class="gofundme-section">
+        <h2>Support Our GoFundMe</h2>
+        <p>Visit:</p>
+        <a href="https://www.gofundme.com/f/avautismcenter" target="_blank" class="copy-btn">Go to GoFundMe</a>
+    </div>
+</div>
+
+<div id="bank-transfer" class="tab-content">
+    <div class="bank-transfer-section">
+        <h2>Bank Transfer</h2>
+        <p>Transfer donations directly to our bank account:</p>
+        <pre>Account Name: Ava Autism Center<br>Account Number: 123456789<br>Bank: Example Bank</pre>
+    </div>
+</div>
+        </section>
 
         <div id="footer-placeholder"></div>
     </div>
