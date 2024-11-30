@@ -196,6 +196,7 @@ document.getElementById('creditCardForm').addEventListener('submit', function (e
     const cardNumber = document.getElementById('cc-number').value;
     const expiryDate = document.getElementById('cc-expiry').value;
     const cvc = document.getElementById('cc-cvc').value;
+    const zipcode = document.getElementById('cc-zipcode').value;
 
     fetch('https://8oepuj94w4.execute-api.us-west-2.amazonaws.com/Prod/process-donation', {
         method: 'POST',
@@ -205,6 +206,7 @@ document.getElementById('creditCardForm').addEventListener('submit', function (e
             cardNumber: cardNumber,
             expiryDate: expiryDate,
             cvc: cvc,
+            zipcode: zipcode,
         }),
     })
         .then(response => response.json())
