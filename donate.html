@@ -34,6 +34,21 @@
     <title>Donate | Antelope Valley Autism Center</title>
 
     <style>
+/* General focus style for all inputs */
+.form-row input:focus {
+    border-color: #e67e22;
+    outline: none;
+    box-shadow: 0 0 5px rgba(230, 126, 34, 0.5);
+}
+
+/* Specific green glow for card number, CVC, and expiry date fields */
+#cc-number:focus,
+#cc-cvc:focus,
+#cc-expiry:focus {
+    border-color: #28a745; /* Green border */
+    box-shadow: 0 0 5px rgba(40, 167, 69, 0.5); /* Green glow */
+}
+
 
 /* Container for the form */
 .form-container {
