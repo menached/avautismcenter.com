@@ -142,6 +142,8 @@
                         <input type="text" id="cc-expiry" name="cc-expiry" placeholder="MM/YY" required><br><br>
                         <label for="cc-cvc">CVC</label>
                         <input type="text" id="cc-cvc" name="cc-cvc" required><br><br>
+                        <label for="cc-zipcode">Zip Code</label>
+                        <input type="text" id="cc-zipcode" name="cc-zipcode" required><br><br>
                         <button type="submit">Donate</button>
                     </form>
                     <p id="responseMessage" style="color: green;"></p>
@@ -195,7 +197,7 @@ document.getElementById('creditCardForm').addEventListener('submit', function (e
     const expiryDate = document.getElementById('cc-expiry').value;
     const cvc = document.getElementById('cc-cvc').value;
 
-    fetch('https://2wurm2yjrb.execute-api.us-west-2.amazonaws.com/Prod/process-donation', {
+    fetch('https://8oepuj94w4.execute-api.us-west-2.amazonaws.com/Prod/process-donation', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
