@@ -440,6 +440,17 @@ document.getElementById('creditCardForm').addEventListener('submit', function (e
         });
 });
 
+// Function to copy text to clipboard
+function copyText(text) {
+    navigator.clipboard.writeText(text).then(() => {
+        alert("Copied to clipboard: " + text);
+    }).catch(err => {
+        console.error("Failed to copy text: ", err);
+        alert("Failed to copy. Please try again.");
+    });
+}
+
+
     </script>
 </body>
 </html>
