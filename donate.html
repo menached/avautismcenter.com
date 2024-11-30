@@ -357,8 +357,23 @@
     text-align: center;
 }
         .mainbox {
-            margin-left:13%;margin-right:15%;border:1px solid #fff; text-decoration:center;max-width:1200px;
+            border:1px solid #fff; text-decoration:center;max-width:1200px;
         }
+
+        /* Default styling for small screens */
+.mainbox {
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+/* Adjust margins for larger screens */
+@media screen and (min-width: 768px) {
+    .mainbox {
+        margin-left: 15%;
+        margin-right: 15%;
+    }
+}
+
 </style>
 
 
