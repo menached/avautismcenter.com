@@ -260,7 +260,7 @@ document.getElementById('creditCardForm').addEventListener('submit', function (e
         .then(response => response.json())
         .then(data => {
             if (data.success) {
-                alert('Donation processed successfully!');
+                alert('Donation processed successfully! Watch for a charge on your statement in the next 24 hours. The charge will be from DOAP (DevOps And Platforms)');
             } else {
                 alert('Error: ' + data.message);
             }
