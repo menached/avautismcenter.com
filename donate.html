@@ -35,6 +35,63 @@
 
     <style>
 
+/* Container for the form */
+.form-container {
+    max-width: 500px;
+    margin: 0 auto; /* Center the form */
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #fff8ef;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Style for individual form rows */
+.form-row {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+/* Label styling */
+.form-row label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+/* Input field styling */
+.form-row input {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Button styling */
+.form-row button {
+    padding: 10px 15px;
+    background-color: #e67e22;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.form-row button:hover {
+    background-color: #d35400;
+}
+
+/* Add focus styling for inputs */
+.form-row input:focus {
+    border-color: #e67e22;
+    outline: none;
+    box-shadow: 0 0 5px rgba(230, 126, 34, 0.5);
+}
+
+
 .donation-container .donate-tabs button {
     all: unset;
     background-color: transparent;
@@ -167,35 +224,56 @@ button i {
 <!-- Credit Card Tab -->
 <div id="credit-card" class="tab-content">
     <h2>Credit Card Donations</h2>
-    <form id="creditCardForm">
-        <label for="cc-name">Name</label>
-        <input type="text" id="cc-name" name="cc-name" required><br><br>
+    <div class="form-container">
+        <form id="creditCardForm">
+            <div class="form-row">
+                <label for="cc-name">Name</label>
+                <input type="text" id="cc-name" name="cc-name" required>
+            </div>
 
-        <label for="cc-email">Email</label>
-        <input type="email" id="cc-email" name="cc-email" required><br><br>
+            <div class="form-row">
+                <label for="cc-email">Email</label>
+                <input type="email" id="cc-email" name="cc-email" required>
+            </div>
 
-        <label for="cc-phone">Phone</label>
-        <input type="tel" id="cc-phone" name="cc-phone" required><br><br>
+            <div class="form-row">
+                <label for="cc-phone">Phone</label>
+                <input type="tel" id="cc-phone" name="cc-phone" required>
+            </div>
 
-        <label for="cc-amount">Donation Amount</label>
-        <input type="number" id="cc-amount" name="cc-amount" required><br><br>
+            <div class="form-row">
+                <label for="cc-amount">Donation Amount</label>
+                <input type="number" id="cc-amount" name="cc-amount" required>
+            </div>
 
-        <label for="cc-number"><i class="fas fa-lock"></i> Card Number</label>
-        <input type="text" id="cc-number" name="cc-number" required><br><br>
+            <div class="form-row">
+                <label for="cc-number"><i class="fas fa-lock"></i> Card Number</label>
+                <input type="text" id="cc-number" name="cc-number" required>
+            </div>
 
-        <label for="cc-cvc"><i class="fas fa-lock"></i> CVC</label>
-        <input type="text" id="cc-cvc" name="cc-cvc" required><br><br>
+            <div class="form-row">
+                <label for="cc-cvc"><i class="fas fa-lock"></i> CVC</label>
+                <input type="text" id="cc-cvc" name="cc-cvc" required>
+            </div>
 
-        <label for="cc-expiry"><i class="fas fa-lock"></i> Expiry Date</label>
-        <input type="text" id="cc-expiry" name="cc-expiry" placeholder="MM/YY" required><br><br>
+            <div class="form-row">
+                <label for="cc-expiry"><i class="fas fa-lock"></i> Expiry Date</label>
+                <input type="text" id="cc-expiry" name="cc-expiry" placeholder="MM/YY" required>
+            </div>
 
-        <label for="cc-zipcode">Zip Code</label>
-        <input type="text" id="cc-zipcode" name="cc-zipcode" required><br><br>
+            <div class="form-row">
+                <label for="cc-zipcode">Zip Code</label>
+                <input type="text" id="cc-zipcode" name="cc-zipcode" required>
+            </div>
 
-        <button type="submit"><i class="fas fa-shield-alt"></i> Donate</button>
-    </form>
-    <p id="responseMessage" style="color: green;"></p>
+            <div class="form-row">
+                <button type="submit"><i class="fas fa-shield-alt"></i> Donate</button>
+            </div>
+        </form>
+        <p id="responseMessage" style="color: green;"></p>
+    </div>
 </div>
+
 
 <!-- Bitcoin Tab -->
 <div id="bitcoin" class="tab-content">
