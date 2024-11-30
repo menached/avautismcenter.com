@@ -129,11 +129,13 @@
     background-color: #d35400;
 }
 
-/* Tab navigation styling */
+/* General tab styling */
 .donate-tabs {
     display: flex;
     justify-content: center;
     border-bottom: 2px solid #f39c12;
+    flex-wrap: wrap; /* Allow wrapping */
+    gap: 10px; /* Add spacing between buttons */
 }
 
 .donate-tabs button {
@@ -147,10 +149,30 @@
     transition: color 0.3s ease, border-bottom 0.3s ease;
 }
 
+/* Active tab styling */
 .donate-tabs button.active {
     color: #000;
     border-bottom: 2px solid #d35400;
 }
+
+/* Hover effect */
+.donate-tabs button:hover {
+    color: #555;
+}
+
+/* Responsive styling for mobile view */
+@media screen and (max-width: 768px) {
+    .donate-tabs {
+        flex-direction: column; /* Stack tabs vertically */
+        align-items: center; /* Center align buttons */
+    }
+
+    .donate-tabs button {
+        width: 100%; /* Make buttons take full width */
+        text-align: center; /* Center align text */
+    }
+}
+
 
 /* Tab content */
 .tab-content {
