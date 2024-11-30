@@ -35,44 +35,26 @@
 
     <style>
 
-.donate-tabs {
-    display: flex;
-    border-bottom: 2px solid #f39c12; /* Underline for tabs */
-    justify-content: center;
-    gap: 5px; /* Space between tabs */
-}
-
-.donate-tabs button {
-    background-color: transparent; /* Transparent background for tabs */
-    color: #e67e22; /* Tab text color */
-    border: none; /* Remove border */
+.donation-container .donate-tabs button {
+    all: unset;
+    background-color: transparent;
+    color: #e67e22;
+    border: none;
     padding: 10px 15px;
     cursor: pointer;
     font-size: 16px;
-    transition: color 0.3s ease, border-bottom 0.3s ease; /* Smooth hover effect */
-    border-bottom: 2px solid transparent; /* Invisible underline for spacing */
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+    border-bottom: 2px solid transparent;
+    text-align: center;
 }
 
-.donate-tabs button.active {
-    color: #d35400; /* Active tab color */
-    border-bottom: 2px solid #d35400; /* Highlight underline for active tab */
+.donation-container .donate-tabs button.active {
+    color: #d35400;
+    border-bottom: 2px solid #d35400;
 }
 
-.donate-tabs button:hover {
-    color: #d35400; /* Hover color */
-}
-
-.tab-content {
-    display: none;
-    padding: 20px;
-    border: 1px solid #f39c12; /* Add a border to the content */
-    border-top: none; /* Remove top border to connect with tabs */
-    border-radius: 0 0 10px 10px; /* Rounded bottom corners */
-    background-color: #fff8ef; /* Light background for content */
-}
-
-.tab-content.active {
-    display: block;
+.donation-container .donate-tabs button:hover {
+    color: #d35400;
 }
 
 
@@ -173,10 +155,12 @@ button i {
         <section>
             <div class="donate-section">
                 <h1>Make a Donation</h1>
-                <div class="donate-tabs">
-                    <button class="tab-button" data-tab="crypto">Crypto</button>
-                    <button class="tab-button" data-tab="credit-card">Credit Card</button>
-                    <button class="tab-button" data-tab="bank-transfer">Bank Transfer</button>
+                <div class="donation-container">
+                    <div class="donate-tabs">
+                        <button class="tab-button" data-tab="crypto">Crypto</button>
+                        <button class="tab-button" data-tab="credit-card">Credit Card</button>
+                        <button class="tab-button" data-tab="bank-transfer">Bank Transfer</button>
+                    </div>
                 </div>
                 <div id="crypto" class="tab-content">
                     <h2>Bitcoin Crypto Donations</h2>
@@ -185,6 +169,7 @@ button i {
                 </div>
                 <div id="credit-card" class="tab-content">
                     <h2>Credit Card Donations</h2>
+
 <form id="creditCardForm">
     <label for="cc-name">
         <i class="fas fa-lock" title="Encrypted and Secure"></i> Name
