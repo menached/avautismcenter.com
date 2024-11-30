@@ -34,135 +34,80 @@
     <title>Donate | Antelope Valley Autism Center</title>
 
     <style>
-
-
-        .crypto-section, .bank-transfer-section, .gofundme-section {
-            max-width: 400px;
-            margin: 0 auto;
-            text-align: center;
-        }
-
-        .crypto-address {
-            font-size: 1.2em;
-            background-color: #f9f9f9;
-            padding: 10px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            margin-bottom: 10px;
-            display: inline-block;
-        }
-
-        .copy-btn {
-            margin-top: 5px;
-            padding: 5px 10px;
-            background-color: #e67e22;
-            color: white;
-            font-size: 14px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-
-        .copy-btn:hover {
-            background-color: #d35400;
-        }
-
-        .form-container {
-            max-width: 500px;
-            margin: 0 auto;
-            padding: 20px;
-            border: 1px solid #ccc;
-            border-radius: 10px;
-            background-color: #fff8ef;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-
-        .form-row {
-            display: flex;
-            flex-direction: column;
-            margin-bottom: 15px;
-        }
-
-        .form-row label {
-            font-weight: bold;
-            margin-bottom: 5px;
-        }
-
-        .form-row input {
-            padding: 10px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-        }
-
-        .form-row button {
-            padding: 10px 15px;
-            background-color: #e67e22;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            font-size: 16px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-
-        .form-row button:hover {
-            background-color: #d35400;
-        }
-
-
-
-/* General focus style for all inputs */
-.form-row input:focus {
-    border-color: #e67e22;
-    outline: none;
-    box-shadow: 0 0 5px rgba(230, 126, 34, 0.5);
-}
-
-/* Specific green glow for card number, CVC, and expiry date fields */
-#cc-number:focus,
-#cc-cvc:focus,
-#cc-expiry:focus {
-    border-color: #28a745; /* Green border */
-    box-shadow: 0 0 5px rgba(40, 167, 69, 0.5); /* Green glow */
-}
-
-
-/* Container for the form */
-.form-container {
+/* General container styling */
+.crypto-section, .bank-transfer-section, .gofundme-section, .form-container {
     max-width: 500px;
-    margin: 0 auto; /* Center the form */
+    margin: 0 auto;
+    text-align: center;
     padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 10px;
     background-color: #fff8ef;
+    border-radius: 10px;
+    border: 1px solid #ccc;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Style for individual form rows */
+/* Crypto address styling */
+.crypto-address {
+    font-size: 1.2em;
+    background-color: #f9f9f9;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    display: inline-block;
+}
+
+.copy-btn {
+    margin-top: 5px;
+    padding: 5px 10px;
+    background-color: #e67e22;
+    color: white;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.copy-btn:hover {
+    background-color: #d35400;
+}
+
+/* Form styling */
 .form-row {
     display: flex;
     flex-direction: column;
     margin-bottom: 15px;
 }
 
-/* Label styling */
 .form-row label {
     font-weight: bold;
     margin-bottom: 5px;
-    color: #333;
 }
 
-/* Input field styling */
 .form-row input {
     padding: 10px;
     border: 1px solid #ddd;
     border-radius: 5px;
     font-size: 16px;
+    transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+/* Focus effects for inputs */
+.form-row input:focus {
+    border-color: #e67e22;
+    box-shadow: 0 0 5px rgba(230, 126, 34, 0.5);
+    outline: none;
+}
+
+/* Specific focus styling for credit card inputs */
+#cc-number:focus, #cc-cvc:focus, #cc-expiry:focus {
+    border-color: #28a745;
+    box-shadow: 0 0 5px rgba(40, 167, 69, 0.5);
 }
 
 /* Button styling */
-.form-row button {
+.form-row button, .donate-tabs button {
     padding: 10px 15px;
     background-color: #e67e22;
     color: white;
@@ -173,112 +118,77 @@
     transition: background-color 0.3s ease;
 }
 
-.form-row button:hover {
+.form-row button:hover, .donate-tabs button:hover, .copy-btn:hover {
     background-color: #d35400;
 }
 
-/* Add focus styling for inputs */
-.form-row input:focus {
-    border-color: #e67e22;
-    outline: none;
-    box-shadow: 0 0 5px rgba(230, 126, 34, 0.5);
+/* Tab navigation styling */
+.donate-tabs {
+    display: flex;
+    justify-content: center;
+    border-bottom: 2px solid #f39c12;
 }
 
-
-.donation-container .donate-tabs button {
-    all: unset;
+.donate-tabs button {
     background-color: transparent;
     color: #e67e22;
     border: none;
     padding: 10px 15px;
-    cursor: pointer;
     font-size: 16px;
-    transition: color 0.3s ease, border-bottom 0.3s ease;
     border-bottom: 2px solid transparent;
-    text-align: center;
+    cursor: pointer;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
 }
 
-.donation-container .donate-tabs button.active {
+.donate-tabs button.active {
     color: #000;
     border-bottom: 2px solid #d35400;
 }
 
-.donation-container .donate-tabs button:hover {
-    color: #555;
+/* Tab content */
+.tab-content {
+    display: none;
+    padding: 20px;
 }
 
-
-
-label i {
-    margin-right: 5px;
-    color: #28a745; /* Green for secure indication */
+.tab-content.active {
+    display: block;
 }
 
-button i {
-    margin-right: 5px;
+/* General section styling */
+.donate-section {
+    background-color: rgba(255, 245, 230, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    margin: 20px auto;
+    max-width: 800px;
 }
 
-        /* Page-specific styling */
-        .donate-section {
-            background-color: rgba(255, 245, 230, 0.8);
-            padding: 20px;
-            border-radius: 10px;
-            text-align: center;
-            margin: 20px auto;
-            max-width: 800px;
-        }
-        .donate-section h1 {
-            color: #ff7f50;
-        }
-        .donate-section p {
-            font-size: 1.2em;
-            margin: 15px 0;
-        }
-        .donate-tabs {
-            display: flex;
-            border-bottom: 2px solid #f39c12;
-            justify-content: center;
-        }
-        .donate-tabs button {
-            background-color: #e67e22;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            cursor: pointer;
-            font-size: 16px;
-            transition: background-color 0.3s ease;
-        }
-        .donate-tabs button.active {
-            background-color: #d35400;
-            border-bottom: 2px solid white;
-        }
-        .donate-tabs button:hover {
-            background-color: #d35400;
-        }
-        .tab-content {
-            display: none;
-            padding: 20px;
-        }
-        .tab-content.active {
-            display: block;
-        }
-        .impact-list {
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
-            gap: 20px;
-            list-style: none;
-            padding: 0;
-        }
-        .impact-list li {
-            text-align: center;
-            max-width: 200px;
-        }
-        .impact-list li i {
-            font-size: 2em;
-            color: #28a745;
-            margin-bottom: 10px;
-        }
+.donate-section h1 {
+    color: #ff7f50;
+}
+
+/* Impact list styling */
+.impact-list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+}
+
+.impact-list li {
+    text-align: center;
+    max-width: 200px;
+}
+
+.impact-list li i {
+    font-size: 2em;
+    color: #28a745;
+    margin-bottom: 10px;
+}
     </style>
 
 </head>
