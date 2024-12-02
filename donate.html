@@ -561,6 +561,13 @@
 
     <!-- Dynamic Header and Footer Script -->
     <script>
+window.addEventListener("load", function () {
+    parent.postMessage(
+        { height: document.body.scrollHeight },
+        "https://www.doap.com" // Replace with the parent domain
+    );
+});
+
         // Load header and footer dynamically
         fetch('header.html')
             .then(response => response.text())
